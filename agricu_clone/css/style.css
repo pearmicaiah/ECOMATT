@@ -9342,6 +9342,71 @@
 	background-color: var(--agrofa-white);
 }
 
+/* Mega Menu Refinement */
+.mega-menu .mega-main-header {
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--main-color);
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+}
+
+.mega-menu .column {
+	/* Removed grid display to revert to vertical stacking */
+}
+
+.mega-menu .mega-main-header .icon {
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+.mega-menu .mega-sub-block {
+	margin-bottom: 5px;
+	padding-left: 5px;
+}
+
+.mega-menu .mega-sub-header {
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--black-color);
+	margin-bottom: 2px;
+	display: flex;
+	align-items: center;
+}
+
+.mega-menu .mega-sub-header .icon {
+	margin-right: 8px;
+	color: var(--color-two);
+	font-size: 14px;
+}
+
+.mega-menu .column ul {
+	padding-left: 28px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 5px;
+}
+
+.mega-menu .column ul li {
+	margin-bottom: 2px;
+	line-height: normal;
+}
+
+.mega-menu .column ul li a {
+	font-size: 13px;
+	color: #666;
+	transition: all 0.3s ease;
+	line-height: 20px;
+}
+
+.mega-menu .column ul li a:hover {
+	color: var(--main-color);
+	padding-left: 5px;
+}
+
 .project-block_four-title {
 	position: relative;
 	font-weight: 600;
