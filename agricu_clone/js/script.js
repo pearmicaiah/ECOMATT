@@ -24,6 +24,19 @@
 	// Call the function when page is loaded
 	window.addEventListener('load', handlePreloader);
 
+	// Elements Animation
+	if ($('.wow').length) {
+		var wow = new WOW({
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: true
+		});
+		wow.init();
+	}
+
+
 
 	//Update Header Style and Scroll to Top
 	function headerStyle() {
@@ -1135,6 +1148,45 @@
 	/* ==========================================================================
 	   When document is loading, do
 	   ========================================================================== */
+
+	// Testimonial One Carousel
+	if ($('.testimonial-one__carousel').length) {
+		var slider = new Swiper('.testimonial-one__carousel', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next1',
+				prevEl: '.swiper-button-prev1',
+				clickable: true,
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 3,
+				},
+				'1200': {
+					slidesPerView: 3,
+				},
+				'992': {
+					slidesPerView: 2,
+				},
+				'768': {
+					slidesPerView: 1,
+				},
+				'576': {
+					slidesPerView: 1,
+				},
+				'0': {
+					slidesPerView: 1,
+				},
+			},
+		});
+	}
 
 	$(window).on('load', function () {
 		handlePreloader();

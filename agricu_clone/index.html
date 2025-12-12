@@ -15,12 +15,19 @@
 	<link href="css/meanmenu.min.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
 	<link href="assets/vendors/agrofa-icons/style.css" rel="stylesheet">
+	<link href="css/farmology-sections.css" rel="stylesheet">
+	<link href="css/custom-sections.css" rel="stylesheet">
+	<link href="assets/css/flaticon.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
 		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap"
 		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 
 	<!-- Color Switcher Mockup -->
 	<link href="css/color-switcher-design.css" rel="stylesheet">
@@ -43,6 +50,17 @@
 
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+	<style>
+		@keyframes shimmer {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			100% {
+				background-position: 100% 50%;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -774,31 +792,85 @@
 						<div class="about-one_content">
 							<div class="sec-title">
 								<div class="sec-title_title">Get To Know Us</div>
-								<h2 class="sec-title_heading tx-split-text split-in-right">Greate Leader in Agriculture
-									Market</h2>
-								<div class="sec-title_text">There are many variations of passages of lorem ipsum
-									available but the majority have suffered alteration in some form by injected humor
-									or random word which don't look even. Suffered alteration in some form by injected
-									humor or random word.</div>
+								<h2 class="sec-title_heading" style="
+									font-size: 36px;
+									line-height: 1.3;
+									display: inline-block;
+									color: transparent;
+									background-image: linear-gradient(to right, #000 0%, #000 30%, #6cbd45 45%, #f2a900 55%, #000 70%, #000 100%);
+									background-size: 200% auto;
+									-webkit-background-clip: text;
+									background-clip: text;
+									-webkit-text-fill-color: transparent;
+									animation: shimmer 3s linear infinite;
+								">A Trusted Leader in
+									Zimbabwe’s Agriculture and Food Production</h2>
+								<div class="sec-title_text">Ecomatt Farm is one of Zimbabwe’s fast-growing and most
+									trusted agricultural enterprises, specializing in horticulture farming, livestock
+									production, and value-added food processing. We produce a wide range of fresh
+									vegetables, grains, poultry, pigs, and goat products, supplying wholesalers,
+									retailers, butcheries, and local communities with reliable, high-quality food.</div>
 							</div>
 
-							<!-- About Block One -->
-							<div class="about-block_one">
-								<div class="about-block_one-inner">
-									<div class="about-block_one-icon trans-300 flaticon-vegetable"></div>
-									<strong>Growing Fruits and Vegetables</strong>
-									You need to be sure there isn’t anything embarrassing <br> hidden in the middle of
-									text.
+							<div class="row clearfix">
+								<!-- Crops & Horticulture -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="about-block_one" style="margin-bottom: 20px;">
+										<div class="about-block_one-inner" style="padding-left: 50px;">
+											<div class="about-block_one-icon trans-300"><i class="fa-solid fa-leaf"
+													style="color: #00A651; font-size: 32px;"></i></div>
+											<strong style="font-size: 18px; margin-bottom: 5px;">Crops &
+												Horticulture</strong>
+											<div
+												style="margin-top: 2px; color: #666; font-size: 14px; line-height: 1.4;">
+												Specialized fresh vegetables, field crops, and seasonal produce.</div>
+										</div>
+									</div>
 								</div>
-							</div>
 
-							<!-- About Block One -->
-							<div class="about-block_one">
-								<div class="about-block_one-inner">
-									<div class="about-block_one-icon trans-300 flaticon-drone"></div>
-									<strong>Tips for Ripening your Fruits</strong>
-									You need to be sure there isn’t anything embarrassing <br> hidden in the middle of
-									text.
+								<!-- Livestock Farming -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="about-block_one" style="margin-bottom: 20px;">
+										<div class="about-block_one-inner" style="padding-left: 50px;">
+											<div class="about-block_one-icon trans-300"><i class="fa-solid fa-cow"
+													style="color: #003366; font-size: 32px;"></i></div>
+											<strong style="font-size: 18px; margin-bottom: 5px;">Livestock
+												Farming</strong>
+											<div
+												style="margin-top: 2px; color: #666; font-size: 14px; line-height: 1.4;">
+												Sustainable breeding of poultry, piggery, and goats.</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Value-Added Products -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="about-block_one" style="margin-bottom: 20px;">
+										<div class="about-block_one-inner" style="padding-left: 50px;">
+											<div class="about-block_one-icon trans-300"><i class="fa-solid fa-industry"
+													style="color: #003366; font-size: 32px;"></i></div>
+											<strong style="font-size: 18px; margin-bottom: 5px;">Value-Added
+												Products</strong>
+											<div
+												style="margin-top: 2px; color: #666; font-size: 14px; line-height: 1.4;">
+												Processing milling products, butchery items, and goods.</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Services & Supply -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="about-block_one" style="margin-bottom: 20px;">
+										<div class="about-block_one-inner" style="padding-left: 50px;">
+											<div class="about-block_one-icon trans-300"><i class="fa-solid fa-handshake"
+													style="color: #00A651; font-size: 32px;"></i></div>
+											<strong style="font-size: 18px; margin-bottom: 5px;">Services &
+												Supply</strong>
+											<div
+												style="margin-top: 2px; color: #666; font-size: 14px; line-height: 1.4;">
+												Providing farm supplies, contract farming, and training.</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -841,157 +913,7 @@
 		</section>
 		<!-- End About One -->
 
-		<!-- Services Two -->
-		<section class="services-two">
-			<div class="services-two_bg-layer overlay-layer"
-				style="background-image:url(images/services-two_pattern.png)"></div>
-			<div class="auto-container">
-				<!-- Sec Title -->
-				<div class="sec-title centered">
-					<div class="sec-title_title">What We Are Doing</div>
-					<h2 class="sec-title_heading tx-split-text split-in-right">We Provide Best Services <br> For Our
-						Customer</h2>
-				</div>
-				<!-- End Sec Title -->
 
-				<div class="four-item-carousel swiper-container">
-					<div class="swiper-wrapper">
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Service Block Two -->
-							<div class="service-block_two">
-								<div class="service-block_two-inner">
-									<div class="service-block_two-image">
-										<img src="images/service-4.jpg" alt "" />
-									</div>
-									<div class="service-block_two-content">
-										<div class="service-block_two-icon">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title"><a href="service-detail.html">Agriculture
-												<br> Products</a></h4>
-									</div>
-									<div class="service-block_two-overlay overlay-layer"
-										style="background-image:url(images/service-4.jpg)">
-										<div class="service-block_two-icon_two">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title_two"><a
-												href="service-detail.html">Agriculture Products</a></h4>
-										<div class="service-block_two-text">Lorem ipsum dolor sit amet, consectetur
-											adipiscing elit, sed do eiusmod tempor incididunt labore </div>
-										<a class="service-block_two-more" href="service-detail.html">read more <i
-												class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Service Block Two -->
-							<div class="service-block_two">
-								<div class="service-block_two-inner">
-									<div class="service-block_two-image">
-										<img src="images/service-5.jpg" alt "" />
-									</div>
-									<div class="service-block_two-content">
-										<div class="service-block_two-icon">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title"><a href="service-detail.html">Organic <br>
-												Products</a></h4>
-									</div>
-									<div class="service-block_two-overlay overlay-layer"
-										style="background-image:url(images/service-5.jpg)">
-										<div class="service-block_two-icon_two">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title_two"><a href="service-detail.html">Organic
-												<br> Products</a></h4>
-										<div class="service-block_two-text">Lorem ipsum dolor sit amet, consectetur
-											adipiscing elit, sed do eiusmod tempor incididunt labore </div>
-										<a class="service-block_two-more" href="service-detail.html">read more <i
-												class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Service Block Two -->
-							<div class="service-block_two">
-								<div class="service-block_two-inner">
-									<div class="service-block_two-image">
-										<img src="images/service-6.jpg" alt "" />
-									</div>
-									<div class="service-block_two-content">
-										<div class="service-block_two-icon">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title"><a href="service-detail.html">Fresh <br>
-												Vegetables</a></h4>
-									</div>
-									<div class="service-block_two-overlay overlay-layer"
-										style="background-image:url(images/service-6.jpg)">
-										<div class="service-block_two-icon_two">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title_two"><a href="service-detail.html">Fresh <br>
-												Vegetables</a></h4>
-										<div class="service-block_two-text">Lorem ipsum dolor sit amet, consectetur
-											adipiscing elit, sed do eiusmod tempor incididunt labore </div>
-										<a class="service-block_two-more" href="service-detail.html">read more <i
-												class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<!-- Service Block Two -->
-							<div class="service-block_two">
-								<div class="service-block_two-inner">
-									<div class="service-block_two-image">
-										<img src="images/service-7.jpg" alt "" />
-									</div>
-									<div class="service-block_two-content">
-										<div class="service-block_two-icon">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title"><a href="service-detail.html">Dairy <br>
-												Products</a></h4>
-									</div>
-									<div class="service-block_two-overlay overlay-layer"
-										style="background-image:url(images/service-7.jpg)">
-										<div class="service-block_two-icon_two">
-											<i class="flaticon-tractor"></i>
-										</div>
-										<h4 class="service-block_two-title_two"><a href="service-detail.html">Dairy <br>
-												Products</a></h4>
-										<div class="service-block_two-text">Lorem ipsum dolor sit amet, consectetur
-											adipiscing elit, sed do eiusmod tempor incididunt labore </div>
-										<a class="service-block_two-more" href="service-detail.html">read more <i
-												class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-
-				<!-- If we need navigation buttons -->
-				<div class="four-item-carousel-prev fas fa-arrow-left fa-fw"></div>
-				<div class="four-item-carousel-next fas fa-arrow-right fa-fw"></div>
-
-			</div>
-		</section>
-		<!-- End Services Two -->
 
 		<!-- Video One -->
 		<section class="video-one">
@@ -1304,76 +1226,6 @@
 
 
 
-		<!-- Food One -->
-		<section class="food-one" style="background-image:url(images/food-pattern.png)">
-			<div class="food-one_pattern overlay-layer" style="background-image:url(images/food-pattern-1.png)"></div>
-			<div class="auto-container">
-				<div class="row clearfix">
-
-					<!-- Image Column -->
-					<div class="food-one_image-column col-lg-6 col-md-12 col-sm-12">
-						<div class="food-one_image-outer">
-							<div class="food-one_image">
-								<img src="images/food.png" alt="" />
-							</div>
-							<div class="food-one_leaf">
-								<img src="images/leaf.png" alt="" />
-							</div>
-						</div>
-					</div>
-
-					<!-- Content Column -->
-					<div class="food-one_content-column col-lg-6 col-md-12 col-sm-12">
-						<div class="food-one_content-outer">
-							<!-- Sec Title -->
-							<div class="sec-title">
-								<div class="sec-title_title">Orgnic Pure Food</div>
-								<h2 class="sec-title_heading tx-split-text split-in-right">Natural Products For <br>
-									Lovers of Healthy Food</h2>
-								<div class="sec-title_text">Lorem ipsum dolor sit amet nsectetur cing elit. Suspe ndisse
-									suscipit sagittis leo sit met entum estibu dignissim posuere cubilia durae. Leo sit
-									met entum cubilia crae onec. <br> Lorem ipsum dolor sit amet adipiscing elit. Nulla
-									placerat posuere dui. Pellentesque venenatis sem non lacus ac auctor.</div>
-							</div>
-							<div class="row clearfix">
-
-								<!-- Food Block One -->
-								<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
-									<div class="food-block_one-inner trans-300 wow fadeInLeft" data-wow-delay="0ms"
-										data-wow-duration="1500ms">
-										<div class="food-block_one-icon trans-300 flaticon-vegetable-1"></div>
-										<h6 class="food-block_one-title trans-300">Fresh Vagetables</h6>
-									</div>
-								</div>
-
-								<!-- Food Block One -->
-								<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
-									<div class="food-block_one-inner trans-300 wow fadeInLeft" data-wow-delay="150ms"
-										data-wow-duration="1500ms">
-										<div class="food-block_one-icon trans-300 flaticon-tractor"></div>
-										<h6 class="food-block_one-title trans-300">Organic Products</h6>
-									</div>
-								</div>
-
-								<!-- Food Block One -->
-								<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
-									<div class="food-block_one-inner trans-300 wow fadeInLeft" data-wow-delay="300ms"
-										data-wow-duration="1500ms">
-										<div class="food-block_one-icon trans-300 flaticon-healthy-food"></div>
-										<h6 class="food-block_one-title trans-300">Dairy Products</h6>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<!-- End Food One -->
-
-
 
 		<!-- Team One -->
 		<section class="team-one">
@@ -1383,7 +1235,7 @@
 				<!-- Sec Title -->
 				<div class="sec-title light centered">
 					<div class="sec-title_title">team members</div>
-					<h2 class="sec-title_heading tx-split-text split-in-right">Meet Our Farmers</h2>
+					<h2 class="sec-title_heading tx-split-text split-in-right">Meet Our Team</h2>
 				</div>
 				<!-- End Sec Title -->
 
@@ -1462,143 +1314,398 @@
 		</section>
 		<!-- End Team One -->
 
-		<!-- Testimonial One -->
-		<section class="testimonial-one" style="background-image:url(images/map.png)">
-			<div class="auto-container">
-				<div class="row clearfix">
 
-					<!-- Content Column -->
-					<div class="testimonial-one_title-column col-lg-4 col-md-12 col-sm-12">
-						<div class="testimonial-one_title-outer">
-							<!-- Sec Title -->
-							<div class="sec-title">
-								<div class="sec-title_title">Cuotomer Rview</div>
-								<h2 class="sec-title_heading tx-split-text split-in-right">What They are Talking About
-									Agricu</h2>
+		<!--Products One (Farmology Batch 1)-->
+		<div class="farmology-scope">
+			<section class="farmology-products-one">
+				<div class="auto-container">
+					<div class="row">
+						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+							<div class="farmology-products-one__single">
+								<div class="farmology-products-one__img-box">
+									<div class="farmology-products-one__img">
+										<img src="assets/images/farmology_batch1/products-1-1.jpg" alt="">
+									</div>
+								</div>
+								<div class="farmology-products-one__content">
+									<div class="farmology-products-one__icon-and-title">
+										<h3 class="farmology-products-one__title"><a href="#">Fresh Vegetable</a></h3>
+										<div class="farmology-products-one__icon"><span class="icon-vegetable"></span>
+										</div>
+									</div>
+									<div class="farmology-products-one__text-and-read-more">
+										<div class="farmology-products-one__text-and-read-more-bg"
+											style="background-image: url(assets/images/farmology_batch1/products-one-text-bg.png);">
+										</div>
+										<p class="farmology-products-one__text">Our vegetables are cultivated naturally
+											to
+											bring you the best of every season.</p>
+										<div class="farmology-products-one__read-more"><a href="#">Read More<span
+													class="fas fa-arrow-right"></span></a></div>
+									</div>
+								</div>
 							</div>
-							<!-- Button Box -->
-							<div class="testimonial-one_button">
-								<a href="testimonial.html" class="theme-btn btn-style-one">
-									<span class="btn-wrap">
-										<span class="text-one">Discover More</span>
-										<span class="text-two">Discover More</span>
-									</span>
-								</a>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="200ms">
+							<div class="farmology-products-one__single">
+								<div class="farmology-products-one__img-box">
+									<div class="farmology-products-one__img">
+										<img src="assets/images/farmology_batch1/products-1-2.jpg" alt="">
+									</div>
+								</div>
+								<div class="farmology-products-one__content">
+									<div class="farmology-products-one__icon-and-title">
+										<h3 class="farmology-products-one__title"><a href="#">Dairy Product</a></h3>
+										<div class="farmology-products-one__icon"><span class="icon-cow"></span></div>
+									</div>
+									<div class="farmology-products-one__text-and-read-more">
+										<div class="farmology-products-one__text-and-read-more-bg"
+											style="background-image: url(assets/images/farmology_batch1/products-one-text-bg.png);">
+										</div>
+										<p class="farmology-products-one__text">From fresh milk to our dairy products
+											ensure
+											farm-fresh quality every day.</p>
+										<div class="farmology-products-one__read-more"><a href="#">Read More<span
+													class="fas fa-arrow-right"></span></a></div>
+									</div>
+								</div>
 							</div>
-
-							<!-- If we need navigation buttons -->
-							<div class="three-item-carousel-prev fas fa-arrow-left fa-fw"></div>
-							<div class="three-item-carousel-next fas fa-arrow-right fa-fw"></div>
-
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="100ms">
+							<div class="farmology-products-one__single">
+								<div class="farmology-products-one__img-box">
+									<div class="farmology-products-one__img">
+										<img src="assets/images/farmology_batch1/products-1-3.jpg" alt="">
+									</div>
+								</div>
+								<div class="farmology-products-one__content">
+									<div class="farmology-products-one__icon-and-title">
+										<h3 class="farmology-products-one__title"><a href="#">Livestock Product</a></h3>
+										<div class="farmology-products-one__icon"><span class="icon-hen-1"></span></div>
+									</div>
+									<div class="farmology-products-one__text-and-read-more">
+										<div class="farmology-products-one__text-and-read-more-bg"
+											style="background-image: url(assets/images/farmology_batch1/products-one-text-bg.png);">
+										</div>
+										<p class="farmology-products-one__text">From organic eggs, our Livestock Product
+											ensure farm-fresh quality every day.</p>
+										<div class="farmology-products-one__read-more"><a href="#">Read More<span
+													class="fas fa-arrow-right"></span></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="200ms">
+							<div class="farmology-products-one__single">
+								<div class="farmology-products-one__img-box">
+									<div class="farmology-products-one__img">
+										<img src="assets/images/farmology_batch1/products-1-4.jpg" alt="">
+									</div>
+								</div>
+								<div class="farmology-products-one__content">
+									<div class="farmology-products-one__icon-and-title">
+										<h3 class="farmology-products-one__title"><a href="#">Organic Fruits</a></h3>
+										<div class="farmology-products-one__icon"><span
+												class="icon-healthy-food"></span>
+										</div>
+									</div>
+									<div class="farmology-products-one__text-and-read-more">
+										<div class="farmology-products-one__text-and-read-more-bg"
+											style="background-image: url(assets/images/farmology_batch1/products-one-text-bg.png);">
+										</div>
+										<p class="farmology-products-one__text">Handpicked from our orchards fruits are
+											packed with freshness and nutrients.</p>
+										<div class="farmology-products-one__read-more"><a href="#">Read More<span
+													class="fas fa-arrow-right"></span></a></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+				</div>
+			</section>
 
-					<!-- Carousel Column -->
-					<div class="testimonial-one_carousel-column col-lg-8 col-md-12 col-sm-12">
-						<div class="testimonial-one_carousel-outer">
-
-							<div class="three-item-carousel swiper-container">
-								<div class="swiper-wrapper">
-
-									<!-- Slide -->
-									<div class="swiper-slide">
-										<!-- Testimonial Block One -->
-										<div class="testimonial-block_one">
-											<div class="testimonial-block_one-inner">
-												<div class="testimonial-block_one-icon flaticon-write"></div>
-												<div
-													class="d-flex justify-content-between align-items-center flex-wrap">
-													<div class="testimonial-block_one-author">
-														<img src="images/author-1.jpg" alt="" />
-													</div>
-													<div class="testimonial-block_one-rating">
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-													</div>
-												</div>
-												<div class="testimonial-block_one-text">Lorem ipsum dolor sit amet,
-													conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut
-													labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-												</div>
-												<div class="testimonial-block_one-designation">
-													Jasiona Marten <span>CEO - Co Founder</span>
-												</div>
-											</div>
-										</div>
+			<!--Project One (Farmology Batch 1)-->
+			<section class="farmology-project-one">
+				<div class="auto-container">
+					<div class="farmology-sec-title centered">
+						<div class="farmology-sec-title_title">Our Recent Projects</div>
+						<h2 class="farmology-sec-title_heading"
+							style="color: var(--farmology-extra); margin-bottom: 50px;">
+							Real
+							Projects
+							That Bring<br> Growth, Quality, And Trust</h2>
+					</div>
+					<div class="row masonary-layout">
+						<!-- Column 1 (Left) -->
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<!-- Item 1: Vegetable -->
+							<div class="farmology-project-one__single wow fadeInLeft" data-wow-delay="100ms">
+								<div class="farmology-project-one__img-box">
+									<div class="farmology-project-one__img">
+										<img src="assets/images/farmology_batch1/project-1-1.jpg" alt="">
 									</div>
-
-									<!-- Slide -->
-									<div class="swiper-slide">
-										<!-- Testimonial Block One -->
-										<div class="testimonial-block_one">
-											<div class="testimonial-block_one-inner">
-												<div class="testimonial-block_one-icon flaticon-write"></div>
-												<div
-													class="d-flex justify-content-between align-items-center flex-wrap">
-													<div class="testimonial-block_one-author">
-														<img src="images/author-2.jpg" alt="" />
-													</div>
-													<div class="testimonial-block_one-rating">
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-													</div>
-												</div>
-												<div class="testimonial-block_one-text">Lorem ipsum dolor sit amet,
-													conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut
-													labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-												</div>
-												<div class="testimonial-block_one-designation">
-													Jasiona Marten <span>CEO - Co Founder</span>
-												</div>
-											</div>
-										</div>
+									<div class="farmology-project-one__content">
+										<p class="farmology-project-one__sub-title">Vegetable</p>
+										<h3 class="farmology-project-one__title"><a href="#">Organic Farming
+												Projects</a>
+										</h3>
 									</div>
-
-									<!-- Slide -->
-									<div class="swiper-slide">
-										<!-- Testimonial Block One -->
-										<div class="testimonial-block_one">
-											<div class="testimonial-block_one-inner">
-												<div class="testimonial-block_one-icon flaticon-write"></div>
-												<div
-													class="d-flex justify-content-between align-items-center flex-wrap">
-													<div class="testimonial-block_one-author">
-														<img src="images/author-1.jpg" alt="" />
-													</div>
-													<div class="testimonial-block_one-rating">
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-														<span class="fa fa-star"></span>
-													</div>
-												</div>
-												<div class="testimonial-block_one-text">Lorem ipsum dolor sit amet,
-													conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut
-													labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-												</div>
-												<div class="testimonial-block_one-designation">
-													Jasiona Marten <span>CEO - Co Founder</span>
-												</div>
-											</div>
+									<div class="farmology-project-one__content-2">
+										<p class="farmology-project-one__sub-title-2">Vegetable</p>
+										<h4 class="farmology-project-one__title-2"><a href="#">Organic Farming
+												Projects</a>
+										</h4>
+										<p class="farmology-project-one__text">Blending tradition with technology for
+											smarter agriculture</p>
+										<div class="farmology-project-one__arrow">
+											<a href="#"><span class="fas fa-arrow-right"></span></a>
 										</div>
 									</div>
 								</div>
 							</div>
 
+							<!-- Item 4: Livestock -->
+							<div class="farmology-project-one__single wow fadeInLeft" data-wow-delay="200ms">
+								<div class="farmology-project-one__img-box">
+									<div class="farmology-project-one__img"><img
+											src="assets/images/farmology_batch1/project-1-4.jpg" alt=""></div>
+									<div class="farmology-project-one__content">
+										<p class="farmology-project-one__sub-title">Livestock</p>
+										<h4 class="farmology-project-one__title"><a href="#">Livestock Farming
+												Projects</a>
+										</h4>
+									</div>
+									<div class="farmology-project-one__content-2">
+										<p class="farmology-project-one__sub-title-2">Livestock</p>
+										<h3 class="farmology-project-one__title-2"><a href="#">Livestock Farming
+												Projects</a></h3>
+										<p class="farmology-project-one__text">Blending tradition with technology for
+											smarter agriculture</p>
+										<div class="farmology-project-one__arrow"><a href="#"><span
+													class="fas fa-arrow-right"></span></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Column 2 (Center - Tall) -->
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<!-- Item 2: Dairy -->
+							<div class="farmology-project-one__single farmology-project-one__single--tall wow fadeInUp"
+								data-wow-delay="300ms">
+								<div class="farmology-project-one__img-box">
+									<div class="farmology-project-one__img">
+										<img src="assets/images/farmology_batch1/project-1-2.jpg" alt="">
+									</div>
+									<div class="farmology-project-one__content">
+										<p class="farmology-project-one__sub-title">Dairy</p>
+										<h3 class="farmology-project-one__title"><a href="#">Dairy Delight Project</a>
+										</h3>
+									</div>
+									<div class="farmology-project-one__content-2">
+										<p class="farmology-project-one__sub-title-2">Dairy</p>
+										<h4 class="farmology-project-one__title-2"><a href="#">Dairy Delight Project</a>
+										</h4>
+										<p class="farmology-project-one__text">Proper health, and feeding, essential for
+											productivity.</p>
+										<div class="farmology-project-one__arrow">
+											<a href="#"><span class="fas fa-arrow-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Column 3 (Right) -->
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<!-- Item 3: NutriHarvest -->
+							<div class="farmology-project-one__single wow fadeInRight" data-wow-delay="100ms">
+								<div class="farmology-project-one__img-box">
+									<div class="farmology-project-one__img"><img
+											src="assets/images/farmology_batch1/project-1-3.jpg" alt=""></div>
+									<div class="farmology-project-one__content">
+										<p class="farmology-project-one__sub-title">NutriHarvest</p>
+										<h3 class="farmology-project-one__title"><a href="#">Healthy Harvest
+												Initiative</a>
+										</h3>
+									</div>
+									<div class="farmology-project-one__content-2">
+										<p class="farmology-project-one__sub-title-2">NutriHarvest</p>
+										<h4 class="farmology-project-one__title-2"><a href="#">Healthy Harvest
+												Initiative</a></h4>
+										<p class="farmology-project-one__text">Dedicated to every stage of farming
+											excellence</p>
+										<div class="farmology-project-one__arrow"><a href="#"><span
+													class="fas fa-arrow-right"></span></a></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Item 5: Agri-Tech -->
+							<div class="farmology-project-one__single wow fadeInRight" data-wow-delay="200ms">
+								<div class="farmology-project-one__img-box">
+									<div class="farmology-project-one__img"><img
+											src="assets/images/farmology_batch1/project-1-5.jpg" alt=""></div>
+									<div class="farmology-project-one__content">
+										<p class="farmology-project-one__sub-title">Agri-Tech</p>
+										<h4 class="farmology-project-one__title"><a href="#">Agri-Tech Innovation</a>
+										</h4>
+									</div>
+									<div class="farmology-project-one__content-2">
+										<p class="farmology-project-one__sub-title-2">Agri-Tech</p>
+										<h3 class="farmology-project-one__title-2"><a href="#">Agri-Tech Innovation</a>
+										</h3>
+										<p class="farmology-project-one__text">Eco-friendly fertilizers & natural crop
+											protection.</p>
+										<div class="farmology-project-one__arrow"><a href="#"><span
+													class="fas fa-arrow-right"></span></a></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-
 				</div>
-			</div>
-		</section>
-		<!-- End Testimonial One -->
+			</section>
+
+			<!--Do And Donts (Farmology Batch 1)-->
+			<section class="farmology-do-and-donts">
+				<div class="farmology-do-and-donts__bg"></div>
+				<div class="auto-container">
+					<div class="row">
+						<div class="col-xl-4">
+							<div class="farmology-do-and-donts__left wow fadeInLeft" data-wow-delay="100ms">
+								<div class="farmology-do-and-donts__single-title"><span>Do’s</span></div>
+								<div class="farmology-do-and-donts__single farmology-do-and-donts__single-1">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-checked-1"></span>
+										<h4 class="farmology-do-and-donts__text">Use natural fertilizers & compost</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single farmology-do-and-donts__single-2">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-checked-1"></span>
+										<h4 class="farmology-do-and-donts__text">Irrigate crops with clean water</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single farmology-do-and-donts__single-3">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-checked-1"></span>
+										<h4 class="farmology-do-and-donts__text">Rotate crops<br> for soil<br> health
+										</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single farmology-do-and-donts__single-4">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-checked-1"></span>
+										<h4 class="farmology-do-and-donts__text">Practice sustainable farming</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single farmology-do-and-donts__single-5">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-checked-1"></span>
+										<h4 class="farmology-do-and-donts__text">Choose fresh, and organic produce</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4">
+							<div class="farmology-do-and-donts__middle">
+								<div class="farmology-do-and-donts__img"><img
+										src="assets/images/farmology_batch1/do-and-donts-img-1.png" alt=""></div>
+								<div class="section-title centered">
+									<h2 class="section-title__title">Simple Guidelines For
+										Better Harvest And A Healthier Planet</h2>
+								</div>
+								<p class="farmology-do-and-donts__middle-text">At
+									EcoMatt,
+									we bring you the purest and freshest products straight from our fields. every
+									product is
+									cultivated naturally, ensuring 100% farm-fresh goodness.</p>
+								<div class="farmology-do-and-donts__btn-box">
+									<a class="thm-btn" href="#">Grow With Us <i class="fa-solid fa-arrow-right"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4">
+							<div class="farmology-do-and-donts__right wow fadeInRight" data-wow-delay="100ms">
+								<div class="farmology-do-and-donts__single-title"><span>Don’ts</span></div>
+								<div class="farmology-do-and-donts__single-one farmology-do-and-donts__single-6">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-cross"></span>
+										<h4 class="farmology-do-and-donts__text">Don’t overuse chemical pesticides</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single-one farmology-do-and-donts__single-7">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-cross"></span>
+										<h4 class="farmology-do-and-donts__text">no waste water during irrigation</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single-one farmology-do-and-donts__single-8">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-cross"></span>
+										<h4 class="farmology-do-and-donts__text">Don’t<br> ignore soil<br> testing</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single-one farmology-do-and-donts__single-9">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-cross"></span>
+										<h4 class="farmology-do-and-donts__text">Don’t compromise on quality</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+								<div class="farmology-do-and-donts__single-one farmology-do-and-donts__single-10">
+									<div class="farmology-do-and-donts__single-bg-shape"
+										style="background-image: url(assets/images/farmology_batch1/do-and-donts-single-bg-shape.png);">
+									</div>
+									<div class="farmology-do-and-donts__icon"><span class="icon-cross"></span>
+										<h4 class="farmology-do-and-donts__text">no use harmful packaging</h4>
+									</div>
+									<div class="farmology-do-and-donts__single-shape-1"></div>
+									<div class="farmology-do-and-donts__single-shape-2"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 
 		<!-- News One -->
 		<section class="news-one">
@@ -1729,6 +1836,815 @@
 			</div>
 		</section>
 		<!-- Clients One -->
+
+		<!--Pricing One Start-->
+		<section class="pricing-one farmology-scope">
+			<div class="container">
+				<div class="section-title text-center sec-title-animation animation-style1">
+					<div class="section-title__tagline-box">
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-1.png" alt="">
+						</div>
+						<h6 class="section-title__tagline">Our Packages</h6>
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-2.png" alt="">
+						</div>
+					</div>
+					<h3 class="section-title__title title-animation">Choose The Right Package For<br> Our Farm Products
+					</h3>
+				</div>
+				<div class="row">
+					<!--Pricing One Single Start-->
+					<div class="col-xl-4 col-lg-4 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+						<div class="pricing-one__single">
+							<div class="pricing-one__single-bg-shape"
+								style="background-image: url(assets/images/shapes/pricing-one-single-bg-shape.png);">
+							</div>
+							<div class="pricing-one__top-inner">
+								<div class="pricing-one__sub-title-and-price">
+									<span class="pricing-one__sub-title">Starter Plan</span>
+									<h2 class="pricing-one__price">$99/ <span>Per Month</span></h2>
+								</div>
+								<div class="pricing-one__top-icon">
+									<span class="fas fa-star"></span>
+								</div>
+							</div>
+							<div class="pricing-one__point-and-btn">
+								<ul class="pricing-one__points list-unstyled">
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Cow Milk</h5>
+											<p>10 liters</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Egg</h5>
+											<p>35 egg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Beef</h5>
+											<p>Not Included</p>
+										</div>
+										<div class="icon-two">
+											<span class="fas fa-times"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Goat Meat</h5>
+											<p>Not Included</p>
+										</div>
+										<div class="icon-two">
+											<span class="fas fa-times"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Dairy Products</h5>
+											<p>Not Included</p>
+										</div>
+										<div class="icon-two">
+											<span class="fas fa-times"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Chicken</h5>
+											<p>5Kg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+								</ul>
+								<div class="pricing-one__btn-box">
+									<a href="#" class="thm-btn">Order Now
+										<i class="fa-solid fa-arrow-right"></i>
+										<span class="hover-btn hover-bx"></span>
+										<span class="hover-btn hover-bx2"></span>
+										<span class="hover-btn hover-bx3"></span>
+										<span class="hover-btn hover-bx4"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Pricing One Single End-->
+					<!--Pricing One Single Start-->
+					<div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+						<div class="pricing-one__single">
+							<div class="pricing-one__single-bg-shape"
+								style="background-image: url(assets/images/shapes/pricing-one-single-bg-shape.png);">
+							</div>
+							<div class="pricing-one__top-inner">
+								<div class="pricing-one__sub-title-and-price">
+									<span class="pricing-one__sub-title">Professional Plan</span>
+									<h2 class="pricing-one__price">$199/ <span>Per Month</span></h2>
+								</div>
+								<div class="pricing-one__top-icon">
+									<span class="fas fa-star"></span>
+								</div>
+							</div>
+							<div class="pricing-one__point-and-btn">
+								<ul class="pricing-one__points list-unstyled">
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Cow Milk</h5>
+											<p>20 liters</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Egg</h5>
+											<p>50 egg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Beef</h5>
+											<p>10kg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Goat Meat</h5>
+											<p>10kg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Dairy Products</h5>
+											<p>Not Included</p>
+										</div>
+										<div class="icon-two">
+											<span class="fas fa-times"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Chicken</h5>
+											<p>10Kg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+								</ul>
+								<div class="pricing-one__btn-box">
+									<a href="#" class="thm-btn">Order Now
+										<i class="fa-solid fa-arrow-right"></i>
+										<span class="hover-btn hover-bx"></span>
+										<span class="hover-btn hover-bx2"></span>
+										<span class="hover-btn hover-bx3"></span>
+										<span class="hover-btn hover-bx4"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Pricing One Single End-->
+					<!--Pricing One Single Start-->
+					<div class="col-xl-4 col-lg-4 col-md-6 wow fadeInRight" data-wow-delay="300ms">
+						<div class="pricing-one__single">
+							<div class="pricing-one__single-bg-shape"
+								style="background-image: url(assets/images/shapes/pricing-one-single-bg-shape.png);">
+							</div>
+							<div class="pricing-one__top-inner">
+								<div class="pricing-one__sub-title-and-price">
+									<span class="pricing-one__sub-title">Enterprise Plan</span>
+									<h2 class="pricing-one__price">$299/ <span>Per Month</span></h2>
+								</div>
+								<div class="pricing-one__top-icon">
+									<span class="fas fa-star"></span>
+								</div>
+							</div>
+							<div class="pricing-one__point-and-btn">
+								<ul class="pricing-one__points list-unstyled">
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Cow Milk</h5>
+											<p>50 liters</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Egg</h5>
+											<p>70 egg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Beef</h5>
+											<p>15kg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Cow Meat</h5>
+											<p>15kg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Dairy Products</h5>
+											<p>Cheese, Yogurt, Butter</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+									<li>
+										<div class="pricing-one__points-text-box">
+											<h5>Chicken</h5>
+											<p>15Kg</p>
+										</div>
+										<div class="icon">
+											<span class="fas fa-check"></span>
+										</div>
+									</li>
+								</ul>
+								<div class="pricing-one__btn-box">
+									<a href="#" class="thm-btn">Order Now
+										<i class="fa-solid fa-arrow-right"></i>
+										<span class="hover-btn hover-bx"></span>
+										<span class="hover-btn hover-bx2"></span>
+										<span class="hover-btn hover-bx3"></span>
+										<span class="hover-btn hover-bx4"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Pricing One Single End-->
+				</div>
+			</div>
+		</section>
+		<!--Pricing One End-->
+
+
+
+
+
+		<!--Blog One Start -->
+		<section class="blog-one">
+			<div class="container">
+				<div class="section-title text-center sec-title-animation animation-style1">
+					<div class="section-title__tagline-box">
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-1.png" alt="">
+						</div>
+						<h6 class="section-title__tagline">Client Feedback</h6>
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-2.png" alt="">
+						</div>
+					</div>
+					<h3 class="section-title__title title-animation">Real Stories Of Trust, Freshness<br> And
+						Satisfaction.
+					</h3>
+				</div>
+				<div class="row">
+					<!--Blog One Single Start-->
+					<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+						<div class="blog-one__single">
+							<div class="blog-one__single-inner">
+								<div class="blog-one__img-box">
+									<div class="blog-one__img">
+										<img src="assets/images/blog/blog-1-1.jpg" alt="">
+										<div class="blog-one__plus">
+											<a href="blog-details.html"><i class="fas fa-plus"></i></a>
+										</div>
+										<div class="blog-one__tag">
+											<a href="blog-details.html">Organic</a>
+										</div>
+									</div>
+									<div class="blog-one__date">
+										<p>25 <span>Mar</span></p>
+									</div>
+								</div>
+								<div class="blog-one__content">
+									<div class="blog-one__content-bg-shape"
+										style="background-image: url(assets/images/shapes/blog-one-content-bg-shape.png);">
+									</div>
+									<ul class="blog-one__meta list-unstyled">
+										<li>
+											<a href="blog-details.html">
+												<span class="fas fa-user"></span>Admin
+											</a>
+										</li>
+										<li>
+											<a href="blog-details.html">
+												<span class="fas fa-comments"></span>Comment
+											</a>
+										</li>
+									</ul>
+									<h3 class="blog-one__title"><a href="blog-details.html">Why Fresh, Organic
+											Vegetables
+											Matter</a></h3>
+									<p class="blog-one__text">Learn how organic vegetables benefit your health and the
+										planet at the same time.</p>
+								</div>
+								<div class="blog-one__read-more">
+									<a href="blog-details.html">Read More<span class="fas fa-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Blog One Single End-->
+					<!--Blog One Single Start-->
+					<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+						<div class="blog-one__single">
+							<div class="blog-one__single-inner">
+								<div class="blog-one__img-box">
+									<div class="blog-one__img">
+										<img src="assets/images/blog/blog-1-2.jpg" alt="">
+										<div class="blog-one__plus">
+											<a href="blog-details.html"><i class="fas fa-plus"></i></a>
+										</div>
+										<div class="blog-one__tag">
+											<a href="blog-details.html">FreshProduce</a>
+										</div>
+									</div>
+									<div class="blog-one__date">
+										<p>05 <span>Jun</span></p>
+									</div>
+								</div>
+								<div class="blog-one__content">
+									<div class="blog-one__content-bg-shape"
+										style="background-image: url(assets/images/shapes/blog-one-content-bg-shape.png);">
+									</div>
+									<ul class="blog-one__meta list-unstyled">
+										<li>
+											<a href="blog-details.html">
+												<span class="fas fa-user"></span>Admin
+											</a>
+										</li>
+										<li>
+											<a href="blog-details.html">
+												<span class="fas fa-comments"></span>Comment
+											</a>
+										</li>
+									</ul>
+									<h3 class="blog-one__title"><a href="blog-details.html">Health Benefits of Organic
+											Vegetables</a></h3>
+									<p class="blog-one__text">Learn how organic vegetables benefit your health and the
+										planet at the same time.</p>
+								</div>
+								<div class="blog-one__read-more">
+									<a href="blog-details.html">Read More<span class="fas fa-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Blog One Single End-->
+					<!--Blog One Single Start-->
+					<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="300ms">
+						<div class="blog-one__single">
+							<div class="blog-one__single-inner">
+								<div class="blog-one__img-box">
+									<div class="blog-one__img">
+										<img src="assets/images/blog/blog-1-3.jpg" alt="">
+										<div class="blog-one__plus">
+											<a href="blog-details.html"><i class="fas fa-plus"></i></a>
+										</div>
+										<div class="blog-one__tag">
+											<a href="blog-details.html">AgriTech</a>
+										</div>
+									</div>
+									<div class="blog-one__date">
+										<p>13 <span>Aug</span></p>
+									</div>
+								</div>
+								<div class="blog-one__content">
+									<div class="blog-one__content-bg-shape"
+										style="background-image: url(assets/images/shapes/blog-one-content-bg-shape.png);">
+									</div>
+									<ul class="blog-one__meta list-unstyled">
+										<li>
+											<a href="blog-details.html">
+												<span class="fas fa-user"></span>Admin
+											</a>
+										</li>
+										<li>
+											<a href="blog-details.html">
+												<span class="fas fa-comments"></span>Comment
+											</a>
+										</li>
+									</ul>
+									<h3 class="blog-one__title"><a href="blog-details.html">How Technology is Changing
+											Farming</a></h3>
+									<p class="blog-one__text">Learn how organic vegetables benefit your health and the
+										planet at the same time.</p>
+								</div>
+								<div class="blog-one__read-more">
+									<a href="blog-details.html">Read More<span class="fas fa-arrow-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Blog One Single End-->
+				</div>
+			</div>
+		</section>
+		<!--Blog One End -->
+
+		<!--Shop Now Start -->
+		<section class="shop-now">
+			<div class="container">
+				<div class="section-title text-center sec-title-animation animation-style1">
+					<div class="section-title__tagline-box">
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-1.png" alt="">
+						</div>
+						<h6 class="section-title__tagline">Shop Now</h6>
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-2.png" alt="">
+						</div>
+					</div>
+					<h3 class="section-title__title title-animation">Shop Fresh, 100% Organic <br>& Chemical-Free.
+					</h3>
+				</div>
+				<div class="row">
+					<!--Shop Now Single Start-->
+					<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+						<div class="shop-now__single">
+							<div class="shop-now__img">
+								<img src="assets/images/shop/shop-now-1-1.png" alt="">
+								<img src="assets/images/shop/shop-now-1-1.png" alt="">
+								<div class="shop-now__review">
+									<i class="fa fa-star"></i>
+									<p>4.9</p>
+								</div>
+							</div>
+							<div class="shop-now__content">
+								<div class="shop-now__content-left">
+									<p><del>$33.00</del> $28.00</p>
+									<h4>
+										<a href="product-details.html">
+											Golden Ginger
+										</a>
+									</h4>
+								</div>
+								<ul class="shop-now__info list-unstyled">
+									<li>
+										<a href="#" title="Add to Wishlist">
+											<i class="far fa-heart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Add to cart">
+											<i class="fas fa-cart-plus"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Quick View">
+											<i class="far fa-eye"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Compare">
+											<i class="fas fa-repeat"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Shop Now Single End-->
+					<!--Shop Now Single Start-->
+					<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="200ms">
+						<div class="shop-now__single">
+							<div class="shop-now__img">
+								<img src="assets/images/shop/shop-now-1-2.png" alt="">
+								<img src="assets/images/shop/shop-now-1-2.png" alt="">
+								<div class="shop-now__review">
+									<i class="fa fa-star"></i>
+									<p>5.0</p>
+								</div>
+							</div>
+							<div class="shop-now__content">
+								<div class="shop-now__content-left">
+									<p>$42.00</p>
+									<h4>
+										<a href="product-details.html">
+											Farm Fresh Eggs (30p)
+										</a>
+									</h4>
+								</div>
+								<ul class="shop-now__info list-unstyled">
+									<li>
+										<a href="#" title="Add to Wishlist">
+											<i class="far fa-heart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Add to cart">
+											<i class="fas fa-cart-plus"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Quick View">
+											<i class="far fa-eye"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Compare">
+											<i class="fas fa-repeat"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Shop Now Single End-->
+					<!--Shop Now Single Start-->
+					<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="100ms">
+						<div class="shop-now__single">
+							<div class="shop-now__img">
+								<img src="assets/images/shop/shop-now-1-3.png" alt="">
+								<img src="assets/images/shop/shop-now-1-3.png" alt="">
+								<div class="shop-now__review">
+									<i class="fa fa-star"></i>
+									<p>4.7</p>
+								</div>
+							</div>
+							<div class="shop-now__content">
+								<div class="shop-now__content-left">
+									<p><del>$55.00</del>$45.00</p>
+									<h4>
+										<a href="product-details.html">
+											Pure & Fresh Milk (11)
+										</a>
+									</h4>
+								</div>
+								<ul class="shop-now__info list-unstyled">
+									<li>
+										<a href="#" title="Add to Wishlist">
+											<i class="far fa-heart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Add to cart">
+											<i class="fas fa-cart-plus"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Quick View">
+											<i class="far fa-eye"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Compare">
+											<i class="fa fa-solid fa-repeat"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Shop Now Single End-->
+					<!--Shop Now Single Start-->
+					<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="200ms">
+						<div class="shop-now__single">
+							<div class="shop-now__img">
+								<img src="assets/images/shop/shop-now-1-4.png" alt="">
+								<img src="assets/images/shop/shop-now-1-4.png" alt="">
+								<div class="shop-now__review">
+									<i class="fa fa-star"></i>
+									<p>4.5</p>
+								</div>
+							</div>
+							<div class="shop-now__content">
+								<div class="shop-now__content-left">
+									<p> $38.00</p>
+									<h4>
+										<a href="product-details.html">
+											Sweet Corn
+										</a>
+									</h4>
+								</div>
+								<ul class="shop-now__info list-unstyled">
+									<li>
+										<a href="#" title="Add to Wishlist">
+											<i class="fa fa-regular fa-heart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Add to cart">
+											<i class="fa fa-solid fa-cart-plus"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Quick View">
+											<i class="fa fa-regular fa-eye"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" title="Compare">
+											<i class="fa fa-solid fa-repeat"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--Shop Now Single End-->
+				</div>
+				<div class="shop-now__btn-box">
+					<a class="thm-btn" href="products.html">View All Products
+						<i class="fas fa-long-arrow-right"></i>
+						<span class="hover-btn hover-bx"></span>
+						<span class="hover-btn hover-bx2"></span>
+						<span class="hover-btn hover-bx3"></span>
+						<span class="hover-btn hover-bx4"></span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!--Shop Now End -->
+
+		<!-- Blog Two Start -->
+		<section class="blog-two">
+			<div class="container">
+				<div class="section-title text-center sec-title-animation animation-style1">
+					<div class="section-title__tagline-box">
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-1.png" alt="">
+						</div>
+						<h6 class="section-title__tagline">Our Blogs</h6>
+						<div class="section-title__shape-1">
+							<img src="assets/images/resources/section-title-shape-2.png" alt="">
+						</div>
+					</div>
+					<h3 class="section-title__title title-animation">Get Updates On Farm Life
+					</h3>
+				</div>
+				<div class="row">
+					<!--Blog Two Single Start-->
+					<div class="col-xl-6 wow fadeInLeft" data-wow-delay="100ms">
+						<div class="blog-two__single">
+							<div class="blog-two__img">
+								<img src="assets/images/blog/blog-2-1.jpg" alt="">
+								<div class="blog-two__tags">
+									<span>Dairy Farming</span>
+									<span>Milk Production</span>
+								</div>
+							</div>
+							<div class="blog-two__content">
+								<div class="blog-two__user">
+									<div class="blog-two__user-img">
+										<img src="assets/images/blog/blog-two-user-1.jpg" alt="">
+									</div>
+									<p class="blog-two__user-title">Malaika alise</p>
+								</div>
+								<ul class="blog-two__meta list-unstyled">
+									<li>
+										<a href="blog-details.html"><span class="far fa-calendar-alt"></span>April 5,
+											2025</a>
+									</li>
+									<li>
+										<a href="blog-details.html"><span class="fal fa-comments"></span>80
+											Comments</a>
+									</li>
+								</ul>
+								<h3 class="blog-two__title"><a href="blog-details.html">How small-scale Livestock
+										farming is changing rural livelihoods.</a></h3>
+								<p class="blog-two__text">Explore feeding techniques and modern tools that ensure better
+									milk quality. Goat Farming for Sustainable Income</p>
+								<div class="blog-two__btn-box">
+									<a href="blog-details.html" class="thm-btn">Read More
+										<i class="fas fa-long-arrow-right"></i>
+										<span class="hover-btn hover-bx"></span>
+										<span class="hover-btn hover-bx2"></span>
+										<span class="hover-btn hover-bx3"></span>
+										<span class="hover-btn hover-bx4"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Blog Two Single End-->
+					<div class="col-xl-6">
+						<!-- Blog Two Single Two Start -->
+						<div class="blog-two__single-two wow fadeInUp" data-wow-delay="200ms">
+							<div class="blog-two__img-two">
+								<img src="assets/images/blog/blog-2-2.jpg" alt="">
+								<div class="blog-two__tags-two">
+									<span>Organic Farming</span>
+								</div>
+							</div>
+							<div class="blog-two__content-two">
+								<div class="blog-two__user-two">
+									<div class="blog-two__user-two-img">
+										<img src="assets/images/blog/blog-two-user-2.jpg" alt="">
+									</div>
+									<p class="blog-two__user-two-title">John Smith</p>
+								</div>
+								<ul class="blog-two__meta-two list-unstyled">
+									<li>
+										<a href="blog-details.html"><span class="far fa-calendar-alt"></span>Feb 25,
+											2025</a>
+									</li>
+									<li>
+										<a href="blog-details.html"><span class="fal fa-comments"></span>22
+											Comments</a>
+									</li>
+								</ul>
+								<h3 class="blog-two__title-two"><a href="blog-details.html">Benefits of Organic
+										Vegetable Farming.</a></h3>
+								<p class="blog-two__text-two">Organic methods improve soil health and boost
+									yields naturally.</p>
+								<div class="blog-two__btn-box-two">
+									<a href="blog-details.html" class="thm-btn">Read More
+										<i class="fas fa-long-arrow-right"></i>
+										<span class="hover-btn hover-bx"></span>
+										<span class="hover-btn hover-bx2"></span>
+										<span class="hover-btn hover-bx3"></span>
+										<span class="hover-btn hover-bx4"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Blog Two Single Two End -->
+						<!-- Blog Two Single Two Start -->
+						<div class="blog-two__single-two wow fadeInUp" data-wow-delay="300ms">
+							<div class="blog-two__img-two">
+								<img src="assets/images/blog/blog-2-3.jpg" alt="">
+								<div class="blog-two__tags-two">
+									<span>Poultry Farming</span>
+								</div>
+							</div>
+							<div class="blog-two__content-two">
+								<div class="blog-two__user-two  blog-two__user-three">
+									<div class="blog-two__user-two-img">
+										<img src="assets/images/blog/blog-two-user-3.jpg" alt="">
+									</div>
+									<p class="blog-two__user-two-title">Jerin jara</p>
+								</div>
+								<ul class="blog-two__meta-two list-unstyled">
+									<li>
+										<a href="blog-details.html"><span class="far fa-calendar-alt"></span>May 19,
+											2025</a>
+									</li>
+									<li>
+										<a href="blog-details.html"><span class="fal fa-comments"></span>15
+											Comments</a>
+									</li>
+								</ul>
+								<h3 class="blog-two__title-two"><a href="blog-details.html">Free-Range Poultry Farming
+										Explained.</a></h3>
+								<p class="blog-two__text-two">Practical tips for efficient feeding and disease
+									management.</p>
+								<div class="blog-two__btn-box-two">
+									<a href="blog-details.html" class="thm-btn">Read More
+										<i class="fas fa-long-arrow-right"></i>
+										<span class="hover-btn hover-bx"></span>
+										<span class="hover-btn hover-bx2"></span>
+										<span class="hover-btn hover-bx3"></span>
+										<span class="hover-btn hover-bx4"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Blog Two Single Two End -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Blog Two End -->
+
 
 		<!-- Main Footer -->
 		<footer class="main-footer">

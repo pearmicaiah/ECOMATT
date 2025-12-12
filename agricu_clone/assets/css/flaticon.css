@@ -1,0 +1,278 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?orkqwr');
+  src: url('../fonts/icomoon.eot?orkqwr#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?orkqwr') format('truetype'),
+    url('../fonts/icomoon.woff?orkqwr') format('woff'),
+    url('../fonts/icomoon.svg?orkqwr#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+.icon-corn:before {
+  content: "\e900";
+}
+
+.icon-hydroponic-gardening:before {
+  content: "\e901";
+}
+
+.icon-planting:before {
+  content: "\e902";
+}
+
+.icon-sustainable:before {
+  content: "\e903";
+}
+
+.icon-trophy:before {
+  content: "\e904";
+}
+
+.icon-leaf:before {
+  content: "\e905";
+}
+
+.icon-pointed-star:before {
+  content: "\e906";
+}
+
+.icon-harvester:before {
+  content: "\e907";
+}
+
+.icon-harvester-1:before {
+  content: "\e908";
+}
+
+.icon-flour:before {
+  content: "\e909";
+}
+
+.icon-wheat-sack:before {
+  content: "\e90a";
+}
+
+.icon-corn-1:before {
+  content: "\e90b";
+}
+
+.icon-corn-2:before {
+  content: "\e90c";
+}
+
+.icon-barley:before {
+  content: "\e90d";
+}
+
+.icon-wheat-grain:before {
+  content: "\e90e";
+}
+
+.icon-right-arrow:before {
+  content: "\e90f";
+}
+
+.icon-left-arrow:before {
+  content: "\e910";
+}
+
+.icon-tractor:before {
+  content: "\e911";
+}
+
+.icon-tick:before {
+  content: "\e912";
+}
+
+.icon-check-mark:before {
+  content: "\e913";
+}
+
+.icon-seeding:before {
+  content: "\e914";
+}
+
+.icon-precision-agriculture:before {
+  content: "\e915";
+}
+
+.icon-planting-1:before {
+  content: "\e916";
+}
+
+.icon-supply-chain:before {
+  content: "\e917";
+}
+
+.icon-logistics:before {
+  content: "\e918";
+}
+
+.icon-farming:before {
+  content: "\e919";
+}
+
+.icon-vegetable:before {
+  content: "\e91a";
+}
+
+.icon-kale:before {
+  content: "\e91b";
+}
+
+.icon-vegetables:before {
+  content: "\e91c";
+}
+
+.icon-animal:before {
+  content: "\e91d";
+}
+
+.icon-dairy-products:before {
+  content: "\e91e";
+}
+
+.icon-hen:before {
+  content: "\e91f";
+}
+
+.icon-hen-1:before {
+  content: "\e920";
+}
+
+.icon-healthy-food:before {
+  content: "\e921";
+}
+
+.icon-farmer:before {
+  content: "\e922";
+}
+
+.icon-plant:before {
+  content: "\e923";
+}
+
+.icon-plant-1:before {
+  content: "\e924";
+}
+
+.icon-corn-3:before {
+  content: "\e925";
+}
+
+.icon-honesty:before {
+  content: "\e926";
+}
+
+.icon-guarantee:before {
+  content: "\e927";
+}
+
+.icon-trusted:before {
+  content: "\e928";
+}
+
+.icon-checked:before {
+  content: "\e929";
+}
+
+.icon-checked-1:before {
+  content: "\e92a";
+}
+
+.icon-cross:before {
+  content: "\e92b";
+}
+
+.icon-left:before {
+  content: "\e92c";
+}
+
+.icon-right:before {
+  content: "\e92d";
+}
+
+.icon-eggs:before {
+  content: "\e92e";
+}
+
+.icon-milk:before {
+  content: "\e92f";
+}
+
+.icon-butcher:before {
+  content: "\e930";
+}
+
+.icon-call:before {
+  content: "\e931";
+}
+
+.icon-telephone:before {
+  content: "\e932";
+}
+
+.icon-pin:before {
+  content: "\e933";
+}
+
+.icon-email:before {
+  content: "\e934";
+}
+
+.icon-email-1:before {
+  content: "\e935";
+}
+
+.icon-check:before {
+  content: "\e936";
+}
+
+.icon-math:before {
+  content: "\e937";
+}
+
+.icon-product:before {
+  content: "\e938";
+}
+
+.icon-satisfication:before {
+  content: "\e939";
+}
+
+.icon-stars:before {
+  content: "\e93a";
+}
+
+.icon-cow:before {
+  content: "\e93b";
+}
+
+.icon-milk-1:before {
+  content: "\e93c";
+}
+
+.icon-milk-2:before {
+  content: "\e93d";
+}
