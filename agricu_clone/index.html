@@ -8,6 +8,7 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/swiper.min.css" rel="stylesheet">
 	<link href="css/owl-carousel/owl.carousel.min.css" rel="stylesheet">
 	<link href="css/owl-carousel/owl.theme.default.min.css" rel="stylesheet">
 	<link href="css/agrofa-icons/style.css" rel="stylesheet">
@@ -587,130 +588,145 @@
 		<!-- Slider One -->
 		<!-- main-slider-start -->
 		<section class="main-slider-one">
-			<div class="main-slider-one__carousel agrofa-owl__carousel owl-carousel" data-owl-options='{
-		"loop": true,
-		"animateOut": "fadeOut",
-		"animateIn": "fadeIn",
-		"items": 1,
-		"autoplay": false,
-		"autoplayTimeout": 7000,
-		"smartSpeed": 1000,
-		"nav": true,
-        "navText": ["<span class=\"icon-left-arrow1\"></span>","<span class=\"icon-right-arrow1\"></span>"],
-		"dots": false,
-		"margin": 0
-		}'>
-				<div class="item">
-					<div class="main-slider-one__item">
-						<div class="main-slider-one__bg"
-							style="background-image: url('images/hero-images/hero-img1-1.jpg')"></div>
+			<div class="swiper hero-swiper">
+				<div class="swiper-wrapper">
+					<!-- Slide 1 (Video) -->
+					<div class="swiper-slide">
+						<video class="hero-video" muted autoplay playsinline>
+							<source src="assets/ecomatt_farm.mp4" type="video/mp4">
+						</video>
+					</div>
+
+					<!-- Slide 2 -->
+					<div class="swiper-slide">
+						<div class="slide-bg" style="background-image: url('images/hero-images/hero-img1-2.jpg')"></div>
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12 text-center">
-									<div class="main-slider-one__content">
+									<div class="main-slider-one__content" data-swiper-parallax="-300">
 										<div class="main-slider-one__sub-title-bx">
 											<img class="main-slider-one__tree-icon"
 												src="images/shapes/hero-tree-icon1-1.png" alt="agrofa" />
 											<h5 class="main-slider-one__sub-title">Organic & Eco Solutions</h5>
 										</div>
-										<!-- slider-sub-title -->
-										<h1 class="main-slider-one__title">Your Finest Option for Healthy Food</h1>
-										<!-- slider-title -->
+										<h1 class="main-slider-one__title">Sustainable Farming for Future</h1>
 										<p class="main-slider-one__info-text">From climate emergency to food security,
 											the way we farm is key <br /> to solving some of the biggest issues facing
 											us today.</p>
 										<div class="main-slider-one__btn">
 											<a href="services.html" class="agrofa-btn agrofa-btn--base"><span>Our
-													Services</span></a><!-- slider-btn -->
+													Services</span></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<div class="main-slider-one__line-bx">
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-						</div>
 					</div>
-				</div>
 
-				<div class="item">
-					<div class="main-slider-one__item">
-						<div class="main-slider-one__bg"
-							style="background-image: url('images/hero-images/hero-img1-2.jpg');"></div>
+					<!-- Slide 3 -->
+					<div class="swiper-slide">
+						<div class="slide-bg" style="background-image: url('images/hero-images/hero-img1-3.jpg')"></div>
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12 text-center">
-									<div class="main-slider-one__content">
+									<div class="main-slider-one__content" data-swiper-parallax="-300">
 										<div class="main-slider-one__sub-title-bx">
 											<img class="main-slider-one__tree-icon"
 												src="images/shapes/hero-tree-icon1-1.png" alt="agrofa" />
 											<h5 class="main-slider-one__sub-title">Organic & Eco Solutions</h5>
 										</div>
-										<!-- slider-sub-title -->
-										<h1 class="main-slider-one__title">Your Finest Option for Healthy Food</h1>
-										<!-- slider-title -->
+										<h1 class="main-slider-one__title">Quality Produce You Trust</h1>
 										<p class="main-slider-one__info-text">From climate emergency to food security,
 											the way we farm is key <br /> to solving some of the biggest issues facing
 											us today.</p>
 										<div class="main-slider-one__btn">
 											<a href="services.html" class="agrofa-btn agrofa-btn--base"><span>Our
-													Services</span></a><!-- slider-btn -->
+													Services</span></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<div class="main-slider-one__line-bx">
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-						</div>
 					</div>
-				</div>
-				<div class="item">
-					<div class="main-slider-one__item">
-						<div class="main-slider-one__bg"
-							style="background-image: url('images/hero-images/hero-img1-3.jpg');"></div>
+
+					<!-- Slide 4 -->
+					<div class="swiper-slide">
+						<div class="slide-bg" style="background-image: url('images/hero-images/hero-img1-1.jpg')"></div>
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12 text-center">
-									<div class="main-slider-one__content">
+									<div class="main-slider-one__content" data-swiper-parallax="-300">
 										<div class="main-slider-one__sub-title-bx">
 											<img class="main-slider-one__tree-icon"
 												src="images/shapes/hero-tree-icon1-1.png" alt="agrofa" />
 											<h5 class="main-slider-one__sub-title">Organic & Eco Solutions</h5>
 										</div>
-										<!-- slider-sub-title -->
-										<h1 class="main-slider-one__title">Your Finest Option for Healthy Food</h1>
-										<!-- slider-title -->
+										<h1 class="main-slider-one__title">Innovating Agriculture Daily</h1>
 										<p class="main-slider-one__info-text">From climate emergency to food security,
 											the way we farm is key <br /> to solving some of the biggest issues facing
 											us today.</p>
 										<div class="main-slider-one__btn">
 											<a href="services.html" class="agrofa-btn agrofa-btn--base"><span>Our
-													Services</span></a><!-- slider-btn -->
+													Services</span></a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
 
-						<div class="main-slider-one__line-bx">
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
-							<span class="main-slider-one__line"></span>
+					<!-- Slide 5 -->
+					<div class="swiper-slide">
+						<div class="slide-bg" style="background-image: url('images/hero-images/hero-img1-2.jpg')"></div>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 text-center">
+									<div class="main-slider-one__content" data-swiper-parallax="-300">
+										<div class="main-slider-one__sub-title-bx">
+											<img class="main-slider-one__tree-icon"
+												src="images/shapes/hero-tree-icon1-1.png" alt="agrofa" />
+											<h5 class="main-slider-one__sub-title">Organic & Eco Solutions</h5>
+										</div>
+										<h1 class="main-slider-one__title">Nature's Best Harvest</h1>
+										<p class="main-slider-one__info-text">From climate emergency to food security,
+											the way we farm is key <br /> to solving some of the biggest issues facing
+											us today.</p>
+										<div class="main-slider-one__btn">
+											<a href="services.html" class="agrofa-btn agrofa-btn--base"><span>Our
+													Services</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+
+					<!-- Slide 6 -->
+					<div class="swiper-slide">
+						<div class="slide-bg" style="background-image: url('images/hero-images/hero-img1-2.jpg')"></div>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 text-center">
+									<div class="main-slider-one__content" data-swiper-parallax="-300">
+										<div class="main-slider-one__sub-title-bx">
+											<img class="main-slider-one__tree-icon"
+												src="images/shapes/hero-tree-icon1-1.png" alt="agrofa" />
+											<h5 class="main-slider-one__sub-title">Organic & Eco Solutions</h5>
+										</div>
+										<h1 class="main-slider-one__title">Join The Eco Revolution</h1>
+										<p class="main-slider-one__info-text">From climate emergency to food security,
+											the way we farm is key <br /> to solving some of the biggest issues facing
+											us today.</p>
+										<div class="main-slider-one__btn">
+											<a href="services.html" class="agrofa-btn agrofa-btn--base"><span>Our
+													Services</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</section>
