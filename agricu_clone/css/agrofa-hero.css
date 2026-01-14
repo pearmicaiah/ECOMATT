@@ -627,16 +627,19 @@
 
 .hero-swiper {
   width: 100%;
-  height: 937px;
+  height: 100vh;
+  /* Unified Full Height */
   position: relative;
   overflow: hidden;
+  background-color: #000;
+  /* Prevent white flash */
 }
 
 @media (max-width: 991px) {
   .hero-swiper {
-    height: auto;
-    padding-bottom: 100px;
-    /* Spacer */
+    height: 100vh;
+    /* Maintain full height on mobile */
+    padding-bottom: 0;
   }
 }
 
@@ -644,7 +647,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  /* Enforced Viewport Width */
   height: 100%;
   object-fit: cover;
   z-index: 1;
@@ -666,13 +670,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  /* Enforced Viewport Width */
   height: 100%;
   background-size: cover;
   background-position: center;
   z-index: 1;
-  /* Initial state for animation */
   transform-origin: center center;
+  object-fit: cover;
 }
 
 /* Overlay */
