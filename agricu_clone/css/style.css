@@ -14983,6 +14983,12 @@
 }
 
 /* Dark Overlay for Video Slide */
+/* Force Dark Overlay on Video Slide */
+.video-slide {
+	position: relative !important;
+	/* Ensure positioning context */
+}
+
 .video-slide::before {
 	content: '';
 	position: absolute;
@@ -14990,9 +14996,13 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #000000;
-	opacity: 0.4;
-	z-index: 1;
+	background: rgba(0, 0, 0, 0.4) !important;
+	/* Visual: Dark Layer */
+	pointer-events: none;
+	/* Interaction: Allow clicks through */
+	z-index: 5 !important;
+	/* Layer: Above video, below text */
+	display: block !important;
 }
 
 /* Ecomatt Hero Overlay Styles */
@@ -15131,6 +15141,8 @@
 	/* Pill shape */
 	font-size: 14px;
 	font-weight: 700;
+	z-index: 1000 !important;
+	/* Ensure clickable */
 	text-transform: uppercase;
 	text-decoration: none;
 	transition: all 0.3s ease;
