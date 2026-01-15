@@ -15018,6 +15018,8 @@
 	/* remove constraint */
 	z-index: 999 !important;
 	padding: 30px 40px 40px 40px;
+	overflow: visible !important;
+	/* Fix for Disappearing Text */
 	border-left: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	border-bottom-left-radius: 40px;
@@ -15111,6 +15113,8 @@
 	color: #FFFFFF !important;
 	font-size: 24px !important;
 	font-weight: 800 !important;
+	white-space: normal !important;
+	/* Ensure long text wraps */
 	z-index: 1;
 }
 
@@ -15190,6 +15194,73 @@
 	box-shadow: 0 4px 15px rgba(86, 157, 3, 0.4);
 }
 
+.shop-now {
+	padding: 30px 0 30px;
+	/* Reduced padding */
+}
+
+.shop-now .container-fluid {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.shop-now .section-title {
+	margin-bottom: 30px !important;
+	/* Pull header closer */
+}
+
+/* Tighten Grid */
+.shop-now .row {
+	display: flex;
+	/* Ensure flex for equal height */
+	flex-wrap: wrap;
+	margin-left: -10px;
+	/* Tighter gutters */
+	margin-right: -10px;
+	align-items: stretch;
+	/* Equal height cards */
+}
+
+.shop-now .row>[class*='col-'] {
+	padding-left: 10px;
+	/* Tighter 20px gap */
+	padding-right: 10px;
+	display: flex;
+	/* Flex column to stretch content */
+	flex-direction: column;
+}
+
+.shop-now__single {
+	margin-bottom: 30px;
+	/* Reduced bottom margin */
+	width: 100%;
+	flex-grow: 1;
+	/* Stretch to fill height */
+}
+
+/* Whitespace Fixes */
+.shop-now {
+	padding-top: 30px !important;
+	margin-top: -0px !important;
+	/* Pull up closer */
+}
+
+.farmology-gallery-section {
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.shop-now .section-title__tagline-box {
+	margin-bottom: 10px !important;
+}
+
+.shop-now__btn-box {
+	margin-top: 40px;
+	text-align: center;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
 	.ecomatt-hero-overlay {
@@ -15198,45 +15269,29 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.ecomatt-hero-overlay {
-		left: 20px !important;
-		/* Reset for mobile */
-		bottom: 120px;
-		/* High enough on mobile */
-		width: auto;
-		max-width: 85%;
-		padding: 20px 20px 40px 25px;
-		border-width: 1px;
-		border-bottom-left-radius: 30px;
+		width: 80%;
 	}
 
-	.ecomatt-hero-overlay::before {
-		top: 40px;
-		width: 50px;
+	.ecomatt-hero-text p {
+		font-size: 18px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.ecomatt-hero-overlay {
+		width: 92% !important;
+		bottom: 150px;
+		/* Raised significantly */
+		left: 4% !important;
+		/* Centered */
+		border-bottom-left-radius: 25px;
+		overflow: visible !important;
 	}
 
-	.ecomatt-hero-logo img {
-		max-width: 120px;
-	}
-
-	.ecomatt-hero-text {
-		font-size: 14px;
-		line-height: 1.5;
-		margin-bottom: 20px;
-		display: -webkit-box;
-		-webkit-line-clamp: 6;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-
-	.ecomatt-hero-socials {
-		gap: 12px;
-	}
-
-	.ecomatt-read-more-btn {
-		padding: 8px 25px;
-		font-size: 12px;
-		bottom: -16px;
+	.ecomatt-hero-text p {
+		font-size: 16px !important;
+		white-space: normal !important;
 	}
 }
