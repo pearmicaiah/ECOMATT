@@ -15053,6 +15053,37 @@
 	filter: drop_shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
 }
 
+/* Floating Button */
+.ecomatt-read-more-btn {
+	position: absolute;
+	bottom: -20px;
+	/* Centered on the 1px border */
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px;
+	background-color: #fff;
+	color: #333;
+	border-radius: 50px;
+	/* Pill shape */
+	font-size: 14px;
+	font-weight: 700;
+	z-index: 9999 !important;
+	/* FORCE TOP LAYER */
+	pointer-events: auto !important;
+	/* FORCE CLICKABILITY */
+	cursor: pointer !important;
+	/* FORCE POINTER */
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	letter-spacing: 1px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	white-space: nowrap;
+}
+
 .ecomatt-hero-text {
 	font-size: 24px !important;
 	line-height: 1.6;
@@ -15060,6 +15091,8 @@
 	margin-bottom: 25px;
 	text-shadow: 4px 4px 10px rgba(0, 0, 0, 1) !important;
 	font-weight: 800 !important;
+	user-select: none;
+	/* Prevent text selection interference */
 
 	/* Grid Stacking Implementation */
 	display: grid;
