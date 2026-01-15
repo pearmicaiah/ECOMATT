@@ -592,7 +592,7 @@
 			<div class="swiper hero-swiper">
 				<div class="swiper-wrapper">
 					<!-- Slide 1 (Video) -->
-					<div class="swiper-slide">
+					<div class="swiper-slide video-slide">
 						<video class="hero-video" muted autoplay playsinline>
 							<source src="assets/ecomatt_farm.mp4" type="video/mp4">
 						</video>
@@ -619,6 +619,22 @@
 								<p>Through integrated crop farming, Ecomatt produces essential grains and field crops,
 									driving food security in Zimbabwe through sustainable land management and
 									innovation.</p>
+								<p>Ecomatt Farm integrates cutting-edge agricultural technology with traditional
+									Zimbabwean wisdom to optimize yields while preserving our precious natural resources
+									for future generations.</p>
+								<p>Beyond farming, we are proud to empower the Kwekwe community by creating sustainable
+									employment and supporting local supply chains with high-quality, homegrown produce.
+								</p>
+								<p>From seed to harvest, Ecomatt adheres to rigorous international quality standards,
+									ensuring every product that leaves our farm is safe, nutritious, and of the highest
+									grade.</p>
+								<p>We are shortening the distance between our fields and your table, delivering peak
+									freshness and flavor through an optimized logistics network across the Midlands
+									province.</p>
+								<p>Our commitment to the land is unwavering; through crop rotation and organic soil
+									enrichment, Ecomatt Farm is building a resilient and fertile ecosystem in the heart
+									of Zimbabwe.</p>
+
 							</div>
 							<div class="ecomatt-hero-socials">
 								<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
@@ -2638,11 +2654,24 @@
 			const slides = document.querySelectorAll('.ecomatt-hero-text p');
 			let currentSlide = 0;
 			const totalSlides = slides.length;
-			const slideInterval = 6000; // 6 seconds
+			const slideInterval = 5000; // 5 seconds
 
 			if (totalSlides > 0) {
+				// Ensure first slide is active initially if not already handled by CSS/HTML
+				slides[0].classList.add('active');
+
 				setInterval(() => {
+					// Handle Exit
 					slides[currentSlide].classList.remove('active');
+					slides[currentSlide].classList.add('exit');
+
+					// Cleanup Exit class after transition (0.8s) to reset position
+					const exitingSlide = currentSlide;
+					setTimeout(() => {
+						slides[exitingSlide].classList.remove('exit');
+					}, 800);
+
+					// Handle Entrance
 					currentSlide = (currentSlide + 1) % totalSlides;
 					slides[currentSlide].classList.add('active');
 				}, slideInterval);

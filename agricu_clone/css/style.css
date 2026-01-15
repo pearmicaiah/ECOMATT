@@ -14982,6 +14982,19 @@
 	}
 }
 
+/* Dark Overlay for Video Slide */
+.video-slide::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.4;
+	z-index: 1;
+}
+
 /* Ecomatt Hero Overlay Styles */
 .ecomatt-hero-overlay {
 	position: absolute;
@@ -15046,16 +15059,30 @@
 .ecomatt-hero-text p {
 	grid-area: content;
 	opacity: 0;
-	transition: opacity 1s ease-in-out;
+	transform: translateX(20px);
+	/* Start from right (Entrance) */
+	transition: opacity 0.8s ease, transform 0.8s ease;
+	/* 0.8s Smooth Transition */
 	margin: 0;
-	/* Remove default margins to stack perfectly */
+	/* Remove default margins */
 	color: #FFFFFF !important;
 	font-size: 24px !important;
 	font-weight: 800 !important;
+	z-index: 1;
 }
 
 .ecomatt-hero-text p.active {
 	opacity: 1;
+	transform: translateX(0);
+	/* Center */
+	z-index: 2;
+}
+
+.ecomatt-hero-text p.exit {
+	opacity: 0;
+	transform: translateX(-20px);
+	/* Exit to left */
+	z-index: 1;
 }
 
 .ecomatt-hero-text::before {
