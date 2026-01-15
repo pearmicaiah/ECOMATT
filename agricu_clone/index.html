@@ -19,7 +19,7 @@
 	<link href="css/farmology-sections.css" rel="stylesheet">
 	<link href="css/custom-sections.css" rel="stylesheet">
 	<link href="assets/css/flaticon.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -597,14 +597,28 @@
 							<source src="assets/ecomatt_farm.mp4" type="video/mp4">
 						</video>
 						<div class="hero-video-overlay"></div>
-						
+
 						<!-- Ecomatt Custom Overlay -->
 						<div class="ecomatt-hero-overlay">
 							<div class="ecomatt-hero-logo">
-								<img src="images/ecomatt-logo.png" alt="Ecomatt Farm Logo">
+								<img src="images/footer-logo.png" alt="Ecomatt Farm Logo">
 							</div>
 							<div class="ecomatt-hero-text">
-								Ecomatt Farm is a diversified agricultural enterprise based in Kwekwe, Zimbabwe, committed to sustainable food production and responsible farming practices. Through an integrated approach that spans poultry, piggery, crop production, and horticulture, Ecomatt Farm plays a vital role in supplying quality, locally produced agricultural products to communities and markets across the region.
+								<p class="active">Ecomatt Farm is a diversified agricultural enterprise based in Kwekwe,
+									Zimbabwe, committed to sustainable food production and responsible farming practices
+									across the region.</p>
+								<p>Our high-quality piggery and livestock units in Kwekwe utilize modern breeding
+									techniques to supply premium, healthy meat products to local communities and growing
+									markets.</p>
+								<p>Ecomatt’s dedicated poultry division focuses on efficient, large-scale production,
+									ensuring a steady supply of quality poultry products while maintaining high animal
+									welfare standards.</p>
+								<p>Specializing in diverse horticulture, our farm produces a wide variety of fresh
+									vegetables and fruits, grown with precision to meet the highest nutritional and
+									quality standards.</p>
+								<p>Through integrated crop farming, Ecomatt produces essential grains and field crops,
+									driving food security in Zimbabwe through sustainable land management and
+									innovation.</p>
 							</div>
 							<div class="ecomatt-hero-socials">
 								<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
@@ -1724,7 +1738,7 @@
 		</section>
 	</div>
 
-	
+
 
 
 
@@ -2619,6 +2633,22 @@
 	<script src="js/agrofa-hero.js"></script>
 	<script src="js/script.js"></script>
 
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const slides = document.querySelectorAll('.ecomatt-hero-text p');
+			let currentSlide = 0;
+			const totalSlides = slides.length;
+			const slideInterval = 6000; // 6 seconds
+
+			if (totalSlides > 0) {
+				setInterval(() => {
+					slides[currentSlide].classList.remove('active');
+					currentSlide = (currentSlide + 1) % totalSlides;
+					slides[currentSlide].classList.add('active');
+				}, slideInterval);
+			}
+		});
+	</script>
 </body>
 
 </html>
