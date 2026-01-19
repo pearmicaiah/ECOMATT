@@ -1346,3 +1346,108 @@
         background-position: center !important;
     }
 }
+/* ==============================================
+   VERTICAL STACKING & SAFETY REFINEMENTS (Final Polish)
+   Target: Mobile (< 768px)
+   ============================================== */
+@media only screen and (max-width: 767px) {
+
+    /* 4. Safety Padding & Overflow */
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+
+    .page-wrapper,
+    .auto-container,
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* 1. Global Footer & Newsletter Stacking Re-Enforced */
+    .footer-widget-two__newsletter-form {
+        display: block !important;
+        position: relative;
+    }
+
+    .footer-widget-two__newsletter-form .form-group {
+        display: block !important;
+    }
+
+    .footer-widget-two__newsletter-form input[type="email"] {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        padding-right: 20px !important;
+        /* Ensure text doesn't hide */
+    }
+
+    .footer-widget-two__newsletter-form button.theme-btn {
+        width: 100% !important;
+        display: block !important;
+        position: relative !important;
+        /* Reset absolute positioning */
+        top: auto !important;
+        right: auto !important;
+        margin: 0 auto !important;
+    }
+
+    /* Footer Columns Width Force */
+    .site-footer-two__middle .row .col-xl-3,
+    .site-footer-two__middle .row .col-lg-3,
+    .site-footer-two__middle .row .col-md-6,
+    .site-footer-two__middle .row .col-sm-12 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 40px !important;
+    }
+
+    /* 2. Content-Side & Sidebar Stacking (Service Details/Services) */
+    /* Ensure flex column direction and order */
+    .sidebar-page-container .row,
+    .sidebar-page-container.left-sidebar .row {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .sidebar-page-container .sidebar-side,
+    .sidebar-page-container.left-sidebar .sidebar-side {
+        order: -1 !important;
+        /* Sidebar First */
+        margin-bottom: 50px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .sidebar-page-container .content-side,
+    .sidebar-page-container.left-sidebar .content-side {
+        order: 2 !important;
+        /* Content Second */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 3. Grid & Gallery Symmetry */
+    /* Instagram Grid 3x2 */
+    .footer-widget-two__instagram-list {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .footer-widget-two__instagram-list li {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* Testimonial Stacking */
+    .testimonial-three .row .col-lg-4,
+    .testimonial-three .row .col-md-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 30px;
+    }
+}
