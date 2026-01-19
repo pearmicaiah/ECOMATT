@@ -3660,6 +3660,7 @@
 
 .accordion-box .block .acc-btn {
 	position: relative;
+	color: white;
 	cursor: pointer;
 	line-height: 30px;
 	font-weight: 500;
@@ -3729,11 +3730,13 @@
 
 .accordion-box .block .acc-content.current {
 	display: block;
+	color: white;
 }
 
 .accordion-box .block .content {
 	position: relative;
 	padding: 30px 30px 30px;
+
 }
 
 .accordion-box .block .content .text {
@@ -15295,3 +15298,544 @@
 		white-space: normal !important;
 	}
 }
+
+/* Lightbox Styles */
+.mfp-bg {
+	background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.mfp-image-holder .mfp-content {
+	max-width: 100%;
+}
+
+.mfp-img {
+	max-height: 90vh !important;
+	padding: 40px 0 40px;
+}
+
+.mfp-bottom-bar {
+	margin-top: -30px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	cursor: auto;
+}
+
+.mfp-title {
+	text-align: center;
+	line-height: 18px;
+	color: #f3f3f3;
+	padding-right: 36px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+/* Ensure arrows are visible */
+.mfp-arrow {
+	opacity: 1;
+}
+
+.mfp-arrow:before {
+	margin-top: 0;
+	border: none;
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 24px;
+	color: #fff;
+}
+
+.mfp-arrow-left:before {
+	content: "\f053";
+}
+
+.mfp-arrow-right:before {
+	content: "\f054";
+}
+
+/* Dos and Donts Vertical Spacing */
+#ecomatt-dos-donts-module {
+	margin-top: 80px !important;
+	margin-bottom: 80px !important;
+	padding: 100px 0 !important;
+}
+
+@media (max-width: 767px) {
+	#ecomatt-dos-donts-module {
+		margin-top: 40px !important;
+		margin-bottom: 40px !important;
+	}
+}
+
+/* Tighten Layout: Shop to Gallery */
+.shop-now,
+.shop-now__btn-box {
+	margin-bottom: 10px !important;
+	padding-bottom: 10px !important;
+}
+
+.farmology-gallery-section,
+.farmology-gallery-heading {
+	padding-top: 20px !important;
+	margin-top: 20px !important;
+}
+
+/* Team Section Spacing */
+.team-one {
+	margin-top: 80px !important;
+}
+
+.farmology-gallery-section {
+	padding-bottom: 40px !important;
+}
+
+/* Fix Green Header Design */
+.team-one .sec-title {
+	padding-top: 60px !important;
+}
+
+@media (max-width: 767px) {
+	.team-one {
+		margin-top: 40px !important;
+	}
+}
+
+/* Seed to Table Feature Grid */
+.seed-to-table-grid-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	margin-top: 30px;
+}
+
+.seed-to-table-features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15px;
+	flex: 0 0 auto;
+	width: 100%;
+	max-width: 450px;
+}
+
+.stt-feature-card {
+	background: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+.stt-feature-card:hover {
+	background: rgba(0, 0, 0, 0.2);
+	transform: translateY(-5px);
+}
+
+.stt-feature-card i {
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.stt-feature-card h5 {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 5px;
+	font-family: 'Outfit', sans-serif;
+}
+
+.stt-feature-card p {
+	color: #fff !important;
+	font-size: 13px !important;
+	line-height: 1.4 !important;
+	margin: 0;
+	opacity: 0.9;
+}
+
+/* Adjust paragraph to sit nicely next to grid */
+.seed-to-table-grid-wrapper .work-learn-one__text {
+	flex: 1;
+	text-align: left;
+}
+
+@media (max-width: 991px) {
+	.seed-to-table-grid-wrapper {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.seed-to-table-features {
+		max-width: 100%;
+	}
+
+	.seed-to-table-grid-wrapper .work-learn-one__text {
+		text-align: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.seed-to-table-features {
+		grid-template-columns: 1fr;
+	}
+
+	.stt-feature-card {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		text-align: left;
+		padding: 15px;
+	}
+
+	.stt-feature-card i {
+		margin-bottom: 0;
+		font-size: 20px;
+		width: 30px;
+	}
+
+	.stt-feature-card h5 {
+		margin-bottom: 2px;
+	}
+}
+
+/* Corporate Identity Styles */
+.identity-grid {
+	grid-template-columns: repeat(3, 1fr) !important;
+	/* 3 Columns */
+	gap: 20px !important;
+	max-width: 100% !important;
+	/* Full Width */
+}
+
+/* Wrapper now acts as a column flex container */
+.corporate-identity-wrapper {
+	flex-direction: column !important;
+	align-items: center !important;
+}
+
+/* Intro Text Centered Below Grid */
+.corporate-identity-wrapper .work-learn-one__text {
+	text-align: center !important;
+	max-width: 800px;
+	/* Limit width for readability */
+	margin: 30px auto 0;
+}
+
+.identity-card {
+	display: flex;
+	flex-direction: column;
+	/* Stack Icon/Text inside card */
+	align-items: center;
+	/* Center Content */
+	text-align: center;
+	gap: 15px;
+	padding: 25px;
+	background: rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	height: 100%;
+	/* Equal Height */
+}
+
+.identity-card i {
+	font-size: 32px;
+	color: #FFC107 !important;
+	margin-bottom: 0px;
+	flex-shrink: 0;
+	margin-top: 0px;
+}
+
+.identity-content h5 {
+	font-size: 18px;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.identity-content p {
+	font-size: 14px !important;
+	opacity: 0.85;
+	color: #fff !important;
+	margin-bottom: 0;
+}
+
+/* Mission Statement Banner */
+.mission-statement-banner {
+	width: 100%;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	color: #fff;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 500;
+	font-family: 'Outfit', sans-serif;
+	opacity: 0.9;
+	letter-spacing: 0.5px;
+}
+
+@media (max-width: 991px) {
+	.identity-grid {
+		grid-template-columns: 1fr !important;
+		/* Stack vertically on mobile/tablet */
+	}
+}
+
+@media (max-width: 767px) {
+	.mission-statement-banner {
+		font-size: 16px;
+		padding-top: 20px;
+	}
+
+	.identity-card {
+		padding: 20px;
+	}
+}
+
+/* Watermark and Descriptive Text Styles */
+.ecomatt-watermark {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 160px;
+	font-weight: 800;
+	color: #fff;
+	opacity: 0.05;
+	white-space: nowrap;
+	pointer-events: none;
+	z-index: 0;
+	font-family: 'Outfit', sans-serif;
+	text-transform: uppercase;
+}
+
+/* Interactive Card Grid Styles (Layered Zero-Gap) */
+.interactive-grid-container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	/* Zero-Gap concept handled by margins */
+	z-index: 1;
+}
+
+/* Row 1: Top Cards */
+.top-row {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1200px;
+	margin: -50px auto 0;
+	gap: 20px;
+}
+
+.top-row .interactive-card {
+	width: 45%;
+	/* Flank the center */
+}
+
+/* Row 3: Bottom Cards */
+.bottom-row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Card Visuals (Modern Glassmorphism) */
+.interactive-card {
+	background: rgba(255, 255, 255, 0.08);
+	/* New base */
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	/* Subtler border */
+	border-radius: 20px;
+	padding: 30px;
+	transition: 0.4s ease;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.interactive-card:hover {
+	background: rgba(255, 255, 255, 0.12);
+	transform: translateY(-10px);
+	/* Enhanced lift */
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.interactive-card h3 {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-family: 'Outfit', sans-serif;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	padding-bottom: 15px;
+}
+
+.interactive-card p {
+	color: #fff !important;
+	font-size: 14px !important;
+	line-height: 1.6 !important;
+	margin: 0;
+	opacity: 0.95;
+}
+
+/* Intro Text Updates (Bridge) */
+.ecomatt-intro-text {
+	position: relative;
+	font-size: 18px !important;
+	color: #fff !important;
+	line-height: 1.5 !important;
+	text-align: center;
+	max-width: 800px;
+	margin: 20px auto !important;
+	/* Tight bridge margin */
+	z-index: 1;
+	font-weight: 400;
+}
+
+/* Watermark Updates (Ghost Image) */
+.ecomatt-watermark {
+	font-size: 200px;
+	opacity: 0.02;
+	z-index: -1;
+	font-weight: 800;
+	color: #fff;
+	white-space: nowrap;
+	pointer-events: none;
+	font-family: 'Outfit', sans-serif;
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Row 2: The Core Identity */
+.corporate-identity-wrapper {
+	width: 100%;
+}
+
+.identity-grid {
+	display: flex !important;
+	justify-content: center !important;
+	gap: 20px !important;
+	margin-top: 0 !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	grid-template-columns: none !important;
+}
+
+.identity-card {
+	padding: 15px !important;
+	gap: 10px;
+	height: auto !important;
+	flex: 0 1 auto;
+	min-width: 200px;
+}
+
+.identity-card i {
+	font-size: 24px;
+}
+
+/* Global Section Reset */
+.work-learn-one--two {
+	padding: 80px 0 !important;
+}
+
+/* Row 3: The Process */
+.work-learn-one__bx {
+	display: flex !important;
+	justify-content: space-around !important;
+	margin-top: 30px !important;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.work-learn-one__col {
+	flex: 0 1 auto;
+	width: auto !important;
+	margin-bottom: 0 !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+	.ecomatt-watermark {
+		font-size: 60px;
+	}
+
+	.identity-grid,
+	.work-learn-one__bx {
+		flex-direction: column !important;
+		align-items: center;
+	}
+
+	.identity-card,
+	.work-learn-one__col {
+		width: 100% !important;
+		max-width: 350px;
+	}
+
+	@media (max-width: 991px) {
+		.interactive-grid-container {
+			gap: 15px;
+		}
+
+		.top-row,
+		.bottom-row {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			margin-top: 0;
+		}
+
+		.top-row .interactive-card,
+		.bottom-row .interactive-card,
+		.interactive-card {
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 0;
+		}
+
+		.ecomatt-intro-text {
+			margin: 20px auto !important;
+		}
+
+		.ecomatt-watermark {
+			font-size: 60px;
+			top: 20%;
+		}
+
+		.work-learn-one--two {
+			padding: 50px 0 !important;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.interactive-card {
+			padding: 20px;
+		}
+
+		.ecomatt-intro-text {
+			font-size: 16px !important;
+			padding: 0 15px;
+		}
+
+		.ecomatt-intro-text {
+			font-size: 16px !important;
+			margin: 20px auto !important;
+		}
+	}
