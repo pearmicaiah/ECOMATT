@@ -143,6 +143,55 @@
 		}
 	</style>
 </head>
+<!-- ECOMATT WHATSAPP ORDER OVERRIDE -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+	const WHATSAPP_URL =
+		"https://wa.me/263783605456?text=Hello%20Ecomatt%20Farm,%20I%20would%20like%20to%20place%20an%20order.";
+
+	const ORDER_WORDS = [
+		"shop",
+		"order",
+		"buy",
+		"view products",
+		"add to bag",
+		"checkout",
+		"shop now",
+		"order now",
+		"view product"
+	];
+
+	document.querySelectorAll("a").forEach(link => {
+		const text = (link.innerText || "").toLowerCase();
+		const href = (link.getAttribute("href") || "").toLowerCase();
+
+		const isOrderAction =
+			ORDER_WORDS.some(word => text.includes(word)) ||
+			href.includes("shop") ||
+			href.includes("cart") ||
+			href.includes("checkout") ||
+			href.includes("shop-details");
+
+		if (isOrderAction) {
+			link.href = WHATSAPP_URL;
+			link.target = "_blank";
+			link.rel = "noopener noreferrer";
+
+			if (
+				text.includes("shop") ||
+				text.includes("order") ||
+				text.includes("view") ||
+				text.includes("buy")
+			) {
+				link.innerHTML = 'Order on WhatsApp <i class="fab fa-whatsapp ms-2"></i>';
+			}
+		}
+	});
+
+});
+</script>
+<!-- END ECOMATT WHATSAPP ORDER OVERRIDE -->
 
 <body>
 	<!--Start of Tawk.to Script-->
@@ -452,7 +501,7 @@
 													<li><a href="service-detail.html">services detail</a></li>
 												</ul> -->
 											</li>
-											<li class=""><a href="project.html">projects</a>
+											<!-- <li class=""><a href="project.html">projects</a> -->
 												<!-- <ul>
 													<li><a href="project.html">project</a></li>
 													<li><a href="services.html">project detail</a></li>
@@ -468,7 +517,7 @@
 													<li><a href="coming-soon.html">coming soon</a></li>
 												</ul> -->
 											</li>
-											<li class=""><a href="blog.html">Blog</a>
+											<!-- <li class=""><a href="blog.html">Blog</a> -->
 
 											</li>
 											<li class="dropdown"><a href="about.html">About</a>
@@ -559,7 +608,7 @@
 						<div class="col-xl-3 d-none d-xl-block">
 							<!-- Browse by Categories -->
 							<div class="category-menu-wrap">
-								<a class="menu-expand" href="#"><i class="far fa-bars"></i>Browse by Categories</a>
+								<a class="menu-expand" href="#"><i class="far fa-bars"></i>Categories</a>
 								<nav class="category-menu">
 									<ul>
 										<li><a href="shop.html"><img src="assets/img/icon/category_1_1.svg"
@@ -1590,60 +1639,98 @@
 	</div>
 </section>
 
-			<section class="space" id="blog-sec">
-				<div class="container">
-					<div class="row justify-content-lg-between justify-content-center align-items-center">
-						<div class="col-lg">
-							<h2 class="sec-title text-center text-lg-start">Latest Updates & News</h2>
-						</div>
-						<div class="col-lg-auto d-none d-lg-block">
-							<div class="sec-btn"><a href="blog.html" class="th-btn">View More Post<i
-										class="fas fa-chevrons-right ms-2"></i></a></div>
-						</div>
+<section class="space" id="blog-sec">
+	<div class="container">
+		<div class="row justify-content-lg-between justify-content-center align-items-center">
+			<div class="col-lg">
+				<h2 class="sec-title text-center text-lg-start">
+					Latest Updates & Farm News
+				</h2>
+			</div>
+			<div class="col-lg-auto d-none d-lg-block">
+				<div class="sec-btn">
+					<a href="blog.html" class="th-btn">
+						View More Updates<i class="fas fa-chevrons-right ms-2"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="row gy-4">
+
+			<!-- BLOG 1 -->
+			<div class="col-xl-4 col-md-6">
+				<div class="blog-grid">
+					<div class="blog-img">
+						<img src="assets/img/blog/blog_3_1.jpg" alt="Ecomatt Farm Produce">
 					</div>
-					<div class="row gy-4">
-						<div class="col-xl-4 col-md-6">
-							<div class="blog-grid">
-								<div class="blog-img"><img src="assets/img/blog/blog_3_1.jpg" alt="blog image"></div>
-								<div class="blog-content">
-									<div class="blog-meta"><a href="blog.html"><i class="far fa-user"></i>By Frutin</a>
-										<a href="blog.html"><i class="far fa-calendar"></i>15 March, 2024</a>
-									</div>
-									<h3 class="box-title"><a href="blog-details.html">Change Your Eating Habits With
-											Organic Food</a></h3><a href="blog-details.html" class="th-btn btn-sm">Read
-										More<i class="fas fa-chevrons-right ms-2"></i></a>
-								</div>
-							</div>
+					<div class="blog-content">
+						<div class="blog-meta">
+							<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
+							<a href="#"><i class="far fa-calendar"></i>15 Nov, 2025</a>
 						</div>
-						<div class="col-xl-4 col-md-6">
-							<div class="blog-grid">
-								<div class="blog-img"><img src="assets/img/blog/blog_3_2.jpg" alt="blog image"></div>
-								<div class="blog-content">
-									<div class="blog-meta"><a href="blog.html"><i class="far fa-user"></i>By Frutin</a>
-										<a href="blog.html"><i class="far fa-calendar"></i>16 March, 2024</a>
-									</div>
-									<h3 class="box-title"><a href="blog-details.html">Transform Your Nutrition with
-											Organic Meal</a></h3><a href="blog-details.html" class="th-btn btn-sm">Read
-										More<i class="fas fa-chevrons-right ms-2"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-4 col-md-6">
-							<div class="blog-grid">
-								<div class="blog-img"><img src="assets/img/blog/blog_3_3.jpg" alt="blog image"></div>
-								<div class="blog-content">
-									<div class="blog-meta"><a href="blog.html"><i class="far fa-user"></i>By Frutin</a>
-										<a href="blog.html"><i class="far fa-calendar"></i>17 March, 2024</a>
-									</div>
-									<h3 class="box-title"><a href="blog-details.html">Organic Eating Is Great For Better
-											Health</a></h3><a href="blog-details.html" class="th-btn btn-sm">Read More<i
-											class="fas fa-chevrons-right ms-2"></i></a>
-								</div>
-							</div>
-						</div>
+						<h3 class="box-title">
+							<a href="blog.html">
+								Why Fresh Farm Produce Matters for Everyday Families
+							</a>
+						</h3>
+						<a href="blog.html" class="th-btn btn-sm">
+							Read More<i class="fas fa-chevrons-right ms-2"></i>
+						</a>
 					</div>
 				</div>
-			</section>
+			</div>
+
+			<!-- BLOG 2 -->
+			<div class="col-xl-4 col-md-6">
+				<div class="blog-grid">
+					<div class="blog-img">
+						<img src="assets/img/blog/blog_3_2.jpg" alt="Fresh Fruits from Ecomatt Farm">
+					</div>
+					<div class="blog-content">
+						<div class="blog-meta">
+							<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
+							<a href="#"><i class="far fa-calendar"></i>16 Nov, 2025</a>
+						</div>
+						<h3 class="box-title">
+							<a href="blog.html">
+								From Our Fields to Your Table: Fresh Fruits Supply
+							</a>
+						</h3>
+						<a href="blog.html" class="th-btn btn-sm">
+							Read More<i class="fas fa-chevrons-right ms-2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- BLOG 3 -->
+			<div class="col-xl-4 col-md-6">
+				<div class="blog-grid">
+					<div class="blog-img">
+						<img src="assets/img/blog/blog_3_3.jpg" alt="Healthy Eating with Farm Produce">
+					</div>
+					<div class="blog-content">
+						<div class="blog-meta">
+							<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
+							<a href="#"><i class="far fa-calendar"></i>17 Nov, 2025</a>
+						</div>
+						<h3 class="box-title">
+							<a href="blog.html">
+								Healthy Living Starts with Locally Grown Food
+							</a>
+						</h3>
+						<a href="blog.html" class="th-btn btn-sm">
+							Read More<i class="fas fa-chevrons-right ms-2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
 		</div>
 		<footer class="site-footer-two">
 			<div class="site-footer-two__bg"></div>

@@ -1110,3 +1110,147 @@
 	}
 	
 }
+
+/* ==============================================
+   GLOBAL RESPONSIVE AUDIT FIXES (User Request)
+   Target: Mobile (< 768px)
+   ============================================== */
+@media only screen and (max-width: 767px) {
+
+    /* 1. Header & Logo Scaling */
+    .main-header .logo img {
+        max-height: 60px !important;
+        width: auto !important;
+    }
+    
+    .main-header .logo-box {
+        text-align: center !important;
+        padding-left: 0px !important;
+        float: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+    }
+    
+    .main-header .mobile-nav-toggler {
+        display: block !important;
+        color: #569D03 !important; /* Ecomatt Green */
+        font-size: 24px;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        cursor: pointer;
+        z-index: 101;
+    }
+    
+    /* Ensure Header Inner Container handles positioning */
+    .main-header .inner-container {
+        position: relative;
+    }
+
+    /* 2. Grid & Card Stacking (Force Single Column) */
+    /* Services, Team, Testimonials, Blog */
+    .services-one .col-lg-3, .services-one .col-md-6, .services-one .col-sm-12,
+    .team-one .col-lg-3, .team-one .col-md-6, .team-one .col-sm-12,
+    .testimonial-three .col-lg-4, .testimonial-three .col-md-6, .testimonial-three .col-sm-12,
+    .blog-one .col-lg-3, .blog-one .col-md-6, .blog-one .col-sm-12,
+    .frutin-shop-wrapper .col-xl-4, .frutin-shop-wrapper .col-md-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 30px;
+    }
+    
+    /* Mega Shop Specifics */
+    .frutin-shop-wrapper .offer-box {
+        margin-bottom: 20px;
+    }
+
+    /* 3. Padding Constraint (15px horizontal) */
+    .auto-container, .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* 4. Page-Specific Fixes */
+    
+    /* Service Detail: Sidebar to Top */
+    .sidebar-page-container.left-sidebar .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar-page-container.left-sidebar .sidebar-side {
+        order: -1 !important; /* First */
+        margin-bottom: 40px;
+    }
+    .sidebar-page-container.left-sidebar .content-side {
+        order: 2 !important; /* Second */
+    }
+    
+    /* Mega-Shop: Full Width Buttons */
+    .frutin-shop-wrapper .th-btn, 
+    .frutin-shop-wrapper .btn {
+        width: 100% !important;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    /* Testimonial Grid Readability */
+    .testimonial-block_one-text {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* 5. Footer Realignment */
+    .site-footer-two__middle .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .site-footer-two__middle .col-xl-3, 
+    .site-footer-two__middle .col-lg-3, 
+    .site-footer-two__middle .col-md-6, 
+    .site-footer-two__middle .col-sm-12 {
+         width: 100% !important;
+         max-width: 100% !important;
+         text-align: center !important;
+         margin-bottom: 30px;
+    }
+    
+    /* Footer Titles & Links Centering */
+    .footer-widget-two__title {
+        text-align: center !important;
+    }
+    .footer-widget-two .widget-content {
+        text-align: center !important;
+    }
+    .footer-widget-two ul li {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    .footer-widget-two ul li a {
+        display: inline-block;
+    }
+    
+    /* Footer Socials Centering */
+    .site-footer-two__social {
+        justify-content: center !important;
+        display: flex !important;
+    }
+    
+    /* Copyright Text Centering */
+    .site-footer-two__bottom .d-flex {
+        flex-direction: column;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    .site-footer-two__bottom .copyright {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .site-footer-two__bottom .footer-nav {
+        justify-content: center;
+        display: flex;
+    }
+}
