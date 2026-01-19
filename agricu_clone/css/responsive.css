@@ -1254,3 +1254,95 @@
         display: flex;
     }
 }
+/* ==============================================
+   FOOTER & NEWSLETTER RESPONSIVE OVERRIDES (User Request)
+   Target: Mobile (< 767px)
+   ============================================== */
+@media only screen and (max-width: 767px) {
+
+    /* 1. Newsletter Form Stacking */
+    .footer-widget-two__newsletter-form .form-group {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .footer-widget-two__newsletter-form input[type="email"],
+    .footer-widget-two__newsletter-form button.theme-btn {
+        width: 100% !important;
+        margin: 0 auto !important;
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+    }
+
+    .footer-widget-two__newsletter-form input[type="email"] {
+        margin-bottom: 15px !important;
+        padding-right: 20px !important;
+        /* Reset padding if button was inside */
+    }
+
+    /* 2. Footer Column Verticality */
+    .site-footer-two__middle .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-widget-two__column,
+    .footer-widget-two__working-box,
+    .footer-widget-two__instagram {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-bottom: 40px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Center Align All Footer Content */
+    .footer-widget-two__title,
+    .footer-widget-two .widget-content,
+    .footer-widget-two__text,
+    .footer-widget-two__working-box,
+    .footer-widget-two__social {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .footer-widget-two ul li {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* 3. Instagram Gallery Scaling (3x2 Grid) */
+    .footer-widget-two__instagram-list {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-widget-two__instagram-list li {
+        float: none !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .footer-widget-two__instagram-list li img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    /* 4. Background & Padding */
+    .site-footer-two__newsletter {
+        padding: 40px 15px !important;
+    }
+
+    .footer-widget-two-newsletter-bg {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
