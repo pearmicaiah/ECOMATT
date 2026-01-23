@@ -539,6 +539,17 @@
 
 @media only screen and (max-width: 767px) {
 
+	/* Global Mobile Resets */
+	html,
+	body {
+		overflow-x: hidden !important;
+	}
+
+	img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
 	.main-header .header-upper .logo-outer {
 		position: relative;
 		width: 100%;
@@ -553,7 +564,8 @@
 
 	.main-header .main-menu {
 		width: 100%;
-		display: none;
+		display: none !important;
+		/* Force hide desktop menu container */
 	}
 
 	.slider-three_text br,
@@ -795,8 +807,98 @@
 		font-size: 40px;
 	}
 
-	.counter-block_three-content {
-		padding-left: 220px;
+	@media only screen and (max-width: 767px) {
+
+		/* Migrated Footer Styles */
+		.footer-widget-two__newsletter-form {
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: center !important;
+		}
+
+		.footer-widget-two__newsletter-form-input-box,
+		.footer-widget-two__newsletter-btn {
+			width: 100% !important;
+			margin: 0 0 15px 0 !important;
+			max-width: 100% !important;
+		}
+
+		.site-footer-two__middle .row [class*='col-'] {
+			width: 100% !important;
+			max-width: 100% !important;
+			flex: 0 0 100% !important;
+			margin-bottom: 30px !important;
+			text-align: center !important;
+		}
+
+		.footer-widget-two__instagram-list {
+			display: grid !important;
+			grid-template-columns: repeat(3, 1fr) !important;
+			gap: 10px !important;
+			justify-content: center !important;
+		}
+
+		.site-footer-two {
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+			overflow: hidden !important;
+		}
+
+		.footer-widget-two__newsletter-title {
+			text-align: center !important;
+			font-size: 24px !important;
+			line-height: 1.2 !important;
+		}
+
+		/* Farmology Guidelines Fixes */
+		.farmology-do-and-donts__left,
+		.farmology-do-and-donts__middle,
+		.farmology-do-and-donts__right {
+			width: 100% !important;
+			max-width: 100% !important;
+			flex: 0 0 100% !important;
+			display: block !important;
+			margin-bottom: 30px;
+		}
+
+		.farmology-do-and-donts__single,
+		.farmology-do-and-donts__single-one {
+			width: 100% !important;
+			display: flex !important;
+			/* Keep internal flex per item */
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.farmology-do-and-donts__icon {
+			flex-shrink: 0;
+			margin-right: 15px;
+		}
+
+		/* Hero Section Tweaks */
+		.main-slider-one__title {
+			font-size: 32px !important;
+			line-height: 1.2 !important;
+		}
+
+		.header-top .left-box,
+		.header-top .right-box {
+			display: none !important;
+			/* Simplify header to prevent overlap */
+		}
+
+		.main-header .mobile-nav-toggler {
+			display: block;
+			margin-right: 15px;
+			color: var(--main-color, #57a200);
+			/* Ensure visibility */
+		}
+
+		/* Fix double hamburger by hiding the one in nav-outer (which we already hid desktop nav) 
+       and ensuring the one in outer-box is visible/styled */
+		.main-header .outer-box .mobile-nav-toggler {
+			display: block !important;
+		}
 	}
 
 	.market-one_list li strong {
@@ -1094,24 +1196,14 @@
 }
 
 /* =========================================
-   Mobile Footer Fixes (User Requested "Vertical Stack Repair")
+   Mobile Footer Fixes (NUCLEAR VERTICAL RESET)
    ========================================= */
 @media only screen and (max-width: 767px) {
 
-	/* 3. Fix Alignment & Overflows - Container */
-	.site-footer-two {
-		padding: 0 15px !important;
-	}
-
-	/* Center-align all text and headers */
-	.site-footer-two,
-	.site-footer-two * {
-		text-align: center !important;
-	}
-
-	/* 1. Fix the Newsletter Stacking */
+	/* 1. Force Newsletter Verticality */
 	.footer-widget-two__newsletter-form {
-		display: block !important;
+		display: flex !important;
+		flex-direction: column !important;
 		width: 100% !important;
 	}
 
@@ -1119,66 +1211,65 @@
 	.footer-widget-two__newsletter-btn {
 		width: 100% !important;
 		max-width: 100% !important;
-		display: block !important;
+		margin: 0 0 15px 0 !important;
 	}
 
-	.footer-widget-two__newsletter-form-input-box {
-		margin-bottom: 15px !important;
+	.footer-widget-two__newsletter {
+		padding: 40px 15px !important;
+		overflow: hidden !important;
 	}
 
-	/* Center input text specifically since it's an input */
-	.footer-widget-two__newsletter-form-input-box input {
-		text-align: center !important;
+	/* 2. Force Footer Column Stacking */
+	.site-footer-two__middle .row [class*='col-'] {
 		width: 100% !important;
-	}
-
-	.footer-widget-two__newsletter-title {
-		text-align: center !important;
-		line-height: 1.2 !important;
-		display: block !important;
-	}
-
-	/* 2. Fix the Footer Column Stacking */
-	.site-footer-two__middle .row .col-xl-3,
-	.site-footer-two__middle .row .col-lg-6,
-	.site-footer-two__middle .row .col-md-6 {
-		width: 100% !important;
-		flex: 0 0 100% !important;
 		max-width: 100% !important;
-		display: block !important;
-		/* Force block behavior for columns */
+		flex: 0 0 100% !important;
+		padding: 0 20px !important;
+		/* Ensure padding inside full width */
 	}
 
 	.footer-widget-two__column,
 	.footer-widget-two__working-box,
 	.footer-widget-two__instagram,
-	.footer-widget-two__newsletter {
+	.footer-widget-two__newsletter,
+	.footer-widget-two__contact {
 		margin-bottom: 40px !important;
-		float: none !important;
-		/* Clear floats */
+		text-align: center !important;
+		width: 100% !important;
+		padding: 0 !important;
+		/* Reset widget padding as column handles it */
+	}
+
+	/* 3. Fix Background & Scaling (Instagram Grid) */
+	.footer-widget-two__instagram-list {
+		display: grid !important;
+		grid-template-columns: repeat(3, 1fr) !important;
+		gap: 10px !important;
+		justify-content: center !important;
 		width: 100% !important;
 	}
 
-	/* 3. Fix Alignment & Overflows - Instagram Gallery */
-	.footer-widget-two__instagram-list {
-		display: flex !important;
-		flex-wrap: wrap !important;
-		justify-content: center !important;
-	}
-
-	/* Keep the grid nice (User didn't strictly ask, but implied "don't hang to side") */
 	.footer-widget-two__instagram-list li {
-		margin: 5px !important;
+		width: 100% !important;
+		margin: 0 !important;
+		max-width: 100% !important;
 	}
 
-	/* Ensure specific elements align correctly */
-	.footer-widget-two__link li {
-		justify-content: center !important;
-		display: flex !important;
+	.footer-widget-two__instagram-img {
+		width: 100% !important;
+		aspect-ratio: 1/1;
 	}
 
-	.footer-widget-two__working-hour li p {
-		justify-content: center !important;
-		display: flex !important;
+	/* Ensure text alignment propagates */
+	.site-footer-two__middle .row,
+	.address-box-two,
+	.footer-widget-two__newsletter-title,
+	.footer-widget-two__title {
+		text-align: center !important;
+	}
+
+	/* Fix input text alignment */
+	.footer-widget-two__newsletter-form-input-box input {
+		text-align: center !important;
 	}
 }
