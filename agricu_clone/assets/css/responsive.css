@@ -1322,5 +1322,98 @@
 
 	.outer-box .mobile-nav-toggler {
 		display: block !important;
+
 	}
-}
+
+	/* Safety closer for any unclosed blocks */
+
+	/* =========================================
+   NUCLEAR MOBILE OVERRIDES (Final Attempt)
+   ========================================= */
+	@media only screen and (max-width: 767px) {
+
+		/* 1. Header & Nav Cleanup */
+		.main-header .nav-outer {
+			display: none !important;
+			/* Hide the entire desktop nav container */
+		}
+
+		.sticky-header .main-menu {
+			display: none !important;
+		}
+
+		.main-header .outer-box .mobile-nav-toggler {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+			position: relative;
+			z-index: 999;
+			margin-left: auto;
+			/* Push to right */
+		}
+
+		/* 2. Guidelines (Farmology) Vertical Stack */
+		.farmology-do-and-donts__left,
+		.farmology-do-and-donts__middle,
+		.farmology-do-and-donts__right {
+			display: flex !important;
+			flex-direction: column !important;
+			width: 100% !important;
+			max-width: 100% !important;
+			margin: 0 0 30px 0 !important;
+		}
+
+		.farmology-do-and-donts__single,
+		.farmology-do-and-donts__single-one {
+			display: flex !important;
+			flex-direction: row !important;
+			/* Icon + Text side-by-side */
+			align-items: center !important;
+			width: 100% !important;
+			margin-bottom: 15px !important;
+			background-color: #fff;
+			/* Ensure visibility */
+			padding: 10px;
+			border-radius: 8px;
+		}
+
+		.farmology-do-and-donts__icon {
+			min-width: 50px;
+			margin-right: 15px;
+		}
+
+		.farmology-do-and-donts__text {
+			font-size: 14px !important;
+			line-height: 1.4 !important;
+			white-space: normal !important;
+		}
+
+		/* 3. Footer Stack */
+		.footer-widget-two__newsletter-form {
+			flex-direction: column !important;
+		}
+
+		.site-footer-two__middle .row {
+			display: flex !important;
+			flex-direction: column !important;
+		}
+
+		.site-footer-two__middle .row>[class*='col-'] {
+			width: 100% !important;
+			max-width: 100% !important;
+			margin-bottom: 30px !important;
+		}
+
+		/* 4. Horizontal Scroll Fix */
+		body,
+		html {
+			overflow-x: hidden !important;
+			width: 100% !important;
+			position: relative;
+		}
+
+		.page-wrapper {
+			overflow-x: hidden !important;
+			width: 100% !important;
+		}
+	}
