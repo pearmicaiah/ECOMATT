@@ -1,0 +1,116 @@
+/* dedicated mobile footer styles */
+@media only screen and (max-width: 767px) {
+
+    /* Force Container Stack & Center */
+    .site-footer-two__middle .row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    .site-footer-two__middle .row>[class*='col-'] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding: 0 15px !important;
+        margin-bottom: 40px !important;
+        text-align: center !important;
+    }
+
+    /* Reset Widgets to Center */
+    .footer-widget-two__column,
+    .footer-widget-two__usefull-link,
+    .footer-widget-two__products,
+    .footer-widget-two__instagram,
+    .footer-widget-two__newsletter {
+        text-align: center !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+        float: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Headings Center */
+    .footer-widget-two__title-box,
+    .footer-widget-two__title {
+        text-align: center !important;
+        width: 100% !important;
+        justify-content: center !important;
+        display: flex !important;
+    }
+
+    /* Links Center */
+    .footer-widget-two__link-box,
+    .footer-widget-two__link,
+    .list-unstyled {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .footer-widget-two__link li {
+        justify-content: center !important;
+        display: flex !important;
+        text-align: center !important;
+    }
+
+    /* Instagram Grid Center */
+    .footer-widget-two__instagram-list {
+        display: grid !important;
+        grid-template-columns: repeat(3, 80px) !important;
+        /* Fixed width for better centering */
+        gap: 10px !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+    }
+
+    .footer-widget-two__instagram-list li {
+        width: auto !important;
+        margin: 0 !important;
+    }
+
+    /* Newsletter Form Center */
+    .footer-widget-two__newsletter-form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .footer-widget-two__newsletter-form-input-box {
+        width: 100% !important;
+    }
+
+    .footer-widget-two__newsletter-form-input-box input {
+        text-align: center !important;
+    }
+
+    /* Logo Center */
+    .footer-widget-two__logo {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    /* Bottom Copyright Center */
+    .site-footer-two__bottom-inner {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .site-footer-two__bottom-menu {
+        justify-content: center !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-top: 15px !important;
+    }
+
+    .site-footer-two__bottom-menu li {
+        display: inline-block !important;
+        margin: 0 10px !important;
+    }
+}
