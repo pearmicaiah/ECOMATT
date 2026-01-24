@@ -1,0 +1,55 @@
+/* Frutin Mega Shop Overrides */
+
+/* FIX 1: Push content down below Fixed Ecomatt Header */
+.frutin-shop-wrapper {
+    position: relative;
+    z-index: 1;
+    /* Lower than header */
+    padding-top: 180px !important;
+    /* Increase from 120px to clear header completely */
+    background-color: #fff;
+    /* Ensure it has a background to cover anything behind */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+/* FIX 2: Ensure Ecomatt Header stays on top */
+.main-header {
+    z-index: 99999 !important;
+}
+
+/* FIX 3: Frutin Slider Z-Index */
+/* Swiper arrows often get lost or appear over header */
+.frutin-shop-wrapper .slider-arrow {
+    z-index: 10;
+}
+
+/* FIX 4: Quick View Modal Z-Index */
+/* Needs to be very high */
+.mfp-bg,
+.mfp-wrap {
+    z-index: 100000 !important;
+}
+
+/* FIX 5: Product Grid Spacing */
+.frutin-shop-wrapper .th-product {
+    margin-bottom: 30px;
+}
+
+/* FIX 6: Reset critical global styles limited to wrapper */
+.frutin-shop-wrapper a {
+    text-decoration: none;
+}
+
+/* FIX 7: Ensure images behave */
+.frutin-shop-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* FIX 8: Hero Slider Overlay */
+/* Sometimes hero content gets cut off */
+.frutin-shop-wrapper .hero-style3 {
+    position: relative;
+    z-index: 5;
+}

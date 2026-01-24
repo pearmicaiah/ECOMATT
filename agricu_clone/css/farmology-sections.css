@@ -502,11 +502,43 @@
     Do And Donts (Renamed to farmology-do-and-donts)
 ===============================================*/
 .farmology-do-and-donts {
+    /* Encapsulated Variables for robustness */
+    --farmology-font: "Poppins", sans-serif;
+    --farmology-font-two: "Outfit", sans-serif;
+    --farmology-font-three: "Caveat", cursive;
+    --farmology-gray: #68584b;
+    --farmology-gray-rgb: 104, 88, 75;
+    --farmology-base: #f5cb4b;
+    --farmology-base-rgb: 245, 203, 75;
+    --farmology-black: #57a200;
+    --farmology-black-rgb: 25, 15, 6;
+    --farmology-extra: #57a200;
+    --farmology-extra-rgb: 68, 44, 38;
+    --farmology-primary: #f6f2e4;
+    --farmology-primary-rgb: 246, 242, 228;
+    --farmology-secondary: #388E3C;
+    --farmology-secondary-rgb: 56, 142, 60;
+    --farmology-white: #ffffff;
+    --farmology-white-rgb: 255, 255, 255;
+    --farmology-bdr-radius: 5px;
+
     position: relative;
     display: block;
     background-color: var(--farmology-extra);
     padding: 100px 0 100px;
     z-index: 1;
+    overflow: visible;
+    /* Ensure content like negative margins isn't clipped */
+}
+
+/* Force override global section-title styles within this scope */
+.farmology-do-and-donts .section-title__tagline {
+    color: var(--farmology-primary) !important;
+}
+
+.farmology-do-and-donts .section-title__title {
+    color: var(--farmology-white) !important;
+    font-size: 35px;
 }
 
 .farmology-do-and-donts__bg {
@@ -853,212 +885,213 @@
         transform: translateY(0);
     }
 }
+
 /*--------------------------------------------------------------
 # Pricing One
 --------------------------------------------------------------*/
 .pricing-one {
-  position: relative;
-  display: block;
-  padding: 120px 0 0;
-  z-index: 1;
+    position: relative;
+    display: block;
+    padding: 120px 0 0;
+    z-index: 1;
 }
 
 .pricing-one__single {
-  position: relative;
-  display: block;
-  background-color: var(--farmology-white);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 48.51px 0.49px;
-  border-radius: var(--farmology-bdr-radius);
-  margin-bottom: 30px;
-  z-index: 1;
+    position: relative;
+    display: block;
+    background-color: var(--farmology-white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 48.51px 0.49px;
+    border-radius: var(--farmology-bdr-radius);
+    margin-bottom: 30px;
+    z-index: 1;
 }
 
 .pricing-one__single-bg-shape {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  opacity: 0.06;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  z-index: -1;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.06;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    z-index: -1;
 }
 
 .pricing-one__single:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
-  border-radius: var(--farmology-bdr-radius);
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+    border-radius: var(--farmology-bdr-radius);
+    z-index: -1;
 }
 
 .pricing-one__top-inner {
-  position: relative;
-  display: flex;
-  background-color: var(--farmology-extra);
-  border-top-right-radius: var(--farmology-bdr-radius);
-  border-top-left-radius: var(--farmology-bdr-radius);
-  padding: 23px 30px 19px;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1;
+    position: relative;
+    display: flex;
+    background-color: var(--farmology-extra);
+    border-top-right-radius: var(--farmology-bdr-radius);
+    border-top-left-radius: var(--farmology-bdr-radius);
+    padding: 23px 30px 19px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
 }
 
 .pricing-one__top-inner:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 0;
-  border: 1px dashed rgba(var(--farmology-primary-rgb), .30);
-  border-radius: var(--farmology-bdr-radius);
-  z-index: -1;
-  border-bottom: 0;
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    border: 1px dashed rgba(var(--farmology-primary-rgb), .30);
+    border-radius: var(--farmology-bdr-radius);
+    z-index: -1;
+    border-bottom: 0;
 }
 
 .pricing-one__sub-title-and-price {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 .pricing-one__sub-title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 30px;
-  color: var(--farmology-primary);
-  text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: var(--farmology-primary);
+    text-transform: capitalize;
 }
 
 .pricing-one__price {
-  font-size: 45px;
-  font-weight: 500;
-  line-height: 45px;
-  color: var(--farmology-base);
-  margin-top: 8px;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+    color: var(--farmology-base);
+    margin-top: 8px;
 }
 
 .pricing-one__price span {
-  font-size: 18px;
-  font-family: var(--farmology-font);
-  font-weight: 500;
-  color: var(--farmology-white);
+    font-size: 18px;
+    font-family: var(--farmology-font);
+    font-weight: 500;
+    color: var(--farmology-white);
 }
 
 .pricing-one__top-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 60px;
-  width: 100%;
-  height: 60px;
-  flex: 1;
-  background-color: var(--farmology-primary);
-  border-radius: 50%;
-  z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60px;
+    width: 100%;
+    height: 60px;
+    flex: 1;
+    background-color: var(--farmology-primary);
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .pricing-one__top-icon:before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 1px dashed var(--farmology-extra);
-  border-radius: 50%;
-  z-index: -1;
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px dashed var(--farmology-extra);
+    border-radius: 50%;
+    z-index: -1;
 }
 
 .pricing-one__top-icon span {
-  position: relative;
-  display: inline-block;
-  font-size: 32px;
-  color: var(--farmology-extra);
+    position: relative;
+    display: inline-block;
+    font-size: 32px;
+    color: var(--farmology-extra);
 }
 
 .pricing-one__point-and-btn {
-  position: relative;
-  display: block;
-  padding: 30px 30px 30px;
-  z-index: 1;
+    position: relative;
+    display: block;
+    padding: 30px 30px 30px;
+    z-index: 1;
 }
 
 .pricing-one__points {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 .pricing-one__points li {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px dashed rgba(var(--farmology-extra-rgb), .30);
-  padding-bottom: 7px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(var(--farmology-extra-rgb), .30);
+    padding-bottom: 7px;
 }
 
 .pricing-one__points li+li {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 .pricing-one__points li:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .pricing-one__points-text-box {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 .pricing-one__points-text-box h5 {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 20px;
-  color: var(--farmology-extra);
-  margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--farmology-extra);
+    margin-bottom: 2px;
 }
 
 .pricing-one__points li .icon {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .pricing-one__points li .icon-two {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .pricing-one__points li .icon span {
-  position: relative;
-  display: inline-block;
-  font-size: 16px;
-  color: var(--farmology-secondary);
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: var(--farmology-secondary);
 }
 
 .pricing-one__points li .icon-two span {
-  position: relative;
-  display: inline-block;
-  font-size: 16px;
-  color: #c31324
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #c31324
 }
 
 .pricing-one__btn-box {
-  position: relative;
-  display: block;
-  text-align: center;
-  margin-top: 11px;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 11px;
 }
 
 .pricing-one__btn-box .thm-btn {
-  width: 100%;
+    width: 100%;
 }
 
 
@@ -1066,79 +1099,78 @@
 # Thm Btn Css
 --------------------------------------------------------------*/
 .thm-btn {
-  position: relative;
-  display: inline-block;
-  color: var(--farmology-base);
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 600;
-  background-color: var(--farmology-extra);
-  border-radius: var(--farmology-bdr-radius);
-  padding: 12px 30px 12px;
-  overflow: hidden;
-  font-family: var(--farmology-font);
-  text-transform: capitalize;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  z-index: 1;
+    position: relative;
+    display: inline-block;
+    color: var(--farmology-base);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+    background-color: var(--farmology-extra);
+    border-radius: var(--farmology-bdr-radius);
+    padding: 12px 30px 12px;
+    overflow: hidden;
+    font-family: var(--farmology-font);
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    z-index: 1;
 }
 
 .thm-btn:hover {
-  color: var(--farmology-extra);
+    color: var(--farmology-extra);
 }
 
 .thm-btn i {
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 5px;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 5px;
 }
 
 .hover-btn {
-  background-color: var(--farmology-base);
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  position: absolute;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-  width: 26%;
-  z-index: -1;
+    background-color: var(--farmology-base);
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    width: 26%;
+    z-index: -1;
 }
 
 .hover-bx {
-  left: 0;
-  -webkit-transition-delay: 0.105s;
-  transition-delay: 0.105s;
-  border-radius: 5px 0px 0px 5px;
+    left: 0;
+    -webkit-transition-delay: 0.105s;
+    transition-delay: 0.105s;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .hover-bx2 {
-  left: 25%;
-  -webkit-transition-delay: 0.105s;
-  transition-delay: 0.105s;
+    left: 25%;
+    -webkit-transition-delay: 0.105s;
+    transition-delay: 0.105s;
 }
 
 .hover-bx3 {
-  left: 50%;
-  -webkit-transition-delay: 0.105s;
-  transition-delay: 0.105s;
+    left: 50%;
+    -webkit-transition-delay: 0.105s;
+    transition-delay: 0.105s;
 }
 
 .hover-bx4 {
-  left: 75%;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-  border-radius: 0 5px 5px 0;
+    left: 75%;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    border-radius: 0 5px 5px 0;
 }
 
 .thm-btn:hover .hover-btn {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
-

@@ -1,0 +1,330 @@
+﻿/* FAQ Styles */
+
+
+.faq-two{
+	position:relative;
+	overflow:hidden;
+	padding:110px 0px 110px;
+}
+
+
+.accordion-box{
+	position:relative;
+	z-index:1;
+}
+
+
+.accordion-box .block{
+	position: relative;
+	margin-bottom:25px;
+}
+
+
+.accordion-box .block.active-block{
+	box-shadow:0px 0px 15px rgba(0,0,0,0.10);
+}
+
+
+.accordion-box .block:last-child{
+	margin-bottom:0px;
+}
+
+
+.accordion-box .block .acc-btn{
+	position:relative;
+	cursor:pointer;
+	line-height:30px;
+	font-weight:500;
+	font-size:22px;
+	border-radius:8px;
+	padding:25px 40px 25px;
+	color: var(--white-color);
+	transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	background-color: var(--main-color);
+	font-family: "Outfit", serif;
+}
+
+
+.accordion-box .block .acc-btn.active{
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+
+.accordion-box .block .icon-outer{
+	position:absolute;
+	right: 8px;
+    top: 9px;
+	font-size:26px;
+	color:var(--white-color);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	font-family: "flaticon_mycollection";
+}
+
+
+.accordion-box .block .icon-outer .icon{
+    position: relative;
+	width:60px;
+	height:60px;
+	font-weight: 700;
+	line-height:62px;
+	text-align:center;
+	display: inline-block;
+    color:var(--white-color);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+
+.accordion-box .block .acc-btn.active .icon-outer .icon{
+	transform:rotate(90deg);
+}
+
+
+.accordion-box .block.active-block .icon{
+	opacity: 1;
+	color: var(--white-color);
+}
+
+
+.accordion-box .block .acc-content{
+	position:relative;
+	display:none;
+}
+
+
+.accordion-box .block .acc-content .content-text{
+	
+}
+
+
+.accordion-box .block .acc-content.current{
+	display:block;	
+}
+
+
+.accordion-box .block .content{
+	position:relative;
+	padding:30px 30px 30px;
+}
+
+
+.accordion-box .block .content .text{
+	line-height:30px;
+	font-size:18px;
+	opacity:0.60;
+    color:var(--black-color);
+}
+
+
+.accordion-box{
+	position:relative;
+	z-index:1;
+}
+
+
+.accordion-box .block{
+	position: relative;
+	margin-bottom:25px;
+}
+
+
+.accordion-box .block.active-block{
+	box-shadow:0px 0px 15px rgba(0,0,0,0.10);
+}
+
+
+.accordion-box .block:last-child{
+	margin-bottom:0px;
+}
+
+
+.accordion-box .block .acc-btn{
+	position:relative;
+	cursor:pointer;
+	line-height:30px;
+	font-weight:500;
+	font-size:22px;
+	border-radius:8px;
+	padding:25px 40px 25px;
+	color: var(--white-color);
+	transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	background-color: var(--main-color);
+	font-family: "Outfit", serif;
+}
+
+
+.accordion-box .block .acc-btn.active{
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+
+.accordion-box .block .icon-outer{
+	position:absolute;
+	right: 8px;
+    top: 9px;
+	font-size:26px;
+	color:var(--white-color);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	font-family: "flaticon_mycollection";
+}
+
+
+.accordion-box .block .icon-outer .icon{
+    position: relative;
+	width:60px;
+	height:60px;
+	font-weight: 700;
+	line-height:62px;
+	text-align:center;
+	display: inline-block;
+    color:var(--white-color);
+	transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+
+.accordion-box .block .acc-btn.active .icon-outer .icon{
+	transform:rotate(90deg);
+}
+
+
+.accordion-box .block.active-block .icon{
+	opacity: 1;
+	color: var(--white-color);
+}
+
+
+.accordion-box .block .acc-content{
+	position:relative;
+	display:none;
+}
+
+
+.accordion-box .block .acc-content .content-text{
+	
+}
+
+
+.accordion-box .block .acc-content.current{
+	display:block;	
+}
+
+
+.accordion-box .block .content{
+	position:relative;
+	padding:30px 30px 30px;
+}
+
+
+.accordion-box .block .content .text{
+	line-height:30px;
+	font-size:18px;
+	opacity:0.60;
+    color:var(--black-color);
+}
+
+
+.accordion-box .block .acc-btn{
+	position:relative;
+	cursor:pointer;
+	line-height:30px;
+	font-weight:500;
+	font-size:22px;
+	border-radius:8px;
+	padding:25px 40px 25px;
+	color: var(--white-color);
+	transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	background-color: var(--main-color);
+	font-family: "Outfit", serif;
+}
+
+
+.accordion-box .block .acc-btn.active{
+	color: var(--white-color);
+	background-color: var(--main-color);
+}
+
+
+.accordion-box .block .acc-btn.active .icon-outer .icon{
+	transform:rotate(90deg);
+}
+
+
+.accordion-box .block .acc-content{
+	position:relative;
+	display:none;
+}
+
+
+.accordion-box .block .acc-content .content-text{
+	
+}
+
+
+.accordion-box .block .acc-content.current{
+	display:block;	
+}
+
+
+.clients-one{
+	position: relative;
+	padding: 120px 0px 110px;
+}
+
+
+.clients-one.style-two{
+	padding:0px 0px;
+}
+
+
+.clients-one.style-two .inner-container{
+	padding: 70px 0px 100px;
+	border-bottom:1px solid rgba(var(--black-color-rgb), 0.10);
+}
+
+
+.clients-one.style-three{
+	padding:90px 0px 110px;
+	background-color:#f9fff1;
+}
+
+/* FAQ Typography Fixes */
+.acc-btn {
+    font-weight: 700 !important;
+    color: #1a1e21;
+}
+.acc-btn.active {
+    color: #569D03 !important;
+}
+.page-title h2 {
+    font-weight: 700;
+}
+

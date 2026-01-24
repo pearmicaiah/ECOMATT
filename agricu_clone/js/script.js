@@ -1223,4 +1223,23 @@
 		});
 	}
 
+	// LightBox / Fancybox
+	if ($('.lightbox-image').length) {
+		$('.lightbox-image').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			},
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false,
+			callbacks: {
+				beforeOpen: function () {
+					this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+				}
+			}
+		});
+	}
+
 })(window.jQuery);
