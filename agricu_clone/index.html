@@ -18,18 +18,11 @@
 	<link href="assets/vendors/agrofa-icons/style.css" rel="stylesheet">
 	<link href="css/farmology-sections.css" rel="stylesheet">
 	<link href="css/custom-sections.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 	<link href="css/mobile-dos-donts.css" rel="stylesheet">
-=======
+
 	<link href="css/responsive.css" rel="stylesheet">
 	<link href="css/mobile-footer.css" rel="stylesheet">
->>>>>>> 8b5488bcad010b02892280ef8f9bcd74596a77d3
->>>>>>> 490b7f4b781b1e8512b1ad8386d9cb4a350fc62b
->>>>>>> 03dc36f93338bcf8a9655a2388ae03f331ac5934
+
 	<link href="assets/css/flaticon.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -2205,7 +2198,7 @@
 		<!-- Main Footer -->
 
 		<!--Site Footer Two Start-->
-		<footer class="site-footer-two">
+		<footer class="site-footer-two desktop-footer">
 			<div class="site-footer-two__bg"></div>
 			<div class="site-footer-two__top">
 				<div class="container">
@@ -2364,6 +2357,55 @@
 			</div>
 		</footer>
 		<!--Site Footer Two End-->
+
+		<!-- Mobile/Tablet Footer -->
+		<div class="mobile-tablet-footer">
+			<div class="container">
+				<!-- Block 1: Newsletter -->
+				<div class="mt-footer-block newsletter-block">
+					<h3>Subscribe To Our Newsletter</h3>
+					<form class="mt-newsletter-form">
+						<input type="email" placeholder="Enter email" name="EMAIL">
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+
+				<!-- Block 2: Opening Times -->
+				<div class="mt-footer-block opening-times-block">
+					<h3>Opening Times</h3>
+					<p>Mon - Fri: 6:00 AM - 6:00 PM</p>
+					<p>Saturday: 6:00 AM - 5:00 PM</p>
+					<p>Sunday: Closed</p>
+				</div>
+
+				<!-- Block 3: Quick Links -->
+				<div class="mt-footer-block links-block">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="products.html">Our Products</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Block 4: Social Hub -->
+				<div class="mt-footer-block social-block">
+					<a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="https://whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+					<a href="https://tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+					<a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+					<a href="https://threads.net/" target="_blank"><i class="fa-brands fa-threads"></i></a>
+				</div>
+
+				<!-- Block 5: Branding -->
+				<div class="mt-footer-block branding-block">
+					<img src="images/footer_two/footer-logo.png" alt="Ecomatt" class="mt-logo">
+					<p class="copyright">Copyright@ 2025 <a href="index.html">Ecomatt</a>. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
 		<!-- End Footer Style -->
 
 		<!-- Search Popup -->
@@ -2481,6 +2523,136 @@
 	<script src="js/script.js"></script>
 
 
+	<style>
+		/* Dual-Footer System Styles */
+		@media (min-width: 1025px) {
+			.mobile-tablet-footer {
+				display: none !important;
+			}
+
+			.desktop-footer {
+				display: block !important;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			.desktop-footer {
+				display: none !important;
+			}
+
+			.mobile-tablet-footer {
+				display: block !important;
+				background-color: #1a1a1a;
+				color: #fff;
+				padding: 40px 0 20px;
+				text-align: center;
+			}
+
+			.mt-footer-block {
+				margin-bottom: 30px;
+			}
+
+			.mt-footer-block h3 {
+				color: #fff;
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+
+			/* Newsletter */
+			.mt-newsletter-form {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				max-width: 100%;
+			}
+
+			.mt-newsletter-form input {
+				width: 100%;
+				padding: 15px;
+				border: none;
+				border-radius: 5px;
+			}
+
+			.mt-newsletter-form button {
+				width: 100%;
+				padding: 15px;
+				background-color: #569D03;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				font-weight: bold;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+
+			/* Opening Times */
+			.opening-times-block {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 20px;
+				border-radius: 10px;
+			}
+
+			.opening-times-block p {
+				color: #ccc;
+				margin-bottom: 5px;
+			}
+
+			/* Links */
+			.links-block ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.links-block ul li {
+				margin-bottom: 10px;
+			}
+
+			.links-block ul li a {
+				color: #ccc;
+				font-size: 16px;
+				text-decoration: none;
+			}
+
+			/* Socials */
+			.social-block {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+				flex-wrap: wrap;
+			}
+
+			.social-block a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 50%;
+				color: #fff;
+				transition: all 0.3s ease;
+			}
+
+			.social-block a:hover {
+				background: #569D03;
+			}
+
+			/* Branding */
+			.mt-logo {
+				max-height: 60px;
+				margin-bottom: 15px;
+			}
+
+			.copyright {
+				color: #888;
+				font-size: 14px;
+			}
+
+			.copyright a {
+				color: #569D03;
+			}
+		}
+	</style>
 </body>
 
 </html>
