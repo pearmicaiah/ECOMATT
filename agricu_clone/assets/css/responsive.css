@@ -543,6 +543,8 @@
 	html,
 	body {
 		overflow-x: hidden !important;
+		width: 100%;
+		position: relative;
 	}
 
 	img {
@@ -550,43 +552,70 @@
 		height: auto !important;
 	}
 
-	.main-header .header-upper .logo-outer {
-		position: relative;
+	/* Header & Navigation Fixes */
+	.main-header .header-upper .logo-outer,
+	.main-header .header-lower .logo-box {
 		width: 100%;
+		text-align: center;
+		padding: 10px 0;
 	}
 
-	.main-header .sticky-header .outer-box {
-		display: block;
-		right: 0px;
-		left: auto;
-		top: 0px;
+	.main-header .logo-box .logo {
+		float: none;
+		display: inline-block;
+	}
+
+	.main-header .mobile-nav-toggler {
+		display: block !important;
+		position: absolute;
+		right: 15px;
+		top: 25px;
+		cursor: pointer;
+		z-index: 100;
 	}
 
 	.main-header .main-menu {
-		width: 100%;
 		display: none !important;
-		/* Force hide desktop menu container */
+		/* Managed by JS/jQuery toggler */
 	}
 
-	.slider-three_text br,
-	.slider-three-arrow,
-	.contact-one_bg-layer,
-	.slider-three .main-slider_pagination,
-	.main-header .main-menu .navbar-collapse>.navigation li.dropdown:after,
-	.main-header .main-menu .navigation>li>ul:before {
-		display: none !important;
+	/* Fix Hero Video Scaling */
+	.video-slide video.hero-video {
+		height: 100vh !important;
+		object-fit: cover !important;
 	}
 
-	.main-header .main-box .logo-box {
-		float: none;
-		text-align: center;
-		padding-bottom: 10px;
+	.feature-one__col-item {
+		margin-bottom: 30px;
 	}
 
-	.main-header .header-lower .outer-box {
-		position: relative;
-		z-index: 12;
-		display: block;
+	/* Footer Vertical Stacking */
+	.footer-widget-two__newsletter-form {
+		display: block !important;
+	}
+
+	.footer-widget-two__newsletter-form-input-box {
+		width: 100% !important;
+		margin-bottom: 15px;
+	}
+
+	.footer-widget-two__newsletter-btn {
+		width: 100% !important;
+	}
+
+	.site-footer-two__middle .col-xl-3,
+	.site-footer-two__middle .col-lg-6,
+	.site-footer-two__middle .col-md-6 {
+		width: 100% !important;
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 40px;
+	}
+
+	.footer-widget-two__instagram-list li {
+		width: 33.33%;
+		float: left;
+		padding: 5px;
 	}
 
 	.main-header .main-menu .navbar-header .navbar-toggler {
@@ -1415,5 +1444,18 @@
 		.page-wrapper {
 			overflow-x: hidden !important;
 			width: 100% !important;
+		}
+	}
+
+	/* Targeting the Do's & Don'ts Module specifically */
+	@media (max-width: 1024px) {
+
+		#ecomatt-dos-donts-module,
+		.farmology-do-and-donts {
+			display: none !important;
+			visibility: hidden !important;
+			height: 0 !important;
+			padding: 0 !important;
+			margin: 0 !important;
 		}
 	}

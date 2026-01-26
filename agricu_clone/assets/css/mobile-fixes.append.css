@@ -1,0 +1,206 @@
+/* ==========================================================================
+   CONSOLIDATED MOBILE RESPONSIVENESS FIXES (2026 REFINE)
+   Target: Mobile Devices (< 768px)
+   ========================================================================== */
+@media only screen and (max-width: 767px) {
+
+    /* 1. GLOBAL RESETS & SCROLLING */
+    html,
+    body,
+    .page-wrapper {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        position: relative;
+    }
+
+    .auto-container,
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+    }
+
+    /* 2. HEADER & NAVIGATION */
+    /* Hide Desktop Nav Elements */
+    .main-header .nav-outer,
+    .main-header .main-menu,
+    .sticky-header .main-menu,
+    .header-top,
+    .main-header_button {
+        display: none !important;
+    }
+
+    /* Show Mobile Menu Toggler */
+    .main-header .mobile-nav-toggler {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative;
+        z-index: 1000;
+        cursor: pointer;
+        color: var(--main-color, #57a200);
+        /* Use brand color */
+        font-size: 24px;
+        margin-left: auto;
+        /* Push to right */
+    }
+
+    /* Ensure specific toggle in outer-box is visible */
+    .main-header .outer-box .mobile-nav-toggler {
+        display: block !important;
+    }
+
+    /* Logo Center/Correction */
+    .main-header .logo-box {
+        width: 100%;
+        text-align: center;
+        justify-content: space-between;
+        /* If toggler is inside */
+        display: flex !important;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logo-box .logo {
+        max-width: 150px;
+        /* Limit logo size */
+    }
+
+    /* 3. HERO & VIDEO SECTION */
+    .slide-bg {
+        background-position: center !important;
+    }
+
+    /* Force video to cover full height/width without overflow */
+    .video-slide video.hero-video {
+        width: 100% !important;
+        height: 100vh !important;
+        object-fit: cover !important;
+    }
+
+    /* Hero Text Adjustments */
+    .main-slider-one__title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        text-align: center;
+    }
+
+    .ecomatt-hero-text p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 4. FOOTER VERTICAL STACKING */
+    .site-footer-two__middle .row {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Force all columns to full width */
+    .site-footer-two__middle .col-xl-3,
+    .site-footer-two__middle .col-lg-6,
+    .site-footer-two__middle .col-md-6,
+    .site-footer-two__middle [class*="col-"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        margin-bottom: 40px !important;
+        text-align: center !important;
+    }
+
+    /* Newsletter Form Stacking */
+    .footer-widget-two__newsletter-form {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .footer-widget-two__newsletter-form-input-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .footer-widget-two__newsletter-form-input-box input {
+        text-align: center !important;
+    }
+
+    .footer-widget-two__newsletter-btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* Instagram Grid Fix */
+    .footer-widget-two__instagram-list {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        /* 3 columns */
+        gap: 10px !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .footer-widget-two__instagram-list li {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-widget-two__instagram-img {
+        width: 100% !important;
+        position: relative;
+    }
+
+    .footer-widget-two__instagram-img img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    /* Widgets Spacing */
+    .footer-widget-two__column,
+    .footer-widget-two__working-box,
+    .footer-widget-two__instagram {
+        margin-bottom: 10px !important;
+        /* Reduced since columns track margin */
+    }
+
+    /* 5. GENERAL CONTENT STACKING */
+    /* Guidelines / Farmology Section */
+    .farmology-do-and-donts__left,
+    .farmology-do-and-donts__middle,
+    .farmology-do-and-donts__right {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 25px !important;
+    }
+
+    .farmology-do-and-donts__single {
+        display: flex !important;
+        flex-direction: row !important;
+        text-align: left !important;
+        align-items: center !important;
+    }
+
+    .farmology-do-and-donts__icon {
+        margin-right: 15px !important;
+    }
+
+    /* Feature One Columns */
+    .feature-one__col-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    /* Fix any overlapping sections */
+    .section-title br {
+        display: none !important;
+    }
+}

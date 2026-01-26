@@ -1535,3 +1535,16 @@
 		width: 100% !important;
 	}
 }
+
+/* Targeting the Do's & Don'ts Module specifically */
+@media (max-width: 1024px) {
+
+	#ecomatt-dos-donts-module,
+	.farmology-do-and-donts {
+		display: none !important;
+		visibility: hidden !important;
+		height: 0 !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+}
