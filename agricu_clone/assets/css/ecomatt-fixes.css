@@ -1,0 +1,53 @@
+/* ===============================
+   ECOMATT SAFE FIXES
+   DO NOT EDIT EXISTING CSS
+   =============================== */
+
+/* Ensure header always stays on top */
+.main-header {
+    position: relative;
+    z-index: 9999;
+}
+
+/* Prevent shop layout stacking issues */
+.frutin-shop-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Category menu – safe hover only on desktop */
+@media (min-width: 1200px) {
+    .category-menu-wrap .category-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .category-menu-wrap:hover .category-menu {
+        display: block;
+    }
+}
+
+/* Disable category hover menu on mobile (prevents overlap bugs) */
+@media (max-width: 1199px) {
+    .category-menu-wrap .category-menu {
+        display: none !important;
+    }
+}
+
+/* Swiper arrows always clickable */
+.swiper-button-next,
+.swiper-button-prev {
+    pointer-events: auto;
+}
+
+/* Prevent buttons from being covered */
+.th-btn {
+    position: relative;
+    z-index: 5;
+}

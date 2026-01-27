@@ -1,4 +1,4 @@
-﻿ï»¿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -19,7 +19,9 @@
 	<link href="css/farmology-sections.css" rel="stylesheet">
 	<link href="css/custom-sections.css" rel="stylesheet">
 	<link href="assets/css/flaticon.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="css/ecomatt-fixes.css">
+
 
 
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -142,56 +144,151 @@
 			z-index: 1;
 		}
 	</style>
-</head>
-<!-- ECOMATT WHATSAPP ORDER OVERRIDE -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+	<style>
+		/* Dual-Footer System Styles */
+		@media (min-width: 1025px) {
+			.mobile-tablet-footer {
+				display: none !important;
+			}
 
-	const WHATSAPP_URL =
-		"https://wa.me/263783605456?text=Hello%20Ecomatt%20Farm,%20I%20would%20like%20to%20place%20an%20order.";
-
-	const ORDER_WORDS = [
-		"shop",
-		"order",
-		"buy",
-		"view products",
-		"add to bag",
-		"checkout",
-		"shop now",
-		"order now",
-		"view product"
-	];
-
-	document.querySelectorAll("a").forEach(link => {
-		const text = (link.innerText || "").toLowerCase();
-		const href = (link.getAttribute("href") || "").toLowerCase();
-
-		const isOrderAction =
-			ORDER_WORDS.some(word => text.includes(word)) ||
-			href.includes("shop") ||
-			href.includes("cart") ||
-			href.includes("checkout") ||
-			href.includes("shop-details");
-
-		if (isOrderAction) {
-			link.href = WHATSAPP_URL;
-			link.target = "_blank";
-			link.rel = "noopener noreferrer";
-
-			if (
-				text.includes("shop") ||
-				text.includes("order") ||
-				text.includes("view") ||
-				text.includes("buy")
-			) {
-				link.innerHTML = 'Order on WhatsApp <i class="fab fa-whatsapp ms-2"></i>';
+			.desktop-footer {
+				display: block !important;
 			}
 		}
-	});
 
-});
+		@media (max-width: 1024px) {
+			.desktop-footer {
+				display: none !important;
+			}
+
+			.mobile-tablet-footer {
+				display: block !important;
+				background-color: #1a1a1a;
+				color: #fff;
+				padding: 40px 0 20px;
+				text-align: center;
+			}
+
+			.mt-footer-block {
+				margin-bottom: 30px;
+			}
+
+			.mt-footer-block h3 {
+				color: #fff;
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+
+			/* Newsletter */
+			.mt-newsletter-form {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				max-width: 100%;
+			}
+
+			.mt-newsletter-form input {
+				width: 100%;
+				padding: 15px;
+				border: none;
+				border-radius: 5px;
+			}
+
+			.mt-newsletter-form button {
+				width: 100%;
+				padding: 15px;
+				background-color: #569D03;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				font-weight: bold;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+
+			/* Opening Times */
+			.opening-times-block {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 20px;
+				border-radius: 10px;
+			}
+
+			.opening-times-block p {
+				color: #ccc;
+				margin-bottom: 5px;
+			}
+
+			/* Links */
+			.links-block ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.links-block ul li {
+				margin-bottom: 10px;
+			}
+
+			.links-block ul li a {
+				color: #ccc;
+				font-size: 16px;
+				text-decoration: none;
+			}
+
+			/* Socials */
+			.social-block {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+				flex-wrap: wrap;
+			}
+
+			.social-block a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 50%;
+				color: #fff;
+				transition: all 0.3s ease;
+			}
+
+			.social-block a:hover {
+				background: #569D03;
+			}
+
+			/* Branding */
+			.mt-logo {
+				max-height: 60px;
+				margin-bottom: 15px;
+			}
+
+			.copyright {
+				color: #888;
+				font-size: 14px;
+			}
+
+			.copyright a {
+				color: #569D03;
+			}
+		}
+	</style>
+</head>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		document.querySelectorAll('a').forEach(function (btn) {
+			if (
+				btn.textContent.toLowerCase().includes("shop") ||
+				btn.textContent.toLowerCase().includes("order")
+			) {
+				btn.href =
+					"https://wa.me/263783605456?text=Hello%20Ecomatt%20Farm,%20I%20would%20like%20to%20place%20an%20order.";
+				btn.target = "_blank";
+			}
+		});
+	});
 </script>
-<!-- END ECOMATT WHATSAPP ORDER OVERRIDE -->
 
 <body>
 	<!--Start of Tawk.to Script-->
@@ -245,7 +342,8 @@ document.addEventListener("DOMContentLoaded", function () {
 												href="tel:+263714745653">+263 71 474 5653</a></li>
 										<li><span class="icon fa-classic fa-solid fa-envelope fa-fw"></span><a
 												href="mailto:sales@ecomatt.co.zw">sales@ecomatt.co.zw</a></li>
-										<li><span class="icon fa-classic fa-solid fa-location-dot fa-fw"></span>Plot 12 Sherwood, Kwekwe</li>
+										<li><span class="icon fa-classic fa-solid fa-location-dot fa-fw"></span>Plot 12
+											Sherwood Kwekwe</li>
 									</ul>
 								</div>
 							</div>
@@ -254,13 +352,11 @@ document.addEventListener("DOMContentLoaded", function () {
 								<!-- Social Box -->
 								<div class="header-top_socials">
 									<div class="social-inner">
-<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/ecomatt_farm/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.threads.com/@ecomatt_farm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
-<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-</div>
+										<a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+										<a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+										<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+										<a href="https://dribbble.com/"><i class="fa-brands fa-dribbble"></i></a>
+									</div>
 								</div>
 
 							</div>
@@ -306,7 +402,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 									<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 										<ul class="navigation clearfix">
-											<li class=""><a href="index.html">Home</a>
+											<li class=""><a href="#">Home</a>
 
 											</li>
 
@@ -325,11 +421,11 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-carrot"></span>
 																	Vegetables</h6>
 																<ul>
-																	<li><a href="service-detail.html">Tomatoes</a></li>
-																	<li><a href="service-detail.html">Onions</a></li>
-																	<li><a href="service-detail.html">Green Beans</a></li>
-																	<li><a href="service-detail.html">Cabbage</a></li>
-																	<li><a href="service-detail.html">Carrots</a></li>
+																	<li><a href="#">Tomatoes</a></li>
+																	<li><a href="#">Onions</a></li>
+																	<li><a href="#">Green Beans</a></li>
+																	<li><a href="#">Cabbage</a></li>
+																	<li><a href="#">Carrots</a></li>
 																</ul>
 															</div>
 
@@ -338,8 +434,8 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-wheat-awn"></span> Field
 																	Crops</h6>
 																<ul>
-																	<li><a href="service-detail.html">Maize</a></li>
-																	<li><a href="service-detail.html">Grain Crops</a></li>
+																	<li><a href="#">Maize</a></li>
+																	<li><a href="#">Grain Crops</a></li>
 																</ul>
 															</div>
 
@@ -348,9 +444,9 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-regular fa-calendar-check"></span>
 																	Seasonal Produce</h6>
 																<ul>
-																	<li><a href="service-detail.html">Watermelon</a></li>
-																	<li><a href="service-detail.html">Ginger</a></li>
-																	<li><a href="service-detail.html">Pumpkins</a></li>
+																	<li><a href="#">Watermelon</a></li>
+																	<li><a href="#">Ginger</a></li>
+																	<li><a href="#">Pumpkins</a></li>
 																</ul>
 															</div>
 														</div>
@@ -366,8 +462,8 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-egg"></span> Poultry
 																</h6>
 																<ul>
-																	<li><a href="service-detail.html">Broilers</a></li>
-																	<li><a href="service-detail.html">Layers</a></li>
+																	<li><a href="#">Broilers</a></li>
+																	<li><a href="#">Layers</a></li>
 																</ul>
 															</div>
 
@@ -376,8 +472,8 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-piggy-bank"></span>
 																	Piggery</h6>
 																<ul>
-																	<li><a href="service-detail.html">Pork Production</a></li>
-																	<li><a href="service-detail.html">Breeding</a></li>
+																	<li><a href="#">Pork Production</a></li>
+																	<li><a href="#">Breeding</a></li>
 
 																</ul>
 															</div>
@@ -386,8 +482,8 @@ document.addEventListener("DOMContentLoaded", function () {
 																<h6 class="mega-sub-header"><span
 																		class="icon fa-solid fa-paw"></span> Goats</h6>
 																<ul>
-																	<li><a href="service-detail.html">Meat</a></li>
-																	<li><a href="service-detail.html">Breeding</a></li>
+																	<li><a href="#">Meat</a></li>
+																	<li><a href="#">Breeding</a></li>
 																</ul>
 															</div>
 
@@ -396,9 +492,9 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-chart-line"></span>
 																	Future Expansion</h6>
 																<ul>
-																	<li><a href="service-detail.html">Cattle</a></li>
-																	<li><a href="service-detail.html">Fish</a></li>
-																	<li><a href="service-detail.html">Rabbits</a></li>
+																	<li><a href="#">Cattle</a></li>
+																	<li><a href="#">Fish</a></li>
+																	<li><a href="#">Rabbits</a></li>
 																</ul>
 															</div>
 														</div>
@@ -414,8 +510,8 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-wheat-awn"></span>
 																	Milling</h6>
 																<ul>
-																	<li><a href="service-detail.html">Chitsano Roller Meal</a></li>
-																	<li><a href="service-detail.html">By-Products</a></li>
+																	<li><a href="#">Chitsano Roller Meal</a></li>
+																	<li><a href="#">By-Products</a></li>
 																</ul>
 															</div>
 
@@ -424,9 +520,9 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-drumstick-bite"></span>
 																	Butchery Products</h6>
 																<ul>
-																	<li><a href="service-detail.html">Fresh Pork</a></li>
-																	<li><a href="service-detail.html">Chicken</a></li>
-																	<li><a href="service-detail.html">Goat</a></li>
+																	<li><a href="#">Fresh Pork</a></li>
+																	<li><a href="#">Chicken</a></li>
+																	<li><a href="#">Goat</a></li>
 																</ul>
 															</div>
 
@@ -435,7 +531,7 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-egg"></span> Packaged
 																	Eggs</h6>
 																<ul>
-																	<li><a href="service-detail.html">Packaged Eggs</a></li>
+																	<li><a href="#">Packaged Eggs</a></li>
 																</ul>
 															</div>
 
@@ -444,7 +540,7 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-bacon"></span> Processed
 																	Meats</h6>
 																<ul>
-																	<li><a href="service-detail.html">Sausages</a></li>
+																	<li><a href="#">Sausages</a></li>
 																</ul>
 															</div>
 														</div>
@@ -460,10 +556,10 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-shop"></span> Farm
 																	Supply Store</h6>
 																<ul>
-																	<li><a href="service-detail.html">Feed</a></li>
-																	<li><a href="service-detail.html">Chicks</a></li>
-																	<li><a href="service-detail.html">Seedlings</a></li>
-																	<li><a href="service-detail.html">Manure</a></li>
+																	<li><a href="#">Feed</a></li>
+																	<li><a href="#">Chicks</a></li>
+																	<li><a href="#">Seedlings</a></li>
+																	<li><a href="#">Manure</a></li>
 																</ul>
 															</div>
 
@@ -475,8 +571,8 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-graduation-cap"></span>
 																	Training & Tours</h6>
 																<ul>
-																	<li><a href="service-detail.html">Training</a></li>
-																	<li><a href="service-detail.html">Farm Tours</a></li>
+																	<li><a href="#">Training</a></li>
+																	<li><a href="#">Farm Tours</a></li>
 																</ul>
 															</div>
 
@@ -485,8 +581,8 @@ document.addEventListener("DOMContentLoaded", function () {
 																		class="icon fa-solid fa-store"></span>
 																	Marketplace</h6>
 																<ul>
-																	<li><a href="service-detail.html">Marketplace & Distribution</a></li>
-																	<li><a href="service-detail.html">MountPlus</a></li>
+																	<li><a href="#">Marketplace & Distribution</a></li>
+																	<li><a href="#">MountPlus</a></li>
 																</ul>
 															</div>
 														</div>
@@ -495,21 +591,21 @@ document.addEventListener("DOMContentLoaded", function () {
 											</li>
 
 
-											<li class=""><a href="services.html">Farm Operations</a>
+											<li class=""><a href="services.html">Services</a>
 												<!-- 	<ul>
-													<li><a href="services.html">Farm Operations</a></li>
+													<li><a href="services.html">services</a></li>
 													<li><a href="service-detail.html">services detail</a></li>
 												</ul> -->
 											</li>
-											<!-- <li class=""><a href="project.html">projects</a> -->
+											<li class=""><a href="project.html">projects</a>
 												<!-- <ul>
 													<li><a href="project.html">project</a></li>
-													<li><a href="services.html">project detail</a></li>
+													<li><a href="project-detail.html">project detail</a></li>
 												</ul> -->
 											</li>
-											<li class=""><a href="mega-shop.html">shop</a>
+											<li class=""><a href="#">shop</a>
 												<!-- 		<ul>
-													<li><a href="mega-shop.html">shop</a></li>
+													<li><a href="#">shop</a></li>
 													<li><a href="shop-detail.html">shop detail</a></li>
 													<li><a href="cart.html">shoping Cart</a></li>
 													<li><a href="checkout.html">CheckOut</a></li>
@@ -517,10 +613,10 @@ document.addEventListener("DOMContentLoaded", function () {
 													<li><a href="coming-soon.html">coming soon</a></li>
 												</ul> -->
 											</li>
-											<!-- <li class=""><a href="blog.html">Blog</a> -->
+											<li class=""><a href="blog.html">Blog</a>
 
 											</li>
-											<li class="dropdown"><a href="about.html">About</a>
+											<li class="dropdown"><a href="#">About</a>
 												<ul>
 													<li><a href="about.html">About us</a></li>
 													<li><a href="faq.html">Faq</a></li>
@@ -608,134 +704,139 @@ document.addEventListener("DOMContentLoaded", function () {
 						<div class="col-xl-3 d-none d-xl-block">
 							<!-- Browse by Categories -->
 							<div class="category-menu-wrap">
-								<a class="menu-expand" href="#"><i class="far fa-bars"></i>Categories</a>
+								<a class="menu-expand" href="#"><i class="far fa-bars"></i>Browse by Categories</a>
 								<nav class="category-menu">
 									<ul>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_1.svg"
-													alt="Icon">Fresh Vegetables</a></li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_2.svg"
+										<li><a href="#"><img src="assets/img/icon/category_1_1.svg" alt="Icon">Fresh
+												Vegetables</a></li>
+										<li><a href="#"><img src="assets/img/icon/category_1_2.svg"
 													alt="Icon">Grocery</a></li>
-										<li class="menu-item-has-children"><a href="shop.html"><img
+										<li class="menu-item-has-children"><a href="#"><img
 													src="assets/img/icon/category_1_3.svg" alt="Icon">Poultry Products
-</a>
+											</a>
 											<ul class="sub-menu">
-												<li><a href="shop.html"><img src="assets/img/icon/category_1_4.svg"
+												<li><a href="#"><img src="assets/img/icon/category_1_4.svg"
 															alt="Icon">Broilers & Free-Range</a></li>
-												<li><a href="shop.html"><img src="assets/img/icon/category_1_5.svg"
+												<li><a href="#"><img src="assets/img/icon/category_1_5.svg"
 															alt="Icon">Eggs</a></li>
-												<li><a href="shop.html"><img src="assets/img/icon/category_1_6.svg"
+												<li><a href="#"><img src="assets/img/icon/category_1_6.svg"
 															alt="Icon">Live Birds</a></li>
-												<li><a href="shop.html"><img src="assets/img/icon/category_1_7.svg"
+												<li><a href="#"><img src="assets/img/icon/category_1_7.svg"
 															alt="Icon">Fresh Meat</a></li>
 											</ul>
 										</li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_4.svg"
-													alt="Icon">Piggery Products</a></li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_5.svg"
-													alt="Icon">Chitsano Roller Meal</a></li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_6.svg"
-													alt="Icon">Packaged Eggs</a></li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_7.svg"
-													alt="Icon">Fresh Meat</a></li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_8.svg"
+										<li><a href="#"><img src="assets/img/icon/category_1_4.svg" alt="Icon">Piggery
+												Products</a></li>
+										<li><a href="#"><img src="assets/img/icon/category_1_5.svg" alt="Icon">Chitsano
+												Roller Meal</a></li>
+										<li><a href="#"><img src="assets/img/icon/category_1_6.svg" alt="Icon">Packaged
+												Eggs</a></li>
+										<li><a href="#"><img src="assets/img/icon/category_1_7.svg" alt="Icon">Fresh
+												Meat</a></li>
+										<li><a href="#"><img src="assets/img/icon/category_1_8.svg"
 													alt="Icon">Chevron</a></li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_9.svg"
-													alt="Icon">Farm Supplies</a></li>
-										<li><a href="shop.html"><img src="assets/img/icon/category_1_10.svg"
-													alt="Icon">Bread & Bakery</a></li>
+										<li><a href="#"><img src="assets/img/icon/category_1_9.svg" alt="Icon">Farm
+												Supplies</a></li>
+										<li><a href="#"><img src="assets/img/icon/category_1_10.svg" alt="Icon">Bread &
+												Bakery</a></li>
 									</ul>
 								</nav>
 							</div>
-						</div> 
+						</div>
 						<div class="col-xl-9">
-	<div class="swiper th-slider" id="heroSlider3" data-slider-options='{"effect":"fade"}'>
-		<div class="swiper-wrapper">
+							<div class="swiper th-slider" id="heroSlider3" data-slider-options='{"effect":"fade"}'>
+								<div class="swiper-wrapper">
 
-			<!-- SLIDE 1: CROPS & HORTICULTURE -->
-			<div class="swiper-slide">
-				<div class="hero-inner" data-bg-src="assets/img/hero/hero_bg_3_1.jpg">
-					<div class="hero-style3">
-						<span class="hero-subtitle" data-ani="slideinup" data-ani-delay="0.0s">
-							FRESH FROM ECOMATT FARM
-						</span>
-						<h1 class="hero-title2">
-							<span class="title1" data-ani="slideinup" data-ani-delay="0.2s">
-								Fresh Farm
-							</span>
-							<span class="title2" data-ani="slideinup" data-ani-delay="0.3s">
-								Vegetables
-							</span>
-						</h1>
-						<p class="hero-text" data-ani="slideinup" data-ani-delay="0.5s">
-							Locally grown vegetables harvested from our fields in Kwekwe and supplied
-							to households, retailers, and bulk buyers.
-						</p>
-						<a href="shop.html" class="th-btn style4" data-ani="slideinup" data-ani-delay="0.6s">
-							Shop Now<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
-					</div>
-				</div>
-			</div>
+									<!-- SLIDE 1: CROPS & HORTICULTURE -->
+									<div class="swiper-slide">
+										<div class="hero-inner" data-bg-src="assets/img/hero/hero_bg_3_1.jpg">
+											<div class="hero-style3">
+												<span class="hero-subtitle" data-ani="slideinup" data-ani-delay="0.0s">
+													FRESH FROM ECOMATT FARM
+												</span>
+												<h1 class="hero-title2">
+													<span class="title1" data-ani="slideinup" data-ani-delay="0.2s">
+														Fresh Farm
+													</span>
+													<span class="title2" data-ani="slideinup" data-ani-delay="0.3s">
+														Vegetables
+													</span>
+												</h1>
+												<p class="hero-text" data-ani="slideinup" data-ani-delay="0.5s">
+													Locally grown vegetables harvested from our fields in Kwekwe and
+													supplied
+													to households, retailers, and bulk buyers.
+												</p>
+												<a href="#" class="th-btn style4" data-ani="slideinup"
+													data-ani-delay="0.6s">
+													Shop Now<i class="fas fa-chevrons-right ms-2"></i>
+												</a>
+											</div>
+										</div>
+									</div>
 
-			<!-- SLIDE 2: POULTRY & PIGGERY -->
-			<div class="swiper-slide">
-				<div class="hero-inner" data-bg-src="assets/img/hero/hero_bg_3_2.jpg">
-					<div class="hero-style3">
-						<span class="hero-subtitle" data-ani="slideinup" data-ani-delay="0.0s">
-							POULTRY & PIGGERY OPERATIONS
-						</span>
-						<h1 class="hero-title2">
-							<span class="title1" data-ani="slideinup" data-ani-delay="0.2s">
-								Fresh Poultry
-							</span>
-							<span class="title2" data-ani="slideinup" data-ani-delay="0.3s">
-								& Pork
-							</span>
-						</h1>
-						<p class="hero-text" data-ani="slideinup" data-ani-delay="0.5s">
-							Broiler chickens and pork produced through structured farming systems
-							with a focus on hygiene, quality, and consistency.
-						</p>
-						<a href="shop.html" class="th-btn style4" data-ani="slideinup" data-ani-delay="0.6s">
-							View Products<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
-					</div>
-				</div>
-			</div>
+									<!-- SLIDE 2: POULTRY & PIGGERY -->
+									<div class="swiper-slide">
+										<div class="hero-inner" data-bg-src="assets/img/hero/hero_bg_3_2.jpg">
+											<div class="hero-style3">
+												<span class="hero-subtitle" data-ani="slideinup" data-ani-delay="0.0s">
+													POULTRY & PIGGERY OPERATIONS
+												</span>
+												<h1 class="hero-title2">
+													<span class="title1" data-ani="slideinup" data-ani-delay="0.2s">
+														Fresh Poultry
+													</span>
+													<span class="title2" data-ani="slideinup" data-ani-delay="0.3s">
+														& Pork
+													</span>
+												</h1>
+												<p class="hero-text" data-ani="slideinup" data-ani-delay="0.5s">
+													Broiler chickens and pork produced through structured farming
+													systems
+													with a focus on hygiene, quality, and consistency.
+												</p>
+												<a href="#" class="th-btn style4" data-ani="slideinup"
+													data-ani-delay="0.6s">
+													View Products<i class="fas fa-chevrons-right ms-2"></i>
+												</a>
+											</div>
+										</div>
+									</div>
 
-			<!-- SLIDE 3: ROLLER MEAL & BUTCHERY -->
-			<div class="swiper-slide">
-				<div class="hero-inner" data-bg-src="assets/img/hero/hero_bg_3_3.jpg">
-					<div class="hero-style3">
-						<span class="hero-subtitle" data-ani="slideinup" data-ani-delay="0.0s">
-							MILLING & BUTCHERY
-						</span>
-						<h1 class="hero-title2">
-							<span class="title1" data-ani="slideinup" data-ani-delay="0.2s">
-								Chitsano
-							</span>
-							<span class="title2" data-ani="slideinup" data-ani-delay="0.3s">
-								Roller Meal
-							</span>
-						</h1>
-						<p class="hero-text" data-ani="slideinup" data-ani-delay="0.5s">
-							Quality roller meal, fresh meat, and farm products supplied directly
-							from Ecomatt Farm to support local markets.
-						</p>
-						<a href="shop.html" class="th-btn style4" data-ani="slideinup" data-ani-delay="0.6s">
-							Order Now<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
-					</div>
-				</div>
-			</div>
+									<!-- SLIDE 3: ROLLER MEAL & BUTCHERY -->
+									<div class="swiper-slide">
+										<div class="hero-inner" data-bg-src="assets/img/hero/hero_bg_3_3.jpg">
+											<div class="hero-style3">
+												<span class="hero-subtitle" data-ani="slideinup" data-ani-delay="0.0s">
+													MILLING & BUTCHERY
+												</span>
+												<h1 class="hero-title2">
+													<span class="title1" data-ani="slideinup" data-ani-delay="0.2s">
+														Chitsano
+													</span>
+													<span class="title2" data-ani="slideinup" data-ani-delay="0.3s">
+														Roller Meal
+													</span>
+												</h1>
+												<p class="hero-text" data-ani="slideinup" data-ani-delay="0.5s">
+													Quality roller meal, fresh meat, and farm products supplied directly
+													from Ecomatt Farm to support local markets.
+												</p>
+												<a href="#" class="th-btn style4" data-ani="slideinup"
+													data-ani-delay="0.6s">
+													Order Now<i class="fas fa-chevrons-right ms-2"></i>
+												</a>
+											</div>
+										</div>
+									</div>
 
-		</div>
+								</div>
 
-		<div class="slider-pagination"></div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>
-	</div>
-</div>
+								<div class="slider-pagination"></div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+						</div>
 
 					</div>
 				</div>
@@ -791,9 +892,8 @@ document.addEventListener("DOMContentLoaded", function () {
 						<div class="col-xl-4 col-md-6">
 							<div class="offer-box mega-hover" data-bg-src="assets/img/bg/cta_bg_3_2.jpg"><span
 									class="box-subtitle bg-theme">3% OFF</span>
-								<h3 class="box-title text-white">Fresh <br>Pork</h3><a
-									href="shop-details.html" class="th-btn style4 btn-sm">Shop Now<i
-										class="fas fa-chevrons-right ms-2"></i></a>
+								<h3 class="box-title text-white">Fresh <br>Pork</h3><a href="shop-details.html"
+									class="th-btn style4 btn-sm">Shop Now<i class="fas fa-chevrons-right ms-2"></i></a>
 							</div>
 						</div>
 						<div class="col-xl-4 col-md-6">
@@ -819,7 +919,7 @@ document.addEventListener("DOMContentLoaded", function () {
 								<div class="category-box">
 									<div class="box-icon"><img src="assets/img/product/category_2_1.png" alt="Image">
 									</div>
-									<h3 class="box-title"><a href="shop.html">Fresh Vegetables</a></h3>
+									<h3 class="box-title"><a href="#">Fresh Vegetables</a></h3>
 									<p class="box-text">Seasonal farm produce</p>
 								</div>
 							</div>
@@ -827,7 +927,7 @@ document.addEventListener("DOMContentLoaded", function () {
 								<div class="category-box">
 									<div class="box-icon"><img src="assets/img/product/category_2_2.png" alt="Image">
 									</div>
-									<h3 class="box-title"><a href="shop.html">Seasonal Produce</a></h3>
+									<h3 class="box-title"><a href="#">Seasonal Produce</a></h3>
 									<p class="box-text">Available by season</p>
 								</div>
 							</div>
@@ -835,7 +935,7 @@ document.addEventListener("DOMContentLoaded", function () {
 								<div class="category-box">
 									<div class="box-icon"><img src="assets/img/product/category_2_3.png" alt="Image">
 									</div>
-									<h3 class="box-title"><a href="shop.html">Poultry Products</a></h3>
+									<h3 class="box-title"><a href="#">Poultry Products</a></h3>
 									<p class="box-text">Chicken & eggs</p>
 								</div>
 							</div>
@@ -843,7 +943,7 @@ document.addEventListener("DOMContentLoaded", function () {
 								<div class="category-box">
 									<div class="box-icon"><img src="assets/img/product/category_2_4.png" alt="Image">
 									</div>
-									<h3 class="box-title"><a href="shop.html">Piggery Products</a></h3>
+									<h3 class="box-title"><a href="#">Piggery Products</a></h3>
 									<p class="box-text">Fresh pork supply</p>
 								</div>
 							</div>
@@ -851,7 +951,7 @@ document.addEventListener("DOMContentLoaded", function () {
 								<div class="category-box">
 									<div class="box-icon"><img src="assets/img/product/category_2_5.png" alt="Image">
 									</div>
-									<h3 class="box-title"><a href="shop.html">Roller Meal</a></h3>
+									<h3 class="box-title"><a href="#">Roller Meal</a></h3>
 									<p class="box-text">Chitsano Roller Meal</p>
 								</div>
 							</div>
@@ -859,7 +959,7 @@ document.addEventListener("DOMContentLoaded", function () {
 								<div class="category-box">
 									<div class="box-icon"><img src="assets/img/product/category_2_6.png" alt="Image">
 									</div>
-									<h3 class="box-title"><a href="shop.html">Butchery Products</a></h3>
+									<h3 class="box-title"><a href="#">Butchery Products</a></h3>
 									<p class="box-text">Farm-sourced meat</p>
 								</div>
 							</div>
@@ -867,562 +967,567 @@ document.addEventListener("DOMContentLoaded", function () {
 					</div>
 				</div>
 			</section>
-	<section class="space">
-	<div class="container">
-		<div class="row justify-content-lg-between justify-content-center align-items-end">
-			<div class="col-lg">
-				<div class="title-area text-center text-lg-start">
-					<span class="sub-title">
-						<img src="assets/img/theme-img/title_icon.svg" alt="Icon">
-						Ecomatt Farm Products
-					</span>
-					<h2 class="sec-title">Our Popular Products</h2>
-				</div>
-			</div>
-			<div class="col-auto mt-n2 mt-lg-0">
-				<div class="sec-btn">
-					<div class="nav tab-menu1" role="tablist">
-						<button class="tab-btn active" data-bs-toggle="tab" data-bs-target="#nav-one" type="button">
-							Fresh Produce
-						</button>
-						<button class="tab-btn" data-bs-toggle="tab" data-bs-target="#nav-two" type="button">
-							Value-Added Products
-						</button>
-						<button class="tab-btn" data-bs-toggle="tab" data-bs-target="#nav-three" type="button">
-							Livestock Products
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="tab-content">
-
-			<!-- ================= FRESH PRODUCE ================= -->
-			<div class="tab-pane fade show active" id="nav-one">
-				<div class="slider-area">
-					<div class="swiper th-slider has-shadow productSlider1"
-						data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
-						<div class="swiper-wrapper">
-
-							<!-- Tomatoes -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_1.jpg" alt="Fresh Tomatoes">
-										<span class="product-tag">Hot</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Vegetables</a>
-										<h3 class="product-title">Fresh Tomatoes</h3>
-										<span class="price">Market Price</span>
-									</div>
+			<section class="space">
+				<div class="container">
+					<div class="row justify-content-lg-between justify-content-center align-items-end">
+						<div class="col-lg">
+							<div class="title-area text-center text-lg-start">
+								<span class="sub-title">
+									<img src="assets/img/theme-img/title_icon.svg" alt="Icon">
+									Ecomatt Farm Products
+								</span>
+								<h2 class="sec-title">Our Popular Products</h2>
+							</div>
+						</div>
+						<div class="col-auto mt-n2 mt-lg-0">
+							<div class="sec-btn">
+								<div class="nav tab-menu1" role="tablist">
+									<button class="tab-btn active" data-bs-toggle="tab" data-bs-target="#nav-one"
+										type="button">
+										Fresh Produce
+									</button>
+									<button class="tab-btn" data-bs-toggle="tab" data-bs-target="#nav-two"
+										type="button">
+										Value-Added Products
+									</button>
+									<button class="tab-btn" data-bs-toggle="tab" data-bs-target="#nav-three"
+										type="button">
+										Livestock Products
+									</button>
 								</div>
 							</div>
-
-							<!-- Onions -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_2.jpg" alt="Red Onions">
-										<span class="product-tag">Sale</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Vegetables</a>
-										<h3 class="product-title">Red Onions</h3>
-										<span class="price">Market Price</span>
-									</div>
-								</div>
-							</div>
-
-							<!-- Cabbage -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_3.jpg" alt="Green Cabbage">
-										<span class="product-tag">New</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Vegetables</a>
-										<h3 class="product-title">Green Cabbage</h3>
-										<span class="price">Market Price</span>
-									</div>
-								</div>
-							</div>
-
-							<!-- Watermelon -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_4.jpg" alt="Watermelon">
-										<span class="product-tag">Seasonal</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Seasonal Produce</a>
-										<h3 class="product-title">Watermelon</h3>
-										<span class="price">Seasonal Price</span>
-									</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
-				</div>
-			</div>
 
-			<!-- ================= VALUE-ADDED PRODUCTS ================= -->
-			<div class="tab-pane fade" id="nav-two">
-				<div class="slider-area">
-					<div class="swiper th-slider has-shadow productSlider2"
-						data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
-						<div class="swiper-wrapper">
+					<div class="tab-content">
 
-							<!-- Roller Meal -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_5.jpg" alt="Chitsano Roller Meal">
-										<span class="product-tag">Hot</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Milling</a>
-										<h3 class="product-title">Chitsano Roller Meal (10kg)</h3>
-										<span class="price">Retail & Bulk</span>
+						<!-- ================= FRESH PRODUCE ================= -->
+						<div class="tab-pane fade show active" id="nav-one">
+							<div class="slider-area">
+								<div class="swiper th-slider has-shadow productSlider1"
+									data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
+									<div class="swiper-wrapper">
+
+										<!-- Tomatoes -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_1.jpg" alt="Fresh Tomatoes">
+													<span class="product-tag">Hot</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Vegetables</a>
+													<h3 class="product-title">Fresh Tomatoes</h3>
+													<span class="price">Market Price</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Onions -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_2.jpg" alt="Red Onions">
+													<span class="product-tag">Sale</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Vegetables</a>
+													<h3 class="product-title">Red Onions</h3>
+													<span class="price">Market Price</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Cabbage -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_3.jpg" alt="Green Cabbage">
+													<span class="product-tag">New</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Vegetables</a>
+													<h3 class="product-title">Green Cabbage</h3>
+													<span class="price">Market Price</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Watermelon -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_4.jpg" alt="Watermelon">
+													<span class="product-tag">Seasonal</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Seasonal Produce</a>
+													<h3 class="product-title">Watermelon</h3>
+													<span class="price">Seasonal Price</span>
+												</div>
+											</div>
+										</div>
+
 									</div>
 								</div>
 							</div>
-
-							<!-- Eggs -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_6.jpg" alt="Farm Eggs">
-										<span class="product-tag">New</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Poultry</a>
-										<h3 class="product-title">Packaged Farm Eggs</h3>
-										<span class="price">Per Tray</span>
-									</div>
-								</div>
-							</div>
-
 						</div>
+
+						<!-- ================= VALUE-ADDED PRODUCTS ================= -->
+						<div class="tab-pane fade" id="nav-two">
+							<div class="slider-area">
+								<div class="swiper th-slider has-shadow productSlider2"
+									data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
+									<div class="swiper-wrapper">
+
+										<!-- Roller Meal -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_5.jpg"
+														alt="Chitsano Roller Meal">
+													<span class="product-tag">Hot</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Milling</a>
+													<h3 class="product-title">Chitsano Roller Meal (10kg)</h3>
+													<span class="price">Retail & Bulk</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Eggs -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_6.jpg" alt="Farm Eggs">
+													<span class="product-tag">New</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Poultry</a>
+													<h3 class="product-title">Packaged Farm Eggs</h3>
+													<span class="price">Per Tray</span>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ================= LIVESTOCK PRODUCTS ================= -->
+						<div class="tab-pane fade" id="nav-three">
+							<div class="slider-area">
+								<div class="swiper th-slider has-shadow productSlider3"
+									data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
+									<div class="swiper-wrapper">
+
+										<!-- Pork -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_7.jpg" alt="Fresh Pork">
+													<span class="product-tag">Hot</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Piggery</a>
+													<h3 class="product-title">Fresh Pork Cuts</h3>
+													<span class="price">Per Kg</span>
+												</div>
+											</div>
+										</div>
+
+										<!-- Chicken -->
+										<div class="swiper-slide">
+											<div class="th-product product-grid">
+												<div class="product-img">
+													<img src="assets/img/product/product_1_8.jpg" alt="Broiler Chicken">
+													<span class="product-tag">Sale</span>
+												</div>
+												<div class="product-content">
+													<a class="product-category">Poultry</a>
+													<h3 class="product-title">Broiler Chicken</h3>
+													<span class="price">Per Bird</span>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
-			</div>
-
-			<!-- ================= LIVESTOCK PRODUCTS ================= -->
-			<div class="tab-pane fade" id="nav-three">
-				<div class="slider-area">
-					<div class="swiper th-slider has-shadow productSlider3"
-						data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":2},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
-						<div class="swiper-wrapper">
-
-							<!-- Pork -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_7.jpg" alt="Fresh Pork">
-										<span class="product-tag">Hot</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Piggery</a>
-										<h3 class="product-title">Fresh Pork Cuts</h3>
-										<span class="price">Per Kg</span>
-									</div>
-								</div>
-							</div>
-
-							<!-- Chicken -->
-							<div class="swiper-slide">
-								<div class="th-product product-grid">
-									<div class="product-img">
-										<img src="assets/img/product/product_1_8.jpg" alt="Broiler Chicken">
-										<span class="product-tag">Sale</span>
-									</div>
-									<div class="product-content">
-										<a class="product-category">Poultry</a>
-										<h3 class="product-title">Broiler Chicken</h3>
-										<span class="price">Per Bird</span>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
+			</section>
 
 			<section class="bg-top-center overflow-hidden space-top" data-bg-src="assets/img/bg/deal_bg_2.jpg">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-xl-6 col-md-8">
-				<div class="title-area text-center">
-					<span class="sub-title">
-						<img src="assets/img/theme-img/title_icon.svg" alt="Icon">
-						Limited Farm Offers
-					</span>
-					<h2 class="sec-title text-white">Deals of the Week</h2>
-					<p class="sec-text text-light">
-						Fresh from our farm in Kwekwe. Enjoy special weekly offers on vegetables,
-						roller meal, poultry, and butchery productsâ€”available while stocks last.
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="deal-sec-area">
-			<ul class="counter-list countdown-style1" data-offer-date="12/31/2026">
-				<li>
-					<div>
-						<div class="day count-number">00</div>
-						<span class="count-name">Days</span>
-					</div>
-				</li>
-				<li>
-					<div>
-						<div class="hour count-number">00</div>
-						<span class="count-name">Hours</span>
-					</div>
-				</li>
-				<li>
-					<div>
-						<div class="minute count-number">00</div>
-						<span class="count-name">Minutes</span>
-					</div>
-				</li>
-				<li>
-					<div>
-						<div class="seconds count-number">00</div>
-						<span class="count-name">Seconds</span>
-					</div>
-				</li>
-			</ul>
-
-			<div class="row gy-4 justify-content-center">
-
-				<!-- LEFT PROMO -->
-				<div class="col-xl-3 text-xl-start text-center">
-					<div class="offer-grid mega-hover" data-bg-src="assets/img/bg/cta_bg_4_1.jpg">
-						<span class="h6 box-subtitle text-white">
-							<span class="text-theme">Weekly Farm</span> Deals
-						</span>
-						<h3 class="box-title text-white">
-							Fresh Produce &<br>Farm Essentials
-						</h3>
-						<a href="shop.html" class="th-btn btn-sm style3">
-							Shop Now<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
-					</div>
-				</div>
-
-				<!-- RIGHT PRODUCTS -->
-				<div class="col-xl-9">
-					<div class="row gy-4">
-
-						<!-- Tomatoes -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_15.jpg" alt="Fresh Tomatoes">
-									<span class="product-tag">Hot</span>
-								</div>
-								<div class="product-content">
-									<a class="product-category">Fresh Vegetables</a>
-									<h3 class="product-title">Fresh Tomatoes</h3>
-									<span class="price">Special Offer</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- Roller Meal -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_13.jpg" alt="Chitsano Roller Meal">
-									<span class="product-tag">Sale</span>
-								</div>
-								<div class="product-content">
-									<a class="product-category">Milling</a>
-									<h3 class="product-title">Chitsano Roller Meal (10kg)</h3>
-									<span class="price">Discounted</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- Fresh Pork -->
-						<div class="col-lg-4 col-sm-6">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_14.jpg" alt="Fresh Pork">
-									<span class="product-tag">Limited</span>
-								</div>
-								<div class="product-content">
-									<a class="product-category">Butchery</a>
-									<h3 class="product-title">Fresh Pork Cuts</h3>
-									<span class="price">Weekly Deal</span>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="space">
-	<div class="container z-index-common">
-		<div class="row gy-30">
-
-			<!-- CROPS & HORTICULTURE -->
-			<div class="col-xl-6">
-				<div class="offer-block mega-hover" data-bg-color="#F3EEC1">
-					<div class="box-img">
-						<img src="assets/img/bg/cta_5_1.png" alt="Fresh Vegetables">
-					</div>
-					<span class="h6 box-subtitle">
-						FRESH FROM OUR FARM : VEGETABLES
-					</span>
-					<div class="box-content" data-border="#F3EEC1">
-						<span class="box-heading">Naturally Grown</span>
-						<h3 class="box-title">
-							Fresh <b>Vegetables</b>
-						</h3>
-						<p class="box-text">
-							Seasonal tomatoes, cabbage, onions, carrots, and green vegetables
-							harvested directly from our fields in Kwekwe.
-						</p>
-						<a href="shop.html" class="th-btn btn-sm">
-							Shop Now<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- CHITSANO ROLLER MEAL -->
-			<div class="col-xl-6">
-				<div class="offer-block mega-hover" data-bg-color="#D1EDD2">
-					<div class="box-img">
-						<img src="assets/img/bg/cta_5_2.png" alt="Chitsano Roller Meal">
-					</div>
-					<span class="h6 box-subtitle">
-						CHITSANO ROLLER MEAL
-					</span>
-					<div class="box-content" data-border="#D1EDD2">
-						<span class="box-heading">Milled Locally</span>
-						<h3 class="box-title">
-							Mealie <b>Roller Meal</b>
-						</h3>
-						<p class="box-text">
-							High-quality roller meal milled, packaged, and supplied for households,
-							retailers, and institutions across Zimbabwe.
-						</p>
-						<a href="shop.html" class="th-btn btn-sm">
-							Shop Now<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-			<section class="space-bottom">
-	<div class="container">
-		<div class="row flex-row-reverse">
-
-			<!-- SIDE PROMO -->
-			<div class="col-xl-3 col-lg-4 col-md-6 mb-40 mb-lg-0">
-				<div class="offer-grid mega-hover" data-bg-src="assets/img/bg/cta_bg_4_2.jpg">
-					<span class="h6 box-subtitle fs-16 text-white">
-						<span class="text-theme2">FARM</span> FRESH & LOCAL
-					</span>
-					<h3 class="box-title text-white">
-						Quality Produce &<br>Farm Products
-					</h3>
-					<a href="shop.html" class="th-btn btn-sm style4">
-						Shop Now<i class="fas fa-chevrons-right ms-2"></i>
-					</a>
-				</div>
-			</div>
-
-			<!-- TRENDING PRODUCTS -->
-			<div class="col-xl-9 col-lg-8 col-md-6">
-				<div class="row justify-content-lg-between justify-content-center align-items-center">
-					<div class="col-md text-center text-md-start">
-						<h2 class="sec-title mb-30">Trending Products</h2>
-					</div>
-					<div class="col-md-auto d-none d-lg-inline-block">
-						<div class="sec-btn mb-35">
-							<div class="icon-box">
-								<button data-slider-prev="#productSlider7" class="slider-arrow default">
-									<i class="far fa-arrow-left"></i>
-								</button>
-								<button data-slider-next="#productSlider7" class="slider-arrow default">
-									<i class="far fa-arrow-right"></i>
-								</button>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-xl-6 col-md-8">
+							<div class="title-area text-center">
+								<span class="sub-title">
+									<img src="assets/img/theme-img/title_icon.svg" alt="Icon">
+									Limited Farm Offers
+								</span>
+								<h2 class="sec-title text-white">Deals of the Week</h2>
+								<p class="sec-text text-light">
+									Fresh from our farm in Kwekwe. Enjoy special weekly offers on vegetables,
+									roller meal, poultry, and butchery products—available while stocks last.
+								</p>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="swiper th-slider has-shadow" id="productSlider7"
-					data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-					
-					<div class="swiper-wrapper">
-
-						<!-- VEGETABLES -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_1.jpg" alt="Fresh Tomatoes">
-									<span class="product-tag">Hot</span>
+					<div class="deal-sec-area">
+						<ul class="counter-list countdown-style1" data-offer-date="12/31/2026">
+							<li>
+								<div>
+									<div class="day count-number">00</div>
+									<span class="count-name">Days</span>
 								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Vegetables</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Fresh Tomatoes</a>
+							</li>
+							<li>
+								<div>
+									<div class="hour count-number">00</div>
+									<span class="count-name">Hours</span>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div class="minute count-number">00</div>
+									<span class="count-name">Minutes</span>
+								</div>
+							</li>
+							<li>
+								<div>
+									<div class="seconds count-number">00</div>
+									<span class="count-name">Seconds</span>
+								</div>
+							</li>
+						</ul>
+
+						<div class="row gy-4 justify-content-center">
+
+							<!-- LEFT PROMO -->
+							<div class="col-xl-3 text-xl-start text-center">
+								<div class="offer-grid mega-hover" data-bg-src="assets/img/bg/cta_bg_4_1.jpg">
+									<span class="h6 box-subtitle text-white">
+										<span class="text-theme">Weekly Farm</span> Deals
+									</span>
+									<h3 class="box-title text-white">
+										Fresh Produce &<br>Farm Essentials
 									</h3>
-									<span class="price">Market Price</span>
+									<a href="#" class="th-btn btn-sm style3">
+										Shop Now<i class="fas fa-chevrons-right ms-2"></i>
+									</a>
 								</div>
 							</div>
-						</div>
 
-						<!-- CABBAGE -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_3.jpg" alt="Cabbage">
-									<span class="product-tag">New</span>
+							<!-- RIGHT PRODUCTS -->
+							<div class="col-xl-9">
+								<div class="row gy-4">
+
+									<!-- Tomatoes -->
+									<div class="col-lg-4 col-sm-6">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_15.jpg" alt="Fresh Tomatoes">
+												<span class="product-tag">Hot</span>
+											</div>
+											<div class="product-content">
+												<a class="product-category">Fresh Vegetables</a>
+												<h3 class="product-title">Fresh Tomatoes</h3>
+												<span class="price">Special Offer</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- Roller Meal -->
+									<div class="col-lg-4 col-sm-6">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_13.jpg"
+													alt="Chitsano Roller Meal">
+												<span class="product-tag">Sale</span>
+											</div>
+											<div class="product-content">
+												<a class="product-category">Milling</a>
+												<h3 class="product-title">Chitsano Roller Meal (10kg)</h3>
+												<span class="price">Discounted</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- Fresh Pork -->
+									<div class="col-lg-4 col-sm-6">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_14.jpg" alt="Fresh Pork">
+												<span class="product-tag">Limited</span>
+											</div>
+											<div class="product-content">
+												<a class="product-category">Butchery</a>
+												<h3 class="product-title">Fresh Pork Cuts</h3>
+												<span class="price">Weekly Deal</span>
+											</div>
+										</div>
+									</div>
+
 								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Vegetables</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Green Cabbage</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="space">
+				<div class="container z-index-common">
+					<div class="row gy-30">
+
+						<!-- CROPS & HORTICULTURE -->
+						<div class="col-xl-6">
+							<div class="offer-block mega-hover" data-bg-color="#F3EEC1">
+								<div class="box-img">
+									<img src="assets/img/bg/cta_5_1.png" alt="Fresh Vegetables">
+								</div>
+								<span class="h6 box-subtitle">
+									FRESH FROM OUR FARM : VEGETABLES
+								</span>
+								<div class="box-content" data-border="#F3EEC1">
+									<span class="box-heading">Naturally Grown</span>
+									<h3 class="box-title">
+										Fresh <b>Vegetables</b>
 									</h3>
-									<span class="price">Market Price</span>
+									<p class="box-text">
+										Seasonal tomatoes, cabbage, onions, carrots, and green vegetables
+										harvested directly from our fields in Kwekwe.
+									</p>
+									<a href="#" class="th-btn btn-sm">
+										Shop Now<i class="fas fa-chevrons-right ms-2"></i>
+									</a>
 								</div>
 							</div>
 						</div>
 
 						<!-- CHITSANO ROLLER MEAL -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_5.jpg" alt="Roller Meal">
-									<span class="product-tag">Hot</span>
+						<div class="col-xl-6">
+							<div class="offer-block mega-hover" data-bg-color="#D1EDD2">
+								<div class="box-img">
+									<img src="assets/img/bg/cta_5_2.png" alt="Chitsano Roller Meal">
 								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Milling</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Chitsano Roller Meal</a>
+								<span class="h6 box-subtitle">
+									CHITSANO ROLLER MEAL
+								</span>
+								<div class="box-content" data-border="#D1EDD2">
+									<span class="box-heading">Milled Locally</span>
+									<h3 class="box-title">
+										Mealie <b>Roller Meal</b>
 									</h3>
-									<span class="price">Bulk & Retail</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- FRESH PORK -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_7.jpg" alt="Fresh Pork">
-									<span class="product-tag">Sale</span>
-								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Butchery</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Fresh Pork Cuts</a>
-									</h3>
-									<span class="price">Available</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- BROILER CHICKEN -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_8.jpg" alt="Broiler Chicken">
-									<span class="product-tag">New</span>
-								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Poultry</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Broiler Chicken</a>
-									</h3>
-									<span class="price">Farm Fresh</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- PACKAGED EGGS -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_6.jpg" alt="Eggs">
-									<span class="product-tag">Hot</span>
-								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Eggs</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Packaged Eggs</a>
-									</h3>
-									<span class="price">Tray & Bulk</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- FARM SUPPLIES -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_70.jpg" alt="Farm Supplies">
-									<span class="product-tag">New</span>
-								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Farm Supplies</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Animal Feed & Seedlings</a>
-									</h3>
-									<span class="price">Available</span>
-								</div>
-							</div>
-						</div>
-
-						<!-- PROCESSED MEATS -->
-						<div class="swiper-slide">
-							<div class="th-product product-grid">
-								<div class="product-img">
-									<img src="assets/img/product/product_1_80.jpg" alt="Processed Meats">
-									<span class="product-tag">Hot</span>
-								</div>
-								<div class="product-content">
-									<a href="shop.html" class="product-category">Processed Meats</a>
-									<h3 class="product-title">
-										<a href="shop-details.html">Sausages & Cuts</a>
-									</h3>
-									<span class="price">Butchery Section</span>
+									<p class="box-text">
+										High-quality roller meal milled, packaged, and supplied for households,
+										retailers, and institutions across Zimbabwe.
+									</p>
+									<a href="#" class="th-btn btn-sm">
+										Shop Now<i class="fas fa-chevrons-right ms-2"></i>
+									</a>
 								</div>
 							</div>
 						</div>
 
 					</div>
 				</div>
+			</section>
 
-			</div>
-		</div>
-	</div>
-</section>
+			<section class="space-bottom">
+				<div class="container">
+					<div class="row flex-row-reverse">
+
+						<!-- SIDE PROMO -->
+						<div class="col-xl-3 col-lg-4 col-md-6 mb-40 mb-lg-0">
+							<div class="offer-grid mega-hover" data-bg-src="assets/img/bg/cta_bg_4_2.jpg">
+								<span class="h6 box-subtitle fs-16 text-white">
+									<span class="text-theme2">FARM</span> FRESH & LOCAL
+								</span>
+								<h3 class="box-title text-white">
+									Quality Produce &<br>Farm Products
+								</h3>
+								<a href="#" class="th-btn btn-sm style4">
+									Shop Now<i class="fas fa-chevrons-right ms-2"></i>
+								</a>
+							</div>
+						</div>
+
+						<!-- TRENDING PRODUCTS -->
+						<div class="col-xl-9 col-lg-8 col-md-6">
+							<div class="row justify-content-lg-between justify-content-center align-items-center">
+								<div class="col-md text-center text-md-start">
+									<h2 class="sec-title mb-30">Trending Products</h2>
+								</div>
+								<div class="col-md-auto d-none d-lg-inline-block">
+									<div class="sec-btn mb-35">
+										<div class="icon-box">
+											<button data-slider-prev="#productSlider7" class="slider-arrow default">
+												<i class="far fa-arrow-left"></i>
+											</button>
+											<button data-slider-next="#productSlider7" class="slider-arrow default">
+												<i class="far fa-arrow-right"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper th-slider has-shadow" id="productSlider7"
+								data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
+
+								<div class="swiper-wrapper">
+
+									<!-- VEGETABLES -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_1.jpg" alt="Fresh Tomatoes">
+												<span class="product-tag">Hot</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Vegetables</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Fresh Tomatoes</a>
+												</h3>
+												<span class="price">Market Price</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- CABBAGE -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_3.jpg" alt="Cabbage">
+												<span class="product-tag">New</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Vegetables</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Green Cabbage</a>
+												</h3>
+												<span class="price">Market Price</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- CHITSANO ROLLER MEAL -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_5.jpg" alt="Roller Meal">
+												<span class="product-tag">Hot</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Milling</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Chitsano Roller Meal</a>
+												</h3>
+												<span class="price">Bulk & Retail</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- FRESH PORK -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_7.jpg" alt="Fresh Pork">
+												<span class="product-tag">Sale</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Butchery</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Fresh Pork Cuts</a>
+												</h3>
+												<span class="price">Available</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- BROILER CHICKEN -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_8.jpg" alt="Broiler Chicken">
+												<span class="product-tag">New</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Poultry</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Broiler Chicken</a>
+												</h3>
+												<span class="price">Farm Fresh</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- PACKAGED EGGS -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_6.jpg" alt="Eggs">
+												<span class="product-tag">Hot</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Eggs</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Packaged Eggs</a>
+												</h3>
+												<span class="price">Tray & Bulk</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- FARM SUPPLIES -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_70.jpg" alt="Farm Supplies">
+												<span class="product-tag">New</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Farm Supplies</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Animal Feed & Seedlings</a>
+												</h3>
+												<span class="price">Available</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- PROCESSED MEATS -->
+									<div class="swiper-slide">
+										<div class="th-product product-grid">
+											<div class="product-img">
+												<img src="assets/img/product/product_1_80.jpg" alt="Processed Meats">
+												<span class="product-tag">Hot</span>
+											</div>
+											<div class="product-content">
+												<a href="#" class="product-category">Processed Meats</a>
+												<h3 class="product-title">
+													<a href="shop-details.html">Sausages & Cuts</a>
+												</h3>
+												<span class="price">Butchery Section</span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
 
 			<div class="brand-sec2" data-bg-src="assets/img/bg/brand_bg_1.jpg">
 				<div class="container th-container">
@@ -1492,246 +1597,245 @@ document.addEventListener("DOMContentLoaded", function () {
 			<section class="space">
 				<div class="container">
 					<div class="row justify-content-center">
-				
-						</div>
+
 					</div>
 				</div>
-			</section>
-	<section class="" data-pos-for="#testi-sec" data-sec-pos="bottom-half">
-	<div class="container z-index-common">
-		<div class="cta-box mega-hover" data-bg-src="assets/img/bg/cta_bg_5_1.jpg">
-			<div class="box-content">
-				<span class="box-subtitle">ORDER VIA WHATSAPP</span>
-				<h3 class="box-title">
-					Place Your Order <b><span class="text-theme">Fast & Easy</span><br>
-					Direct from Ecomatt Farm</b> 
-				</h3>
-				<a href="https://wa.me/263783605456?text=Hello%20Ecomatt%20Farm,%20I%20would%20like%20to%20place%20an%20order."
-				   class="th-btn" target="_blank">
-					Order on WhatsApp<i class="fab fa-whatsapp ms-2"></i>
-				</a>
-			</div>
 		</div>
-	</div>
-</section>
-
-			<section class="overflow-hidden bg-smoke2 space" id="testi-sec">
-	<div class="shape-mockup d-none d-xxl-block" data-bottom="0" data-left="0">
-		<img src="assets/img/shape/food_shape_3.png" alt="shape">
-	</div>
-	<div class="shape-mockup d-none d-xxl-block" data-bottom="0" data-right="0">
-		<img src="assets/img/shape/food_shape_4.png" alt="shape">
-	</div>
-
-	<div class="container">
-		<div class="slider-area testi-grid-area">
-
-			<!-- THUMB IMAGES -->
-			<div class="swiper th-slider testi-grid-thumb"
-				data-slider-options='{"effect":"slide","slidesPerView":"3","spaceBetween":7,"loop":false}'>
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="box-img">
-							<img src="assets/img/testimonial/testi_3_1.jpg" alt="Customer">
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="box-img">
-							<img src="assets/img/testimonial/testi_3_2.jpg" alt="Customer">
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="box-img">
-							<img src="assets/img/testimonial/testi_3_3.jpg" alt="Customer">
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- TESTIMONIAL CONTENT -->
-			<div class="swiper th-slider" id="testiSlide1"
-				data-slider-options='{"effect":"slide","loop":false,"thumbs":{"swiper":".testi-grid-thumb"}}'>
-				<div class="swiper-wrapper">
-
-					<!-- TESTIMONIAL 1 -->
-					<div class="swiper-slide">
-						<div class="testi-grid">
-							<h3 class="testi-grid_title">Reliable Farm Produce</h3>
-							<p class="testi-grid_text">
-								<span>â€œ</span>
-								Ecomatt Farm has been supplying us with fresh vegetables and eggs consistently.
-								The quality is good, and the supply is reliable, which is important for our business.
-								<span>â€</span>
-							</p>
-							<h4 class="testi-grid_name">
-								T. Moyo â€“
-								<span class="testi-grid_desig">Retail Buyer, Kwekwe</span>
-							</h4>
-							<div class="testi-grid_review">
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-							</div>
-						</div>
-					</div>
-
-					<!-- TESTIMONIAL 2 -->
-					<div class="swiper-slide">
-						<div class="testi-grid">
-							<h3 class="testi-grid_title">Quality Poultry & Pork</h3>
-							<p class="testi-grid_text">
-								<span>â€œ</span>
-								We source broiler chickens and pork from Ecomatt Farm. The products are fresh,
-								well-handled, and meet our expectations for quality and hygiene.
-								<span>â€</span>
-							</p>
-							<h4 class="testi-grid_name">
-								R. Chikowore â€“
-								<span class="testi-grid_desig">Butchery Operator</span>
-							</h4>
-							<div class="testi-grid_review">
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-							</div>
-						</div>
-					</div>
-
-					<!-- TESTIMONIAL 3 -->
-					<div class="swiper-slide">
-						<div class="testi-grid">
-							<h3 class="testi-grid_title">Trusted Local Supplier</h3>
-							<p class="testi-grid_text">
-								<span>â€œ</span>
-								Ecomatt Farm understands local farming conditions. Their roller meal and fresh
-								produce are dependable, and communication is always clear.
-								<span>â€</span>
-							</p>
-							<h4 class="testi-grid_name">
-								S. Dube â€“
-								<span class="testi-grid_desig">Bulk Buyer</span>
-							</h4>
-							<div class="testi-grid_review">
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-								<i class="fa-sharp fa-solid fa-star"></i>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<button data-slider-prev="#testiSlide1" class="slider-arrow slider-prev">
-				<i class="far fa-arrow-left"></i>
-			</button>
-			<button data-slider-next="#testiSlide1" class="slider-arrow slider-next">
-				<i class="far fa-arrow-right"></i>
-			</button>
-
-		</div>
-	</div>
-</section>
-
-<section class="space" id="blog-sec">
-	<div class="container">
-		<div class="row justify-content-lg-between justify-content-center align-items-center">
-			<div class="col-lg">
-				<h2 class="sec-title text-center text-lg-start">
-					Latest Updates & Farm News
-				</h2>
-			</div>
-			<div class="col-lg-auto d-none d-lg-block">
-				<div class="sec-btn">
-					<a href="blog.html" class="th-btn">
-						View More Updates<i class="fas fa-chevrons-right ms-2"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="row gy-4">
-
-			<!-- BLOG 1 -->
-			<div class="col-xl-4 col-md-6">
-				<div class="blog-grid">
-					<div class="blog-img">
-						<img src="assets/img/blog/blog_3_1.jpg" alt="Ecomatt Farm Produce">
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
-							<a href="#"><i class="far fa-calendar"></i>15 Nov, 2025</a>
-						</div>
+		</section>
+		<section class="" data-pos-for="#testi-sec" data-sec-pos="bottom-half">
+			<div class="container z-index-common">
+				<div class="cta-box mega-hover" data-bg-src="assets/img/bg/cta_bg_5_1.jpg">
+					<div class="box-content">
+						<span class="box-subtitle">ORDER VIA WHATSAPP</span>
 						<h3 class="box-title">
-							<a href="blog.html">
-								Why Fresh Farm Produce Matters for Everyday Families
-							</a>
+							Place Your Order <b><span class="text-theme">Fast & Easy</span><br>
+								Direct from Ecomatt Farm</b>
 						</h3>
-						<a href="blog.html" class="th-btn btn-sm">
-							Read More<i class="fas fa-chevrons-right ms-2"></i>
+						<a href="https://wa.me/263783605456?text=Hello%20Ecomatt%20Farm,%20I%20would%20like%20to%20place%20an%20order."
+							class="th-btn" target="_blank">
+							Order on WhatsApp<i class="fab fa-whatsapp ms-2"></i>
 						</a>
 					</div>
 				</div>
 			</div>
+		</section>
 
-			<!-- BLOG 2 -->
-			<div class="col-xl-4 col-md-6">
-				<div class="blog-grid">
-					<div class="blog-img">
-						<img src="assets/img/blog/blog_3_2.jpg" alt="Fresh Fruits from Ecomatt Farm">
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
-							<a href="#"><i class="far fa-calendar"></i>16 Nov, 2025</a>
-						</div>
-						<h3 class="box-title">
-							<a href="blog.html">
-								From Our Fields to Your Table: Fresh Fruits Supply
-							</a>
-						</h3>
-						<a href="blog.html" class="th-btn btn-sm">
-							Read More<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
-					</div>
-				</div>
+		<section class="overflow-hidden bg-smoke2 space" id="testi-sec">
+			<div class="shape-mockup d-none d-xxl-block" data-bottom="0" data-left="0">
+				<img src="assets/img/shape/food_shape_3.png" alt="shape">
+			</div>
+			<div class="shape-mockup d-none d-xxl-block" data-bottom="0" data-right="0">
+				<img src="assets/img/shape/food_shape_4.png" alt="shape">
 			</div>
 
-			<!-- BLOG 3 -->
-			<div class="col-xl-4 col-md-6">
-				<div class="blog-grid">
-					<div class="blog-img">
-						<img src="assets/img/blog/blog_3_3.jpg" alt="Healthy Eating with Farm Produce">
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
-							<a href="#"><i class="far fa-calendar"></i>17 Nov, 2025</a>
+			<div class="container">
+				<div class="slider-area testi-grid-area">
+
+					<!-- THUMB IMAGES -->
+					<div class="swiper th-slider testi-grid-thumb"
+						data-slider-options='{"effect":"slide","slidesPerView":"3","spaceBetween":7,"loop":false}'>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="box-img">
+									<img src="assets/img/testimonial/testi_3_1.jpg" alt="Customer">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="box-img">
+									<img src="assets/img/testimonial/testi_3_2.jpg" alt="Customer">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="box-img">
+									<img src="assets/img/testimonial/testi_3_3.jpg" alt="Customer">
+								</div>
+							</div>
 						</div>
-						<h3 class="box-title">
-							<a href="blog.html">
-								Healthy Living Starts with Locally Grown Food
-							</a>
-						</h3>
-						<a href="blog.html" class="th-btn btn-sm">
-							Read More<i class="fas fa-chevrons-right ms-2"></i>
-						</a>
 					</div>
+
+					<!-- TESTIMONIAL CONTENT -->
+					<div class="swiper th-slider" id="testiSlide1"
+						data-slider-options='{"effect":"slide","loop":false,"thumbs":{"swiper":".testi-grid-thumb"}}'>
+						<div class="swiper-wrapper">
+
+							<!-- TESTIMONIAL 1 -->
+							<div class="swiper-slide">
+								<div class="testi-grid">
+									<h3 class="testi-grid_title">Reliable Farm Produce</h3>
+									<p class="testi-grid_text">
+										<span>“</span>
+										Ecomatt Farm has been supplying us with fresh vegetables and eggs consistently.
+										The quality is good, and the supply is reliable, which is important for our
+										business.
+										<span>”</span>
+									</p>
+									<h4 class="testi-grid_name">
+										T. Moyo –
+										<span class="testi-grid_desig">Retail Buyer, Kwekwe</span>
+									</h4>
+									<div class="testi-grid_review">
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+									</div>
+								</div>
+							</div>
+
+							<!-- TESTIMONIAL 2 -->
+							<div class="swiper-slide">
+								<div class="testi-grid">
+									<h3 class="testi-grid_title">Quality Poultry & Pork</h3>
+									<p class="testi-grid_text">
+										<span>“</span>
+										We source broiler chickens and pork from Ecomatt Farm. The products are fresh,
+										well-handled, and meet our expectations for quality and hygiene.
+										<span>”</span>
+									</p>
+									<h4 class="testi-grid_name">
+										R. Chikowore –
+										<span class="testi-grid_desig">Butchery Operator</span>
+									</h4>
+									<div class="testi-grid_review">
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+									</div>
+								</div>
+							</div>
+
+							<!-- TESTIMONIAL 3 -->
+							<div class="swiper-slide">
+								<div class="testi-grid">
+									<h3 class="testi-grid_title">Trusted Local Supplier</h3>
+									<p class="testi-grid_text">
+										<span>“</span>
+										Ecomatt Farm understands local farming conditions. Their roller meal and fresh
+										produce are dependable, and communication is always clear.
+										<span>”</span>
+									</p>
+									<h4 class="testi-grid_name">
+										S. Dube –
+										<span class="testi-grid_desig">Bulk Buyer</span>
+									</h4>
+									<div class="testi-grid_review">
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+										<i class="fa-sharp fa-solid fa-star"></i>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<button data-slider-prev="#testiSlide1" class="slider-arrow slider-prev">
+						<i class="far fa-arrow-left"></i>
+					</button>
+					<button data-slider-next="#testiSlide1" class="slider-arrow slider-next">
+						<i class="far fa-arrow-right"></i>
+					</button>
+
 				</div>
 			</div>
+		</section>
+		<section class="space" id="blog-sec">
+			<div class="container">
+				<div class="row justify-content-lg-between justify-content-center align-items-center">
+					<div class="col-lg">
+						<h2 class="sec-title text-center text-lg-start">Latest Updates & Farm News</h2>
+					</div>
+					<div class="col-lg-auto d-none d-lg-block">
+						<div class="sec-btn">
+							<a href="blog.html" class="th-btn">
+								View More Updates<i class="fas fa-chevrons-right ms-2"></i>
+							</a>
+						</div>
+					</div>
+				</div>
 
-		</div>
+				<div class="row gy-4">
+
+					<!-- BLOG 1 -->
+					<div class="col-xl-4 col-md-6">
+						<div class="blog-grid">
+							<div class="blog-img">
+								<img src="assets/img/blog/blog_3_1.jpg" alt="Fresh Produce from Ecomatt Farm">
+							</div>
+							<div class="blog-content">
+								<div class="blog-meta">
+									<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
+									<a href="#"><i class="far fa-calendar"></i>15 March, 2024</a>
+								</div>
+								<h3 class="box-title">
+									<a href="blog-details.html">
+										Seasonal Fresh Produce Available at Ecomatt Farm
+									</a>
+								</h3>
+								<a href="blog-details.html" class="th-btn btn-sm">
+									Read More<i class="fas fa-chevrons-right ms-2"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- BLOG 2 -->
+					<div class="col-xl-4 col-md-6">
+						<div class="blog-grid">
+							<div class="blog-img">
+								<img src="assets/img/blog/blog_3_2.jpg" alt="Chitsano Roller Meal Production">
+							</div>
+							<div class="blog-content">
+								<div class="blog-meta">
+									<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
+									<a href="#"><i class="far fa-calendar"></i>16 March, 2024</a>
+								</div>
+								<h3 class="box-title">
+									<a href="blog-details.html">
+										How Chitsano Roller Meal Is Produced at Our Farm
+									</a>
+								</h3>
+								<a href="blog-details.html" class="th-btn btn-sm">
+									Read More<i class="fas fa-chevrons-right ms-2"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- BLOG 3 -->
+					<div class="col-xl-4 col-md-6">
+						<div class="blog-grid">
+							<div class="blog-img">
+								<img src="assets/img/blog/blog_3_3.jpg" alt="Poultry and Piggery Farming">
+							</div>
+							<div class="blog-content">
+								<div class="blog-meta">
+									<a href="#"><i class="far fa-user"></i>By Ecomatt Farm</a>
+									<a href="#"><i class="far fa-calendar"></i>17 March, 2024</a>
+								</div>
+								<h3 class="box-title">
+									<a href="blog-details.html">
+										Poultry & Piggery Farming at Ecomatt: What We Do
+									</a>
+								</h3>
+								<a href="blog-details.html" class="th-btn btn-sm">
+									Read More<i class="fas fa-chevrons-right ms-2"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
 	</div>
-</section>
-
-		</div>
+	<div class="desktop-footer">
 		<footer class="site-footer-two">
 			<div class="site-footer-two__bg"></div>
 			<div class="site-footer-two__top">
@@ -1777,13 +1881,11 @@ document.addEventListener("DOMContentLoaded", function () {
 									</li>
 								</ul>
 								<div class="site-footer-two__social">
-<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/ecomatt_farm/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.threads.com/@ecomatt_farm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
-<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-</div>
+									<a href="#"><i class="fab fa-facebook-f"></i></a>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+									<a href="#"><i class="fab fa-instagram"></i></a>
+									<a href="#"><i class="fab fa-pinterest-p"></i></a>
+								</div>
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
@@ -1795,10 +1897,10 @@ document.addEventListener("DOMContentLoaded", function () {
 								<div class="footer-widget-two__link-box">
 									<ul class="footer-widget-two__link list-unstyled">
 										<li><span class="fas fa-wheat"></span><a href="about.html">About Us</a></li>
-										<li><span class="fas fa-wheat"></span><a href="project.html">Portfolio</a></li>
+										<li><span class="fas fa-wheat"></span><a href="projects.html">Portfolio</a></li>
 										<li><span class="fas fa-wheat"></span><a href="faq.html">Help & FAQs</a></li>
 										<li><span class="fas fa-wheat"></span><a href="blog.html">Blog</a></li>
-										<li><span class="fas fa-wheat"></span><a href="services.html">Farm Operations</a></li>
+										<li><span class="fas fa-wheat"></span><a href="services.html">Services</a></li>
 										<li><span class="fas fa-wheat"></span><a href="contact.html">Contact</a></li>
 									</ul>
 								</div>
@@ -1811,18 +1913,18 @@ document.addEventListener("DOMContentLoaded", function () {
 									</h3>
 								</div>
 								<ul class="footer-widget-two__link list-unstyled">
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Fresh
+									<li><span class="fas fa-wheat"></span><a href="fresh-produce.html">Fresh
 											Produce</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Dairy
+									<li><span class="fas fa-wheat"></span><a href="dairy-products.html">Dairy
 											Products</a>
 									</li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Livestock
+									<li><span class="fas fa-wheat"></span><a href="livestock.html">Livestock
 											Products</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Organic
+									<li><span class="fas fa-wheat"></span><a href="fresh-produce.html">Organic
 											Farming</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Crops &
+									<li><span class="fas fa-wheat"></span><a href="grains-cereals.html">Crops &
 											Grains</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Poultry</a></li>
+									<li><span class="fas fa-wheat"></span><a href="livestock.html">Poultry</a></li>
 								</ul>
 							</div>
 						</div>
@@ -1835,37 +1937,37 @@ document.addEventListener("DOMContentLoaded", function () {
 									<li>
 										<div class="footer-widget-two__instagram-img">
 											<img src="images/footer_two/footer-widget-instagram-img-1.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
+											<a href="project-details.html"><span class="fab fa-instagram"></span></a>
 										</div>
 									</li>
 									<li>
 										<div class="footer-widget-two__instagram-img">
 											<img src="images/footer_two/footer-widget-instagram-img-2.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
+											<a href="project-details.html"><span class="fab fa-instagram"></span></a>
 										</div>
 									</li>
 									<li>
 										<div class="footer-widget-two__instagram-img">
 											<img src="images/footer_two/footer-widget-instagram-img-3.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
+											<a href="project-details.html"><span class="fab fa-instagram"></span></a>
 										</div>
 									</li>
 									<li>
 										<div class="footer-widget-two__instagram-img">
 											<img src="images/footer_two/footer-widget-instagram-img-4.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
+											<a href="project-details.html"><span class="fab fa-instagram"></span></a>
 										</div>
 									</li>
 									<li>
 										<div class="footer-widget-two__instagram-img">
 											<img src="images/footer_two/footer-widget-instagram-img-5.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
+											<a href="project-details.html"><span class="fab fa-instagram"></span></a>
 										</div>
 									</li>
 									<li>
 										<div class="footer-widget-two__instagram-img">
 											<img src="images/footer_two/footer-widget-instagram-img-6.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
+											<a href="project-details.html"><span class="fab fa-instagram"></span></a>
 										</div>
 									</li>
 								</ul>
@@ -1892,10 +1994,131 @@ document.addEventListener("DOMContentLoaded", function () {
 				</div>
 			</div>
 		</footer>
-		<!--Site Footer Two End-->
-		<!-- End Footer Style -->
+	</div>
 
-		
+	<!-- Mobile/Tablet Footer -->
+	<div class="mobile-tablet-footer">
+		<div class="container">
+			<!-- Block 1: Newsletter -->
+			<div class="mt-footer-block newsletter-block">
+				<h3>Subscribe To Our Newsletter</h3>
+				<form class="mt-newsletter-form">
+					<input type="email" placeholder="Enter email" name="EMAIL">
+					<button type="submit">Subscribe</button>
+				</form>
+			</div>
+
+			<!-- Block 2: Opening Times -->
+			<div class="mt-footer-block opening-times-block">
+				<h3>Opening Times</h3>
+				<p>Mon - Fri: 6:00 AM - 6:00 PM</p>
+				<p>Saturday: 6:00 AM - 5:00 PM</p>
+				<p>Sunday: Closed</p>
+			</div>
+
+			<!-- Block 3: Quick Links -->
+			<div class="mt-footer-block links-block">
+				<h3>Quick Links</h3>
+				<ul>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="products.html">Our Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+
+			<!-- Block 4: Social Hub -->
+			<div class="mt-footer-block social-block">
+				<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank"><i
+						class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/ecomatt_farm/" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank"><i
+						class="fab fa-whatsapp"></i></a>
+				<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank"><i
+						class="fa-brands fa-tiktok"></i></a>
+				<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank"><i
+						class="fab fa-youtube"></i></a>
+				<a href="https://www.threads.com/@ecomatt_farm" target="_blank"><i class="fa-brands fa-threads"></i></a>
+			</div>
+
+			<!-- Block 5: Branding -->
+			<div class="mt-footer-block branding-block">
+				<img src="images/footer_two/footer-logo.png" alt="Ecomatt" class="mt-logo">
+				<p class="copyright">Copyright@ 2025 <a href="index.html">Ecomatt</a>. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+	<!--Site Footer Two End-->
+	<!-- End Footer Style -->
+
+	<!-- Search Popup -->
+	<div class="search-popup">
+		<div class="color-layer"></div>
+		<button class="close-search"><span class="fa-xmark"></span></button>
+		<form method="post" action="blog.html">
+			<div class="form-group">
+				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
+			</div>
+		</form>
+	</div>
+	<!-- End Search Popup -->
+
+	<!-- Color Palate / Color Switcher -->
+	<div class="color-palate">
+		<div class="color-trigger">
+			<i class="fa fa-solid fa-gear fa-fw"></i>
+		</div>
+		<div class="color-palate-inner">
+			<div class="color-palate-head">
+				<h6>Choose Options</h6>
+			</div>
+
+			<!-- Colors -->
+			<div class="various-color clearfix">
+				<div class="colors-list">
+					<span class="palate default-color active"
+						data-theme-file="assets/css/color-themes/default-color.css"></span>
+					<span class="palate blue-color" data-theme-file="assets/css/color-themes/blue-color.css"></span>
+					<span class="palate olive-color" data-theme-file="assets/css/color-themes/olive-color.css"></span>
+					<span class="palate orange-color" data-theme-file="assets/css/color-themes/orange-color.css"></span>
+					<span class="palate purple-color" data-theme-file="assets/css/color-themes/purple-color.css"></span>
+					<span class="palate green-color" data-theme-file="assets/css/color-themes/green-color.css"></span>
+					<span class="palate brown-color" data-theme-file="assets/css/color-themes/brown-color.css"></span>
+					<span class="palate yellow-color" data-theme-file="assets/css/color-themes/yellow-color.css"></span>
+				</div>
+			</div>
+
+			<h6>RTL Version</h6>
+			<ul class="rtl-version option-box">
+				<li class="rtl">RTL Version</li>
+				<li>LTR Version</li>
+			</ul>
+			<h6>Want Sticky Header</h6>
+			<ul class="header-version option-box">
+				<li class="box">No</li>
+				<li>Yes</li>
+			</ul>
+			<h6>Dark Verion</h6>
+			<ul class="dark-version option-box">
+				<li class="box">Yes</li>
+				<li>No</li>
+			</ul>
+
+			<div class="purchase-box">
+				You will find much more options for colors and styling in admin panel. This color picker is used
+				only for demonstation purposes.
+				<a href="#" class="theme-btn btn-style-one">
+					<span class="btn-wrap">
+						<span class="text-one">buy now</span>
+						<span class="text-two">buy now</span>
+					</span>
+				</a>
+			</div>
+
+		</div>
+	</div>
+	<!-- End Color Palate / Color Switcher -->
 
 	</div>
 	<!-- End PageWrapper -->

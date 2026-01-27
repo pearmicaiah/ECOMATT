@@ -1,5 +1,6 @@
-﻿ï»¿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Ecomatt | Services</title>
@@ -19,7 +20,7 @@
 	<link href="css/custom-sections.css" rel="stylesheet">
 	<link href="assets/css/flaticon.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -63,33 +64,175 @@
 			}
 		}
 	</style>
-<style>.main-header .logo img { max-height: 80px !important; width: auto !important; } .main-menu .navigation { display: flex !important; flex-direction: row !important; align-items: center !important; }</style>
+	<style>
+		.main-header .logo img {
+			max-height: 80px !important;
+			width: auto !important;
+		}
+
+		.main-menu .navigation {
+			display: flex !important;
+			flex-direction: row !important;
+			align-items: center !important;
+		}
+	</style>
+	</style>
+	<style>
+		/* Dual-Footer System Styles */
+		@media (min-width: 1025px) {
+			.mobile-tablet-footer {
+				display: none !important;
+			}
+
+			.desktop-footer {
+				display: block !important;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			.desktop-footer {
+				display: none !important;
+			}
+
+			.mobile-tablet-footer {
+				display: block !important;
+				background-color: #1a1a1a;
+				color: #fff;
+				padding: 40px 0 20px;
+				text-align: center;
+			}
+
+			.mt-footer-block {
+				margin-bottom: 30px;
+			}
+
+			.mt-footer-block h3 {
+				color: #fff;
+				font-size: 20px;
+				margin-bottom: 15px;
+			}
+
+			/* Newsletter */
+			.mt-newsletter-form {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				max-width: 100%;
+			}
+
+			.mt-newsletter-form input {
+				width: 100%;
+				padding: 15px;
+				border: none;
+				border-radius: 5px;
+			}
+
+			.mt-newsletter-form button {
+				width: 100%;
+				padding: 15px;
+				background-color: #569D03;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				font-weight: bold;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+
+			/* Opening Times */
+			.opening-times-block {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 20px;
+				border-radius: 10px;
+			}
+
+			.opening-times-block p {
+				color: #ccc;
+				margin-bottom: 5px;
+			}
+
+			/* Links */
+			.links-block ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.links-block ul li {
+				margin-bottom: 10px;
+			}
+
+			.links-block ul li a {
+				color: #ccc;
+				font-size: 16px;
+				text-decoration: none;
+			}
+
+			/* Socials */
+			.social-block {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+				flex-wrap: wrap;
+			}
+
+			.social-block a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 50%;
+				color: #fff;
+				transition: all 0.3s ease;
+			}
+
+			.social-block a:hover {
+				background: #569D03;
+			}
+
+			/* Branding */
+			.mt-logo {
+				max-height: 60px;
+				margin-bottom: 15px;
+			}
+
+			.copyright {
+				color: #888;
+				font-size: 14px;
+			}
+
+			.copyright a {
+				color: #569D03;
+			}
+		}
+	</style>
 </head>
 
 <body>
 
-<div class="page-wrapper">
-	
-	<!-- Cursor -->
-	<div class="cursor"></div>
-	<div class="cursor-follower"></div>
-	<!-- Cursor End -->
- 	
-	<!-- Preloader -->
-	<div class="preloader">
-		<div class="loader">
-			<div class="outer-circle"></div>
-			<div class="inner-circle"></div>
-			<div class="dots">
-				<div class="dot dot-1"></div>
-				<div class="dot dot-2"></div>
-				<div class="dot dot-3"></div>
+	<div class="page-wrapper">
+
+		<!-- Cursor -->
+		<div class="cursor"></div>
+		<div class="cursor-follower"></div>
+		<!-- Cursor End -->
+
+		<!-- Preloader -->
+		<div class="preloader">
+			<div class="loader">
+				<div class="outer-circle"></div>
+				<div class="inner-circle"></div>
+				<div class="dots">
+					<div class="dot dot-1"></div>
+					<div class="dot dot-2"></div>
+					<div class="dot dot-3"></div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Preloader -->
-	
-	<!-- Main Header -->
+		<!-- End Preloader -->
+
+		<!-- Main Header -->
 		<header class="main-header header-style-one">
 
 			<!-- Header Top -->
@@ -105,7 +248,8 @@
 												href="tel:+263714745653">+263 71 474 5653</a></li>
 										<li><span class="icon fa-classic fa-solid fa-envelope fa-fw"></span><a
 												href="mailto:sales@ecomatt.co.zw">sales@ecomatt.co.zw</a></li>
-										<li><span class="icon fa-classic fa-solid fa-location-dot fa-fw"></span>Plot 12 Sherwood, Kwekwe</li>
+										<li><span class="icon fa-classic fa-solid fa-location-dot fa-fw"></span>Plot 12
+											Sherwood, Kwekwe</li>
 									</ul>
 								</div>
 							</div>
@@ -114,13 +258,20 @@
 								<!-- Social Box -->
 								<div class="header-top_socials">
 									<div class="social-inner">
-<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/ecomatt_farm/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.threads.com/@ecomatt_farm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
-<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-</div>
+										<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+										<a href="https://www.instagram.com/ecomatt_farm/" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+										<a href="https://www.threads.com/@ecomatt_farm" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
+										<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA"
+											target="_blank" rel="noopener noreferrer"><i
+												class="fa-brands fa-youtube"></i></a>
+										<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+										<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+									</div>
 								</div>
 
 							</div>
@@ -187,7 +338,8 @@
 																<ul>
 																	<li><a href="service-detail.html">Tomatoes</a></li>
 																	<li><a href="service-detail.html">Onions</a></li>
-																	<li><a href="service-detail.html">Green Beans</a></li>
+																	<li><a href="service-detail.html">Green Beans</a>
+																	</li>
 																	<li><a href="service-detail.html">Cabbage</a></li>
 																	<li><a href="service-detail.html">Carrots</a></li>
 																</ul>
@@ -199,7 +351,8 @@
 																	Crops</h6>
 																<ul>
 																	<li><a href="service-detail.html">Maize</a></li>
-																	<li><a href="service-detail.html">Grain Crops</a></li>
+																	<li><a href="service-detail.html">Grain Crops</a>
+																	</li>
 																</ul>
 															</div>
 
@@ -208,7 +361,8 @@
 																		class="icon fa-regular fa-calendar-check"></span>
 																	Seasonal Produce</h6>
 																<ul>
-																	<li><a href="service-detail.html">Watermelon</a></li>
+																	<li><a href="service-detail.html">Watermelon</a>
+																	</li>
 																	<li><a href="service-detail.html">Ginger</a></li>
 																	<li><a href="service-detail.html">Pumpkins</a></li>
 																</ul>
@@ -236,7 +390,8 @@
 																		class="icon fa-solid fa-piggy-bank"></span>
 																	Piggery</h6>
 																<ul>
-																	<li><a href="service-detail.html">Pork Production</a></li>
+																	<li><a href="service-detail.html">Pork
+																			Production</a></li>
 																	<li><a href="service-detail.html">Breeding</a></li>
 
 																</ul>
@@ -274,8 +429,10 @@
 																		class="icon fa-solid fa-wheat-awn"></span>
 																	Milling</h6>
 																<ul>
-																	<li><a href="service-detail.html">Chitsano Roller Meal</a></li>
-																	<li><a href="service-detail.html">By-Products</a></li>
+																	<li><a href="service-detail.html">Chitsano Roller
+																			Meal</a></li>
+																	<li><a href="service-detail.html">By-Products</a>
+																	</li>
 																</ul>
 															</div>
 
@@ -284,7 +441,8 @@
 																		class="icon fa-solid fa-drumstick-bite"></span>
 																	Butchery Products</h6>
 																<ul>
-																	<li><a href="service-detail.html">Fresh Pork</a></li>
+																	<li><a href="service-detail.html">Fresh Pork</a>
+																	</li>
 																	<li><a href="service-detail.html">Chicken</a></li>
 																	<li><a href="service-detail.html">Goat</a></li>
 																</ul>
@@ -295,7 +453,8 @@
 																		class="icon fa-solid fa-egg"></span> Packaged
 																	Eggs</h6>
 																<ul>
-																	<li><a href="service-detail.html">Packaged Eggs</a></li>
+																	<li><a href="service-detail.html">Packaged Eggs</a>
+																	</li>
 																</ul>
 															</div>
 
@@ -336,7 +495,8 @@
 																	Training & Tours</h6>
 																<ul>
 																	<li><a href="service-detail.html">Training</a></li>
-																	<li><a href="service-detail.html">Farm Tours</a></li>
+																	<li><a href="service-detail.html">Farm Tours</a>
+																	</li>
 																</ul>
 															</div>
 
@@ -345,7 +505,8 @@
 																		class="icon fa-solid fa-store"></span>
 																	Marketplace</h6>
 																<ul>
-																	<li><a href="service-detail.html">Marketplace & Distribution</a></li>
+																	<li><a href="service-detail.html">Marketplace &
+																			Distribution</a></li>
 																	<li><a href="service-detail.html">MountPlus</a></li>
 																</ul>
 															</div>
@@ -551,664 +712,809 @@
 			</div>
 		</div>
 		<!-- End Sidebar Cart Item -->
-<!-- About Sidebar -->
-<div class="about-sidebar">
-	<div class="gradient-layer"></div>
+		<!-- About Sidebar -->
+		<div class="about-sidebar">
+			<div class="gradient-layer"></div>
 
-	<!-- Close Button -->
-	<div class="close-sidebar-widget close-button">
-		<span class="fa-solid fa-xmark fa-fw"></span>
-	</div>
-
-	<div class="sidebar-inner">
-		<div class="upper-box">
-			<div class="image">
-				<img src="images/about-1.jpg" alt="Ecomatt Farm - Kwekwe Zimbabwe" />
+			<!-- Close Button -->
+			<div class="close-sidebar-widget close-button">
+				<span class="fa-solid fa-xmark fa-fw"></span>
 			</div>
 
-			<div class="content-box">
-				<h3>About <span>Ecomatt Farm</span></h3>
+			<div class="sidebar-inner">
+				<div class="upper-box">
+					<div class="image">
+						<img src="images/about-1.jpg" alt="Ecomatt Farm - Kwekwe Zimbabwe" />
+					</div>
 
-				<div class="text">
-					Ecomatt Farm is a diversified agricultural enterprise based in Kwekwe, Zimbabwe.
-					We are committed to sustainable farming through crop production, poultry farming,
-					piggery operations, value-added milling, and fresh butchery products. Our focus is on
-					producing quality, affordable food while supporting local markets and communities.
-				</div>
+					<div class="content-box">
+						<h3>About <span>Ecomatt Farm</span></h3>
 
-				<ul class="about-sidebar_list">
-					<li>Crops & Horticulture</li>
-					<li>Poultry & Piggery Farming</li>
-					<li>Chitsano Roller Meal Milling</li>
-					<li>Butchery & Fresh Meat Products</li>
-					<li>Farm Supply & Training Services</li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- Social Box -->
-		<div class="social-box">
-			<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank" rel="noopener noreferrer">
-				<i class="fa-brands fa-facebook-f"></i>
-			</a>
-			<a href="https://www.instagram.com/ecomatt_farm/" target="_blank" rel="noopener noreferrer">
-				<i class="fa-brands fa-instagram"></i>
-			</a>
-			<a href="https://www.threads.com/@ecomatt_farm" target="_blank" rel="noopener noreferrer">
-				<i class="fa-brands fa-threads"></i>
-			</a>
-			<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank" rel="noopener noreferrer">
-				<i class="fa-brands fa-youtube"></i>
-			</a>
-			<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank" rel="noopener noreferrer">
-				<i class="fa-brands fa-whatsapp"></i>
-			</a>
-			<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank" rel="noopener noreferrer">
-				<i class="fa-brands fa-tiktok"></i>
-			</a>
-		</div>
-	</div>
-</div>
-<!-- End About Sidebar -->
-
-<div class='main-content-wrapper' style='padding-top: 120px;'>
-
-
-
-	<!-- Page Title -->
-    <section class="page-title" style="background-image:url(assets/images/background/page-title.jpg)">
-        <div class="auto-container">
-			<h2>Our Farm Operations</h2>
-			<ul class="bread-crumb clearfix">
-				<li><a href="index.html">Home</a></li>
-				<li>Farm Operations</li>
-			</ul>
-        </div>
-    </section>
-    <!-- End Page Title -->
-
-	<!-- Services Three -->
-	<section class="services-three">
-		<div class="auto-container">
-			<div class="row clearfix">
-				
-				<!-- Service Block Three -->
-				<div class="service-block_three col-lg-4 col-md-6 col-sm-12">
-					<div class="service-block_three-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="service-block_three-content">
-							<div class="service-block_three-icon trans-500">
-								<i class="flaticon-tractor"></i>
-							</div>
-							<h4 class="service-block_three-title"><a href="service-detail.html">Crops & Horticulture</a></h4>
-							<div class="service-block_three-text">We grow a variety of vegetables and field crops using well-managed farming practices to ensure healthy produce and reliable seasonal supply.</div>
+						<div class="text">
+							Ecomatt Farm is a diversified agricultural enterprise based in Kwekwe, Zimbabwe.
+							We are committed to sustainable farming through crop production, poultry farming,
+							piggery operations, value-added milling, and fresh butchery products. Our focus is on
+							producing quality, affordable food while supporting local markets and communities.
 						</div>
-						<div class="service-block_three-image">
-							<a class="service-block_three-arrow flaticon-arrow-up" href="service-detail.html"></a>
-							<a href="service-detail.html"><img class="trans-500" src="assets/images/resource/service-8.jpg" alt ""/></a>
-						</div>
+
+						<ul class="about-sidebar_list">
+							<li>Crops & Horticulture</li>
+							<li>Poultry & Piggery Farming</li>
+							<li>Chitsano Roller Meal Milling</li>
+							<li>Butchery & Fresh Meat Products</li>
+							<li>Farm Supply & Training Services</li>
+						</ul>
 					</div>
 				</div>
-				
-				<!-- Service Block Three -->
-				<div class="service-block_three col-lg-4 col-md-6 col-sm-12">
-					<div class="service-block_three-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="service-block_three-content">
-							<div class="service-block_three-icon trans-500">
-								<i class="flaticon-plant"></i>
-							</div>
-							<h4 class="service-block_three-title"><a href="service-detail.html">Poultry Farming</a></h4>
-							<div class="service-block_three-text">Our poultry units produce broilers and layers under controlled conditions that prioritise bird health, hygiene, and consistent output.</div>
-						</div>
-						<div class="service-block_three-image">
-							<a class="service-block_three-arrow flaticon-arrow-up" href="service-detail.html"></a>
-							<a href="service-detail.html"><img class="trans-500" src="assets/images/resource/service-10.jpg" alt ""/></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Service Block Three -->
-				<div class="service-block_three col-lg-4 col-md-6 col-sm-12">
-					<div class="service-block_three-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="service-block_three-content">
-							<div class="service-block_three-icon trans-500">
-								<i class="flaticon-vegetable-1"></i>
-							</div>
-							<h4 class="service-block_three-title"><a href="service-detail.html">Piggery Operations</a></h4>
-							<div class="service-block_three-text">Ecomatt Farm runs structured piggery operations focused on breeding, nutrition, and quality pork production for local markets.</div>
-						</div>
-						<div class="service-block_three-image">
-							<a class="service-block_three-arrow flaticon-arrow-up" href="service-detail.html"></a>
-							<a href="service-detail.html"><img class="trans-500" src="assets/images/resource/service-9.jpg" alt ""/></a>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	<!-- End Services Three -->
 
-	<!-- Food One -->
-	<section class="food-one style-two" style="background-image:url(assets/images/background/food-pattern.png)">
-		<div class="food-one_pattern overlay-layer" style="background-image:url(assets/images/background/food-pattern-1.png)"></div>
-		<div class="auto-container">
-			<div class="row clearfix">
-				
-				<!-- Image Column -->
-				<div class="food-one_image-column col-lg-6 col-md-12 col-sm-12">
-					<div class="food-one_image-outer">
-						<div class="food-one_image">
-							<img src="assets/images/resource/food.png" alt="" />
-						</div>
-						<div class="food-one_leaf">
-							<img src="assets/images/icons/leaf.png" alt="" />
-						</div>
-					</div>
-				</div>
-				
-				<!-- Content Column -->
-				<div class="food-one_content-column col-lg-6 col-md-12 col-sm-12">
-					<div class="food-one_content-outer">
-						<!-- Sec Title -->
-						<div class="sec-title">
-							<div class="sec-title_title">ABOUT ECOMATT FARM</div>
-							<h2 class="sec-title_heading tx-split-text split-in-right">Integrated Farming  <br> Focused on Quality and Reliability</h2>
-							<div class="sec-title_text">Ecomatt Farm is a diversified agricultural operation based in Kwekwe, Zimbabwe. We combine practical farming experience with modern <br> production methods to deliver consistent, high-quality produce across our poultry, piggery, crop, and horticulture operations.</div>
-						</div>
-						<div class="row clearfix">  
-							
-							<!-- Food Block One -->
-							<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
-								<div class="food-block_one-inner trans-300 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-									<div class="food-block_one-icon trans-300 flaticon-vegetable-1"></div>
-									<h6 class="food-block_one-title trans-300">Crops & Horticulture</h6>
-								</div>
-							</div>
-							
-							<!-- Food Block One -->
-							<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
-								<div class="food-block_one-inner trans-300 wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
-									<div class="food-block_one-icon trans-300 flaticon-chicken"></div>
-									<h6 class="food-block_one-title trans-300">Poultry & Piggery</h6>
-								</div>
-							</div>
-							
-							<!-- Food Block One -->
-						<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
-    <div class="food-block_one-inner trans-300 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-        <div class="food-block_one-icon trans-300 flaticon-tractor"></div>
-        <h6 class="food-block_one-title trans-300">Farm Supply & Support</h6>
-    </div>
-</div>
-
-							
-						</div>
-					</div>
-				</div>
-			
-			</div>
-		</div>
-	</section>
-	<!-- End Food One -->
-
-	<!-- Services Two -->
-	<section class="services-two">
-		<div class="services-two_bg-layer overlay-layer" style="background-image:url(assets/images/background/services-two_pattern.png)"></div>
-		<div class="auto-container">
-			<!-- Sec Title -->
-			<div class="sec-title centered">
-				<div class="sec-title_title">WHAT WE DO</div>
-				<h2 class="sec-title_heading tx-split-text split-in-right">Our Core  <br> Farming Operations</h2>
-			</div>
-			<!-- End Sec Title -->
-			
-			<div class="four-item-carousel swiper-container">
-				<div class="swiper-wrapper">
-
-					<!-- Slide -->
-					<div class="swiper-slide">
-						<!-- Service Block Two -->
-						<div class="service-block_two">
-							<div class="service-block_two-inner">
-								<div class="service-block_two-image">
-									<img src="assets/images/resource/service-4.jpg" alt ""/>
-								</div>
-								<div class="service-block_two-content">
-									<div class="service-block_two-icon">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title"><a href="service-detail.html">Crops &  <br> Field Production</a></h4>
-								</div>
-								<div class="service-block_two-overlay overlay-layer" style="background-image:url(assets/images/resource/service-4.jpg)">
-									<div class="service-block_two-icon_two">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title_two"><a href="service-detail.html">Crops & Field Production</a></h4>
-									<div class="service-block_two-text">Maize and seasonal field crops produced through structured land and water management. </div>
-									<a class="service-block_two-more" href="service-detail.html">read more <i class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Slide -->
-					<div class="swiper-slide">
-						<!-- Service Block Two -->
-						<div class="service-block_two">
-							<div class="service-block_two-inner">
-								<div class="service-block_two-image">
-									<img src="assets/images/resource/service-5.jpg" alt ""/>
-								</div>
-								<div class="service-block_two-content">
-									<div class="service-block_two-icon">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title"><a href="service-detail.html">Poultry  <br> Farming</a></h4>
-								</div>
-								<div class="service-block_two-overlay overlay-layer" style="background-image:url(assets/images/resource/service-5.jpg)">
-									<div class="service-block_two-icon_two">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title_two"><a href="service-detail.html">Poultry  <br> Farming</a></h4>
-									<div class="service-block_two-text">Broiler and layer production focused on hygiene, nutrition, and consistent supply. </div>
-									<a class="service-block_two-more" href="service-detail.html">read more <i class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Slide -->
-					<div class="swiper-slide">
-						<!-- Service Block Two -->
-						<div class="service-block_two">
-							<div class="service-block_two-inner">
-								<div class="service-block_two-image">
-									<img src="assets/images/resource/service-6.jpg" alt ""/>
-								</div>
-								<div class="service-block_two-content">
-									<div class="service-block_two-icon">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title"><a href="service-detail.html">Piggery  <br> Operations</a></h4>
-								</div>
-								<div class="service-block_two-overlay overlay-layer" style="background-image:url(assets/images/resource/service-6.jpg)">
-									<div class="service-block_two-icon_two">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title_two"><a href="service-detail.html">Piggery <br> Operations</a></h4>
-									<div class="service-block_two-text">Structured piggery systems supporting breeding and quality pork production. </div>
-									<a class="service-block_two-more" href="service-detail.html">read more <i class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Slide -->
-					<div class="swiper-slide">
-						<!-- Service Block Two -->
-						<div class="service-block_two">
-							<div class="service-block_two-inner">
-								<div class="service-block_two-image">
-									<img src="assets/images/resource/service-7.jpg" alt ""/>
-								</div>
-								<div class="service-block_two-content">
-									<div class="service-block_two-icon">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title"><a href="service-detail.html">Horticulture  <br> & Vegetables</a></h4>
-								</div>
-								<div class="service-block_two-overlay overlay-layer" style="background-image:url(assets/images/resource/service-7.jpg)">
-									<div class="service-block_two-icon_two">
-										<i class="flaticon-tractor"></i>
-									</div>
-									<h4 class="service-block_two-title_two"><a href="service-detail.html">Horticulture <br> & Vegetables</a></h4>
-									<div class="service-block_two-text">Seasonal vegetables grown to support both household and bulk supply needs. </div>
-									<a class="service-block_two-more" href="service-detail.html">read more <i class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				
-			</div>
-			
-			<!-- If we need navigation buttons -->
-			<div class="four-item-carousel-prev fas fa-arrow-left fa-fw"></div>
-			<div class="four-item-carousel-next fas fa-arrow-right fa-fw"></div>
-			
-		</div>
-	</section>
-	<!-- End Services Two -->
-	
-	<!-- Video One -->
-	<section class="video-one">
-		<div class="auto-container">
-			<div class="inner-container wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-				<!--Video Box-->
-				<div class="video-box"style="background-image:url(assets/images/background/video-bg.jpg)">
-					<figure class="video-image">
-						<div class="title">Watch Our Video</div>
-						<a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-video play-box"><span class="flaticon-play-button"><i class="ripple"></i></span></a>
-						<h2>Hereâ€™s how our  <br> farm operates.</h2>
-					</figure>
+				<!-- Social Box -->
+				<div class="social-box">
+					<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank"
+						rel="noopener noreferrer">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a href="https://www.instagram.com/ecomatt_farm/" target="_blank" rel="noopener noreferrer">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a href="https://www.threads.com/@ecomatt_farm" target="_blank" rel="noopener noreferrer">
+						<i class="fa-brands fa-threads"></i>
+					</a>
+					<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank"
+						rel="noopener noreferrer">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+					<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank"
+						rel="noopener noreferrer">
+						<i class="fa-brands fa-whatsapp"></i>
+					</a>
+					<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank" rel="noopener noreferrer">
+						<i class="fa-brands fa-tiktok"></i>
+					</a>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- End Video One -->
+		<!-- End About Sidebar -->
 
-	<!-- Clients One -->
-	<section class="clients-one style-three">
-		<div class="auto-container">
-			
-			<div class="clients_slider swiper-container">
-				<div class="swiper-wrapper">
-					
-					<!-- Slide -->
-				<!-- 	<div class="swiper-slide">
+		<div class='main-content-wrapper' style='padding-top: 120px;'>
+
+
+
+			<!-- Page Title -->
+			<section class="page-title" style="background-image:url(assets/images/background/page-title.jpg)">
+				<div class="auto-container">
+					<h2>Our Farm Operations</h2>
+					<ul class="bread-crumb clearfix">
+						<li><a href="index.html">Home</a></li>
+						<li>Farm Operations</li>
+					</ul>
+				</div>
+			</section>
+			<!-- End Page Title -->
+
+			<!-- Services Three -->
+			<section class="services-three">
+				<div class="auto-container">
+					<div class="row clearfix">
+
+						<!-- Service Block Three -->
+						<div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+							<div class="service-block_three-inner wow fadeInLeft" data-wow-delay="0ms"
+								data-wow-duration="1500ms">
+								<div class="service-block_three-content">
+									<div class="service-block_three-icon trans-500">
+										<i class="flaticon-tractor"></i>
+									</div>
+									<h4 class="service-block_three-title"><a href="service-detail.html">Crops &
+											Horticulture</a></h4>
+									<div class="service-block_three-text">We grow a variety of vegetables and field
+										crops using well-managed farming practices to ensure healthy produce and
+										reliable seasonal supply.</div>
+								</div>
+								<div class="service-block_three-image">
+									<a class="service-block_three-arrow flaticon-arrow-up"
+										href="service-detail.html"></a>
+									<a href="service-detail.html"><img class="trans-500"
+											src="assets/images/resource/service-8.jpg" alt "" /></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Service Block Three -->
+						<div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+							<div class="service-block_three-inner wow fadeInUp" data-wow-delay="0ms"
+								data-wow-duration="1500ms">
+								<div class="service-block_three-content">
+									<div class="service-block_three-icon trans-500">
+										<i class="flaticon-plant"></i>
+									</div>
+									<h4 class="service-block_three-title"><a href="service-detail.html">Poultry
+											Farming</a></h4>
+									<div class="service-block_three-text">Our poultry units produce broilers and layers
+										under controlled conditions that prioritise bird health, hygiene, and consistent
+										output.</div>
+								</div>
+								<div class="service-block_three-image">
+									<a class="service-block_three-arrow flaticon-arrow-up"
+										href="service-detail.html"></a>
+									<a href="service-detail.html"><img class="trans-500"
+											src="assets/images/resource/service-10.jpg" alt "" /></a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Service Block Three -->
+						<div class="service-block_three col-lg-4 col-md-6 col-sm-12">
+							<div class="service-block_three-inner wow fadeInRight" data-wow-delay="0ms"
+								data-wow-duration="1500ms">
+								<div class="service-block_three-content">
+									<div class="service-block_three-icon trans-500">
+										<i class="flaticon-vegetable-1"></i>
+									</div>
+									<h4 class="service-block_three-title"><a href="service-detail.html">Piggery
+											Operations</a></h4>
+									<div class="service-block_three-text">Ecomatt Farm runs structured piggery
+										operations focused on breeding, nutrition, and quality pork production for local
+										markets.</div>
+								</div>
+								<div class="service-block_three-image">
+									<a class="service-block_three-arrow flaticon-arrow-up"
+										href="service-detail.html"></a>
+									<a href="service-detail.html"><img class="trans-500"
+											src="assets/images/resource/service-9.jpg" alt "" /></a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- End Services Three -->
+
+			<!-- Food One -->
+			<section class="food-one style-two" style="background-image:url(assets/images/background/food-pattern.png)">
+				<div class="food-one_pattern overlay-layer"
+					style="background-image:url(assets/images/background/food-pattern-1.png)"></div>
+				<div class="auto-container">
+					<div class="row clearfix">
+
+						<!-- Image Column -->
+						<div class="food-one_image-column col-lg-6 col-md-12 col-sm-12">
+							<div class="food-one_image-outer">
+								<div class="food-one_image">
+									<img src="assets/images/resource/food.png" alt="" />
+								</div>
+								<div class="food-one_leaf">
+									<img src="assets/images/icons/leaf.png" alt="" />
+								</div>
+							</div>
+						</div>
+
+						<!-- Content Column -->
+						<div class="food-one_content-column col-lg-6 col-md-12 col-sm-12">
+							<div class="food-one_content-outer">
+								<!-- Sec Title -->
+								<div class="sec-title">
+									<div class="sec-title_title">ABOUT ECOMATT FARM</div>
+									<h2 class="sec-title_heading tx-split-text split-in-right">Integrated Farming <br>
+										Focused on Quality and Reliability</h2>
+									<div class="sec-title_text">Ecomatt Farm is a diversified agricultural operation
+										based in Kwekwe, Zimbabwe. We combine practical farming experience with modern
+										<br> production methods to deliver consistent, high-quality produce across our
+										poultry, piggery, crop, and horticulture operations.
+									</div>
+								</div>
+								<div class="row clearfix">
+
+									<!-- Food Block One -->
+									<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
+										<div class="food-block_one-inner trans-300 wow fadeInLeft" data-wow-delay="0ms"
+											data-wow-duration="1500ms">
+											<div class="food-block_one-icon trans-300 flaticon-vegetable-1"></div>
+											<h6 class="food-block_one-title trans-300">Crops & Horticulture</h6>
+										</div>
+									</div>
+
+									<!-- Food Block One -->
+									<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
+										<div class="food-block_one-inner trans-300 wow fadeInLeft"
+											data-wow-delay="150ms" data-wow-duration="1500ms">
+											<div class="food-block_one-icon trans-300 flaticon-chicken"></div>
+											<h6 class="food-block_one-title trans-300">Poultry & Piggery</h6>
+										</div>
+									</div>
+
+									<!-- Food Block One -->
+									<div class="food-block_one col-lg-4 col-md-4 col-sm-12">
+										<div class="food-block_one-inner trans-300 wow fadeInLeft"
+											data-wow-delay="300ms" data-wow-duration="1500ms">
+											<div class="food-block_one-icon trans-300 flaticon-tractor"></div>
+											<h6 class="food-block_one-title trans-300">Farm Supply & Support</h6>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- End Food One -->
+
+			<!-- Services Two -->
+			<section class="services-two">
+				<div class="services-two_bg-layer overlay-layer"
+					style="background-image:url(assets/images/background/services-two_pattern.png)"></div>
+				<div class="auto-container">
+					<!-- Sec Title -->
+					<div class="sec-title centered">
+						<div class="sec-title_title">WHAT WE DO</div>
+						<h2 class="sec-title_heading tx-split-text split-in-right">Our Core <br> Farming Operations</h2>
+					</div>
+					<!-- End Sec Title -->
+
+					<div class="four-item-carousel swiper-container">
+						<div class="swiper-wrapper">
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Service Block Two -->
+								<div class="service-block_two">
+									<div class="service-block_two-inner">
+										<div class="service-block_two-image">
+											<img src="assets/images/resource/service-4.jpg" alt "" />
+										</div>
+										<div class="service-block_two-content">
+											<div class="service-block_two-icon">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title"><a href="service-detail.html">Crops &
+													<br> Field Production</a></h4>
+										</div>
+										<div class="service-block_two-overlay overlay-layer"
+											style="background-image:url(assets/images/resource/service-4.jpg)">
+											<div class="service-block_two-icon_two">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title_two"><a href="service-detail.html">Crops
+													& Field Production</a></h4>
+											<div class="service-block_two-text">Maize and seasonal field crops produced
+												through structured land and water management. </div>
+											<a class="service-block_two-more" href="service-detail.html">read more <i
+													class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Service Block Two -->
+								<div class="service-block_two">
+									<div class="service-block_two-inner">
+										<div class="service-block_two-image">
+											<img src="assets/images/resource/service-5.jpg" alt "" />
+										</div>
+										<div class="service-block_two-content">
+											<div class="service-block_two-icon">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title"><a href="service-detail.html">Poultry
+													<br> Farming</a></h4>
+										</div>
+										<div class="service-block_two-overlay overlay-layer"
+											style="background-image:url(assets/images/resource/service-5.jpg)">
+											<div class="service-block_two-icon_two">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title_two"><a
+													href="service-detail.html">Poultry <br> Farming</a></h4>
+											<div class="service-block_two-text">Broiler and layer production focused on
+												hygiene, nutrition, and consistent supply. </div>
+											<a class="service-block_two-more" href="service-detail.html">read more <i
+													class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Service Block Two -->
+								<div class="service-block_two">
+									<div class="service-block_two-inner">
+										<div class="service-block_two-image">
+											<img src="assets/images/resource/service-6.jpg" alt "" />
+										</div>
+										<div class="service-block_two-content">
+											<div class="service-block_two-icon">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title"><a href="service-detail.html">Piggery
+													<br> Operations</a></h4>
+										</div>
+										<div class="service-block_two-overlay overlay-layer"
+											style="background-image:url(assets/images/resource/service-6.jpg)">
+											<div class="service-block_two-icon_two">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title_two"><a
+													href="service-detail.html">Piggery <br> Operations</a></h4>
+											<div class="service-block_two-text">Structured piggery systems supporting
+												breeding and quality pork production. </div>
+											<a class="service-block_two-more" href="service-detail.html">read more <i
+													class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide -->
+							<div class="swiper-slide">
+								<!-- Service Block Two -->
+								<div class="service-block_two">
+									<div class="service-block_two-inner">
+										<div class="service-block_two-image">
+											<img src="assets/images/resource/service-7.jpg" alt "" />
+										</div>
+										<div class="service-block_two-content">
+											<div class="service-block_two-icon">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title"><a
+													href="service-detail.html">Horticulture <br> & Vegetables</a></h4>
+										</div>
+										<div class="service-block_two-overlay overlay-layer"
+											style="background-image:url(assets/images/resource/service-7.jpg)">
+											<div class="service-block_two-icon_two">
+												<i class="flaticon-tractor"></i>
+											</div>
+											<h4 class="service-block_two-title_two"><a
+													href="service-detail.html">Horticulture <br> & Vegetables</a></h4>
+											<div class="service-block_two-text">Seasonal vegetables grown to support
+												both household and bulk supply needs. </div>
+											<a class="service-block_two-more" href="service-detail.html">read more <i
+													class="fa-classic fa-solid fa-angles-right fa-fw"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- If we need navigation buttons -->
+					<div class="four-item-carousel-prev fas fa-arrow-left fa-fw"></div>
+					<div class="four-item-carousel-next fas fa-arrow-right fa-fw"></div>
+
+				</div>
+			</section>
+			<!-- End Services Two -->
+
+			<!-- Video One -->
+			<section class="video-one">
+				<div class="auto-container">
+					<div class="inner-container wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<!--Video Box-->
+						<div class="video-box" style="background-image:url(assets/images/background/video-bg.jpg)">
+							<figure class="video-image">
+								<div class="title">Watch Our Video</div>
+								<a href="https://www.youtube.com/watch?v=kxPCFljwJws"
+									class="lightbox-video play-box"><span class="flaticon-play-button"><i
+											class="ripple"></i></span></a>
+								<h2>Hereâ€™s how our <br> farm operates.</h2>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Video One -->
+
+			<!-- Clients One -->
+			<section class="clients-one style-three">
+				<div class="auto-container">
+
+					<div class="clients_slider swiper-container">
+						<div class="swiper-wrapper">
+
+							<!-- Slide -->
+							<!-- 	<div class="swiper-slide">
 						<div class="client-image">
 							<a href="#"><img src="assets/images/clients/1.png" alt="" /></a>
 						</div>
 					</div> -->
 
-					<!-- Slide -->
-				<!-- 	<div class="swiper-slide">
+							<!-- Slide -->
+							<!-- 	<div class="swiper-slide">
 						<div class="client-image">
 							<a href="#"><img src="assets/images/clients/2.png" alt="" /></a>
 						</div>
 					</div> -->
 
-					<!-- Slide -->
-				<!-- 	<div class="swiper-slide">
+							<!-- Slide -->
+							<!-- 	<div class="swiper-slide">
 						<div class="client-image">
 							<a href="#"><img src="assets/images/clients/3.png" alt="" /></a>
 						</div>
 					</div> -->
 
-					<!-- Slide -->
-				<!-- 	<div class="swiper-slide">
+							<!-- Slide -->
+							<!-- 	<div class="swiper-slide">
 						<div class="client-image">
 							<a href="#"><img src="assets/images/clients/4.png" alt="" /></a>
 						</div>
 					</div> -->
 
-					<!-- Slide -->
-			<!-- 		<div class="swiper-slide">
+							<!-- Slide -->
+							<!-- 		<div class="swiper-slide">
 						<div class="client-image">
 							<a href="#"><img src="assets/images/clients/1.png" alt="" /></a>
 						</div>
 					</div> -->
 
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Clients One -->
-	
-	</div>
-<!-- Main Footer -->
-
-		<!--Site Footer Two Start-->
-		<footer class="site-footer-two">
-			<div class="site-footer-two__bg"></div>
-			<div class="site-footer-two__top">
-				<div class="container">
-					<div class="footer-widget-two__newsletter wow fadeInUp" data-wow-delay="200ms">
-						<div class="footer-widget-two__newsletter-bg"
-							style="background-image: url(images/footer_two/footer-widget-two-newsletter-bg.jpg);">
 						</div>
-						<h3 class="footer-widget-two__newsletter-title">Subscribe To Our Newsletter To<br>
-							Get
-							Latest Update</h3>
-						<form class="footer-widget-two__newsletter-form mc-form" data-url="MC_FORM_URL"
-							novalidate="novalidate">
-							<div class="footer-widget-two__newsletter-form-input-box">
-								<input type="email" placeholder="Enter email" name="EMAIL">
-							</div>
-							<button type="submit" class="footer-widget-two__newsletter-btn thm-btn">Subscribe
-								<i class="fas fa-long-arrow-right"></i>
-								<span class="hover-btn hover-bx"></span>
-								<span class="hover-btn hover-bx2"></span>
-								<span class="hover-btn hover-bx3"></span>
-								<span class="hover-btn hover-bx4"></span>
-							</button>
-						</form>
 					</div>
 				</div>
-			</div>
-			<div class="site-footer-two__middle">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-							<div class="footer-widget-two__working-box">
-								<h3 class="footer-widget-two__working-title">opening time:</h3>
-								<ul class="footer-widget-two__working-hour list-unstyled">
-									<li>
-										<p>Mon - Fri<span>6:00 AM - 6:00 PM</span></p>
-									</li>
-									<li>
-										<p>Saturday<span>6:00 AM - 5:00 PM</span></p>
-									</li>
-									<li>
-										<p>Sunday<span>Closed</span></p>
-									</li>
-								</ul>
-								<div class="site-footer-two__social">
-<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/ecomatt_farm/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.threads.com/@ecomatt_farm" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
-<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-</div>
+			</section>
+			<!-- Clients One -->
+
+		</div>
+		<!-- Main Footer -->
+
+		<!--Site Footer Two Start-->
+		<!--Site Footer Two Start-->
+		<div class="desktop-footer">
+			<footer class="site-footer-two">
+				<div class="site-footer-two__bg"></div>
+				<div class="site-footer-two__top">
+					<div class="container">
+						<div class="footer-widget-two__newsletter wow fadeInUp" data-wow-delay="200ms">
+							<div class="footer-widget-two__newsletter-bg"
+								style="background-image: url(images/footer_two/footer-widget-two-newsletter-bg.jpg);">
 							</div>
-						</div>
-						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-							<div class="footer-widget-two__column footer-widget-two__usefull-link">
-								<div class="footer-widget-two__title-box">
-									<h3 class="footer-widget-two__title" style="color: #FFFFFF !important;">Quick Links
-									</h3>
+							<h3 class="footer-widget-two__newsletter-title">Subscribe To Our Newsletter To<br>
+								Get
+								Latest Update</h3>
+							<form class="footer-widget-two__newsletter-form mc-form" data-url="MC_FORM_URL"
+								novalidate="novalidate">
+								<div class="footer-widget-two__newsletter-form-input-box">
+									<input type="email" placeholder="Enter email" name="EMAIL">
 								</div>
-								<div class="footer-widget-two__link-box">
+								<button type="submit" class="footer-widget-two__newsletter-btn thm-btn">Subscribe
+									<i class="fas fa-long-arrow-right"></i>
+									<span class="hover-btn hover-bx"></span>
+									<span class="hover-btn hover-bx2"></span>
+									<span class="hover-btn hover-bx3"></span>
+									<span class="hover-btn hover-bx4"></span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="site-footer-two__middle">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+								<div class="footer-widget-two__working-box">
+									<h3 class="footer-widget-two__working-title">opening time:</h3>
+									<ul class="footer-widget-two__working-hour list-unstyled">
+										<li>
+											<p>Mon - Fri<span>6:00 AM - 6:00 PM</span></p>
+										</li>
+										<li>
+											<p>Saturday<span>6:00 AM - 5:00 PM</span></p>
+										</li>
+										<li>
+											<p>Sunday<span>Closed</span></p>
+										</li>
+									</ul>
+									<div class="site-footer-two__social">
+										<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+										<a href="https://www.instagram.com/ecomatt_farm/" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+										<a href="https://www.threads.com/@ecomatt_farm" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-threads"></i></a>
+										<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA"
+											target="_blank" rel="noopener noreferrer"><i
+												class="fa-brands fa-youtube"></i></a>
+										<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+										<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank"
+											rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+								<div class="footer-widget-two__column footer-widget-two__usefull-link">
+									<div class="footer-widget-two__title-box">
+										<h3 class="footer-widget-two__title" style="color: #FFFFFF !important;">Quick
+											Links
+										</h3>
+									</div>
+									<div class="footer-widget-two__link-box">
+										<ul class="footer-widget-two__link list-unstyled">
+											<li><span class="fas fa-wheat"></span><a href="about.html">About Us</a></li>
+											<li><span class="fas fa-wheat"></span><a href="project.html">Portfolio</a>
+											</li>
+											<li><span class="fas fa-wheat"></span><a href="faq.html">Help & FAQs</a>
+											</li>
+											<li><span class="fas fa-wheat"></span><a href="blog.html">Blog</a></li>
+											<li><span class="fas fa-wheat"></span><a href="services.html">Farm
+													Operations</a></li>
+											<li><span class="fas fa-wheat"></span><a href="contact.html">Contact</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+								<div class="footer-widget-two__column footer-widget-two__products">
+									<div class="footer-widget-two__title-box">
+										<h3 class="footer-widget-two__title" style="color: #FFFFFF !important;">Our
+											Products
+										</h3>
+									</div>
 									<ul class="footer-widget-two__link list-unstyled">
-										<li><span class="fas fa-wheat"></span><a href="about.html">About Us</a></li>
-										<li><span class="fas fa-wheat"></span><a href="project.html">Portfolio</a></li>
-										<li><span class="fas fa-wheat"></span><a href="faq.html">Help & FAQs</a></li>
-										<li><span class="fas fa-wheat"></span><a href="blog.html">Blog</a></li>
-										<li><span class="fas fa-wheat"></span><a href="services.html">Farm Operations</a></li>
-										<li><span class="fas fa-wheat"></span><a href="contact.html">Contact</a></li>
+										<li><span class="fas fa-wheat"></span><a href="service-detail.html">Fresh
+												Produce</a></li>
+										<li><span class="fas fa-wheat"></span><a href="service-detail.html">Dairy
+												Products</a>
+										</li>
+										<li><span class="fas fa-wheat"></span><a href="service-detail.html">Livestock
+												Products</a></li>
+										<li><span class="fas fa-wheat"></span><a href="service-detail.html">Organic
+												Farming</a></li>
+										<li><span class="fas fa-wheat"></span><a href="service-detail.html">Crops &
+												Grains</a></li>
+										<li><span class="fas fa-wheat"></span><a href="service-detail.html">Poultry</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+								<div class="footer-widget-two__instagram">
+									<div class="footer-widget-two__title-box">
+										<h3 class="footer-widget-two__title" style="color: #FFFFFF !important;">Gallery
+										</h3>
+									</div>
+									<ul class="footer-widget-two__instagram-list list-unstyled clearfix">
+										<li>
+											<div class="footer-widget-two__instagram-img">
+												<img src="images/footer_two/footer-widget-instagram-img-1.jpg" alt="">
+												<a href="services.html"><span class="fab fa-instagram"></span></a>
+											</div>
+										</li>
+										<li>
+											<div class="footer-widget-two__instagram-img">
+												<img src="images/footer_two/footer-widget-instagram-img-2.jpg" alt="">
+												<a href="services.html"><span class="fab fa-instagram"></span></a>
+											</div>
+										</li>
+										<li>
+											<div class="footer-widget-two__instagram-img">
+												<img src="images/footer_two/footer-widget-instagram-img-3.jpg" alt="">
+												<a href="services.html"><span class="fab fa-instagram"></span></a>
+											</div>
+										</li>
+										<li>
+											<div class="footer-widget-two__instagram-img">
+												<img src="images/footer_two/footer-widget-instagram-img-4.jpg" alt="">
+												<a href="services.html"><span class="fab fa-instagram"></span></a>
+											</div>
+										</li>
+										<li>
+											<div class="footer-widget-two__instagram-img">
+												<img src="images/footer_two/footer-widget-instagram-img-5.jpg" alt="">
+												<a href="services.html"><span class="fab fa-instagram"></span></a>
+											</div>
+										</li>
+										<li>
+											<div class="footer-widget-two__instagram-img">
+												<img src="images/footer_two/footer-widget-instagram-img-6.jpg" alt="">
+												<a href="services.html"><span class="fab fa-instagram"></span></a>
+											</div>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-							<div class="footer-widget-two__column footer-widget-two__products">
-								<div class="footer-widget-two__title-box">
-									<h3 class="footer-widget-two__title" style="color: #FFFFFF !important;">Our Products
-									</h3>
-								</div>
-								<ul class="footer-widget-two__link list-unstyled">
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Fresh
-											Produce</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Dairy
-											Products</a>
-									</li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Livestock
-											Products</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Organic
-											Farming</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Crops &
-											Grains</a></li>
-									<li><span class="fas fa-wheat"></span><a href="service-detail.html">Poultry</a></li>
-								</ul>
-							</div>
+						<div class="footer-widget-two__logo">
+							<a href="index.html"><img src="images/footer_two/footer-logo.png" style="max-width: 220px;"
+									alt=""></a>
 						</div>
-						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-							<div class="footer-widget-two__instagram">
-								<div class="footer-widget-two__title-box">
-									<h3 class="footer-widget-two__title" style="color: #FFFFFF !important;">Gallery</h3>
-								</div>
-								<ul class="footer-widget-two__instagram-list list-unstyled clearfix">
-									<li>
-										<div class="footer-widget-two__instagram-img">
-											<img src="images/footer_two/footer-widget-instagram-img-1.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
-										</div>
-									</li>
-									<li>
-										<div class="footer-widget-two__instagram-img">
-											<img src="images/footer_two/footer-widget-instagram-img-2.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
-										</div>
-									</li>
-									<li>
-										<div class="footer-widget-two__instagram-img">
-											<img src="images/footer_two/footer-widget-instagram-img-3.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
-										</div>
-									</li>
-									<li>
-										<div class="footer-widget-two__instagram-img">
-											<img src="images/footer_two/footer-widget-instagram-img-4.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
-										</div>
-									</li>
-									<li>
-										<div class="footer-widget-two__instagram-img">
-											<img src="images/footer_two/footer-widget-instagram-img-5.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
-										</div>
-									</li>
-									<li>
-										<div class="footer-widget-two__instagram-img">
-											<img src="images/footer_two/footer-widget-instagram-img-6.jpg" alt="">
-											<a href="services.html"><span class="fab fa-instagram"></span></a>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="footer-widget-two__logo">
-						<a href="index.html"><img src="images/footer_two/footer-logo.png" style="max-width: 220px;"
-								alt=""></a>
 					</div>
 				</div>
+				<div class="site-footer-two__bottom">
+					<div class="container">
+						<div class="site-footer-two__bottom-inner">
+							<p class="site-footer-two__bottom-text">Copyright@ 2025 <a href="index.html">Ecomatt</a>.
+								All
+								Rights Reserved.</p>
+							<ul class="list-unstyled site-footer-two__bottom-menu">
+								<li><a href="contact.html">Support</a></li>
+								<li><a href="about.html">Terms and Condition</a></li>
+								<li><a href="about.html">Privacy and Policy</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Mobile/Tablet Footer -->
+		<div class="mobile-tablet-footer">
+			<div class="container">
+				<!-- Block 1: Newsletter -->
+				<div class="mt-footer-block newsletter-block">
+					<h3>Subscribe To Our Newsletter</h3>
+					<form class="mt-newsletter-form">
+						<input type="email" placeholder="Enter email" name="EMAIL">
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+
+				<!-- Block 2: Opening Times -->
+				<div class="mt-footer-block opening-times-block">
+					<h3>Opening Times</h3>
+					<p>Mon - Fri: 6:00 AM - 6:00 PM</p>
+					<p>Saturday: 6:00 AM - 5:00 PM</p>
+					<p>Sunday: Closed</p>
+				</div>
+
+				<!-- Block 3: Quick Links -->
+				<div class="mt-footer-block links-block">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="products.html">Our Products</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Block 4: Social Hub -->
+				<div class="mt-footer-block social-block">
+					<a href="https://www.facebook.com/profile.php?id=61583618074262" target="_blank"><i
+							class="fab fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/ecomatt_farm/" target="_blank"><i
+							class="fab fa-instagram"></i></a>
+					<a href="https://whatsapp.com/channel/0029Vb7GohSLdQeZMOg58x2l" target="_blank"><i
+							class="fab fa-whatsapp"></i></a>
+					<a href="https://www.tiktok.com/@ecomattfarm?lang=en" target="_blank"><i
+							class="fa-brands fa-tiktok"></i></a>
+					<a href="https://www.youtube.com/channel/UCqUuQcsNDZy8uW7wfkgJVdA" target="_blank"><i
+							class="fab fa-youtube"></i></a>
+					<a href="https://www.threads.com/@ecomatt_farm" target="_blank"><i
+							class="fa-brands fa-threads"></i></a>
+				</div>
+
+				<!-- Block 5: Branding -->
+				<div class="mt-footer-block branding-block">
+					<img src="images/footer_two/footer-logo.png" alt="Ecomatt" class="mt-logo">
+					<p class="copyright">Copyright@ 2025 <a href="index.html">Ecomatt</a>. All Rights Reserved.</p>
+				</div>
 			</div>
-			<div class="site-footer-two__bottom">
-				<div class="container">
-					<div class="site-footer-two__bottom-inner">
-						<p class="site-footer-two__bottom-text">Copyright@ 2025 <a href="index.html">Ecomatt</a>. All
-							Rights Reserved.</p>
-						<ul class="list-unstyled site-footer-two__bottom-menu">
-							<li><a href="contact.html">Support</a></li>
-							<li><a href="about.html">Terms and Condition</a></li>
-							<li><a href="about.html">Privacy and Policy</a></li>
+		</div>
+		<div class="desktop-footer">
+			<footer class="site-footer-two">
+				<!-- End Footer Style -->
+
+				<!-- Search Popup -->
+				<div class="search-popup">
+					<div class="color-layer"></div>
+					<button class="close-search"><span class="fa-xmark"></span></button>
+					<form method="post" action="blog.html">
+						<div class="form-group">
+							<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+							<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
+						</div>
+					</form>
+				</div>
+				<!-- End Search Popup -->
+
+				<!-- Color Palate / Color Switcher -->
+				<div class="color-palate">
+					<div class="color-trigger">
+						<i class="fa fa-solid fa-gear fa-fw"></i>
+					</div>
+					<div class="color-palate-inner">
+						<div class="color-palate-head">
+							<h6>Choose Options</h6>
+						</div>
+
+						<!-- Colors -->
+						<div class="various-color clearfix">
+							<div class="colors-list">
+								<span class="palate default-color active"
+									data-theme-file="assets/css/color-themes/default-color.css"></span>
+								<span class="palate blue-color"
+									data-theme-file="assets/css/color-themes/blue-color.css"></span>
+								<span class="palate olive-color"
+									data-theme-file="assets/css/color-themes/olive-color.css"></span>
+								<span class="palate orange-color"
+									data-theme-file="assets/css/color-themes/orange-color.css"></span>
+								<span class="palate purple-color"
+									data-theme-file="assets/css/color-themes/purple-color.css"></span>
+								<span class="palate green-color"
+									data-theme-file="assets/css/color-themes/green-color.css"></span>
+								<span class="palate brown-color"
+									data-theme-file="assets/css/color-themes/brown-color.css"></span>
+								<span class="palate yellow-color"
+									data-theme-file="assets/css/color-themes/yellow-color.css"></span>
+							</div>
+						</div>
+
+						<h6>RTL Version</h6>
+						<ul class="rtl-version option-box">
+							<li class="rtl">RTL Version</li>
+							<li>LTR Version</li>
 						</ul>
+						<h6>Want Sticky Header</h6>
+						<ul class="header-version option-box">
+							<li class="box">No</li>
+							<li>Yes</li>
+						</ul>
+						<h6>Dark Verion</h6>
+						<ul class="dark-version option-box">
+							<li class="box">Yes</li>
+							<li>No</li>
+						</ul>
+
+						<div class="purchase-box">
+							You will find much more options for colors and styling in admin panel. This color picker is
+							used only for demonstation purposes.
+							<a href="#" class="theme-btn btn-style-one">
+								<span class="btn-wrap">
+									<span class="text-one">buy now</span>
+									<span class="text-two">buy now</span>
+								</span>
+							</a>
+						</div>
+
 					</div>
 				</div>
-			</div>
-		</footer>
-		<!--Site Footer Two End-->
-		<!-- End Footer Style -->
-	
-	<!-- Search Popup -->
-	<div class="search-popup">
-		<div class="color-layer"></div>
-		<button class="close-search"><span class="fa-xmark"></span></button>
-		<form method="post" action="blog.html">
-			<div class="form-group">
-				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
-			</div>
-		</form>
-	</div>
-	<!-- End Search Popup -->
-	
-	<!-- Color Palate / Color Switcher -->
-	<div class="color-palate">
-		<div class="color-trigger">
-			<i class="fa fa-solid fa-gear fa-fw"></i>
+				<!-- End Color Palate / Color Switcher -->
+
 		</div>
-		<div class="color-palate-inner">
-			<div class="color-palate-head">
-				<h6>Choose Options</h6>
-			</div>
-			
-			<!-- Colors -->
-			<div class="various-color clearfix">
-				<div class="colors-list">
-					<span class="palate default-color active" data-theme-file="assets/css/color-themes/default-color.css"></span>
-					<span class="palate blue-color" data-theme-file="assets/css/color-themes/blue-color.css"></span>
-					<span class="palate olive-color" data-theme-file="assets/css/color-themes/olive-color.css"></span>
-					<span class="palate orange-color" data-theme-file="assets/css/color-themes/orange-color.css"></span>
-					<span class="palate purple-color" data-theme-file="assets/css/color-themes/purple-color.css"></span>
-					<span class="palate green-color" data-theme-file="assets/css/color-themes/green-color.css"></span>
-					<span class="palate brown-color" data-theme-file="assets/css/color-themes/brown-color.css"></span>
-					<span class="palate yellow-color" data-theme-file="assets/css/color-themes/yellow-color.css"></span>
-				</div>
-			</div>
-					
-			<h6>RTL Version</h6>
-			<ul class="rtl-version option-box"> <li class="rtl">RTL Version</li> <li>LTR Version</li> </ul>
-			<h6>Want Sticky Header</h6>
-			<ul class="header-version option-box"> <li class="box">No</li> <li>Yes</li></ul>
-			<h6>Dark Verion</h6>
-			<ul class="dark-version option-box"> <li class="box">Yes</li> <li>No</li></ul>
-			
-			<div class="purchase-box">
-				You will find much more options for colors and styling in admin panel. This color picker is used only for demonstation purposes.
-				<a href="#" class="theme-btn btn-style-one">
-					<span class="btn-wrap">
-						<span class="text-one">buy now</span>
-						<span class="text-two">buy now</span>
-					</span>
-				</a>
-			</div>
-			
+		<!-- End PageWrapper -->
+
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+			</svg>
 		</div>
-	</div>
-	<!-- End Color Palate / Color Switcher -->
-	
-</div>
-<!-- End PageWrapper -->
 
-<div class="progress-wrap">
-	<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-		<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-	</svg>
-</div>
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/appear.js"></script>
+		<script src="assets/js/parallax.min.js"></script>
+		<script src="assets/js/tilt.jquery.min.js"></script>
+		<script src="assets/js/jquery.paroller.min.js"></script>
+		<script src="assets/js/wow.js"></script>
+		<script src="assets/js/swiper.min.js"></script>
+		<script src="assets/js/backtotop.js"></script>
+		<script src="assets/js/odometer.js"></script>
+		<script src="assets/js/parallax-scroll.js"></script>
 
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/parallax.min.js"></script>
-<script src="assets/js/tilt.jquery.min.js"></script>
-<script src="assets/js/jquery.paroller.min.js"></script>
-<script src="assets/js/wow.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/backtotop.js"></script>
-<script src="assets/js/odometer.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
+		<script src="assets/js/gsap.min.js"></script>
+		<script src="assets/js/SplitText.min.js"></script>
+		<script src="assets/js/ScrollTrigger.min.js"></script>
+		<script src="assets/js/ScrollToPlugin.min.js"></script>
+		<script src="assets/js/ScrollSmoother.min.js"></script>
 
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/SplitText.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/ScrollToPlugin.min.js"></script>
-<script src="assets/js/ScrollSmoother.min.js"></script>
-
-<script src="assets/js/typeit.js"></script>
-<script src="assets/js/jquery.marquee.min.js"></script>
-<script src="assets/js/magnific-popup.min.js"></script>
-<script src="assets/js/nav-tool.js"></script>
-<script src="assets/js/jquery-ui.js"></script>
-<script src="assets/js/element-in-view.js"></script>
-<script src="assets/js/color-settings.js"></script>
-<script src="assets/js/script.js"></script>
+		<script src="assets/js/typeit.js"></script>
+		<script src="assets/js/jquery.marquee.min.js"></script>
+		<script src="assets/js/magnific-popup.min.js"></script>
+		<script src="assets/js/nav-tool.js"></script>
+		<script src="assets/js/jquery-ui.js"></script>
+		<script src="assets/js/element-in-view.js"></script>
+		<script src="assets/js/color-settings.js"></script>
+		<script src="assets/js/script.js"></script>
 
 </body>
+
 </html>
-
-
